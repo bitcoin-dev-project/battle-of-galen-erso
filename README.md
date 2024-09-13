@@ -224,13 +224,8 @@ When you are ready to launch your attack for real, start by "switching context"
 from your local cluster to the remote cluster. You will have a config file
 provided by the administrator:
 
-** // TODO **
-
 ```
-warnet auth ...
+warnet auth /path/to/battlefield-100-large-kubeconfig.yaml
 ```
-
-
-
 
 
