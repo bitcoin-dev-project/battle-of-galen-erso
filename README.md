@@ -61,8 +61,11 @@ Using a Python virtual environment is strongly recommended.
 ```
 git clone <this repo>
 cd <this repo>
+
 python -m venv .venv
 source .venv/bin/activate
+
+pip install --upgrade pip
 pip install warnet
 ```
 
