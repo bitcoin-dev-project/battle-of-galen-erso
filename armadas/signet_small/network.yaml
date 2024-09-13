@@ -1,0 +1,34 @@
+nodes:
+- addnode:
+  - miner.default
+  config: "maxconnections=1000\nuacomment=armada-0\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=001480f82d40a724821c53000731ba66c13c5a02b851\n"
+  global:
+    chain: signet
+    rpcpassword: ff4799ef24520f42671ffe940758aca1
+  image:
+    tag: '29.0'
+  name: armada-0
+- addnode:
+  - miner.default
+  config: "maxconnections=1000\nuacomment=armada-1\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=001480f82d40a724821c53000731ba66c13c5a02b851\n"
+  global:
+    chain: signet
+    rpcpassword: 7c437f6f6b3633cb486ce943c7fee2c3
+  image:
+    tag: '29.0'
+  name: armada-1
+- addnode:
+  - miner.default
+  config: "maxconnections=1000\nuacomment=armada-2\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=001480f82d40a724821c53000731ba66c13c5a02b851\n"
+  global:
+    chain: signet
+    rpcpassword: bf77362e8452ace6f4b5655994b33bad
+  image:
+    tag: '29.0'
+  name: armada-2

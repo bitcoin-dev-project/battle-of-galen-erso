@@ -1,0 +1,97 @@
+caddy:
+  enabled: true
+fork_observer:
+  configQueryInterval: 20
+  enabled: true
+nodes:
+- addnode:
+  - tank-0001-aqua
+  - miner
+  - tank-0000-aqua
+  - tank-0000-aqua
+  - tank-0000-aqua
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0000-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=001480f82d40a724821c53000731ba66c13c5a02b851\n"
+  global:
+    chain: signet
+    rpcpassword: d72355788929ccbc2c1950227ba76e21
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0000-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - miner
+  - miner
+  - tank-0000-aqua
+  - tank-0001-aqua
+  - tank-0000-aqua
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0001-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=001480f82d40a724821c53000731ba66c13c5a02b851\n"
+  global:
+    chain: signet
+    rpcpassword: 9201ec7206763245c2e70ec6fca665e2
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0001-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0000-aqua
+  - tank-0001-aqua
+  - tank-0001-aqua
+  - tank-0000-aqua
+  - tank-0001-aqua
+  config: "maxconnections=1000\nuacomment=miner\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=001480f82d40a724821c53000731ba66c13c5a02b851\n\
+    coinstatsindex=1\n "
+  global:
+    chain: signet
+    rpcpassword: aca5178d218cd9ed96cfe622e32b302b
+  image:
+    tag: 29.0-util
+  metrics: txrate=getchaintxstats(10)["txrate"] utxosetsize=gettxoutsetinfo()["txouts"]
+  metricsExport: true
+  name: miner
+  startupProbe:
+    exec:
+      command:
+      - /bin/sh
+      - -c
+      - bitcoin-cli createwallet miner && bitcoin-cli importdescriptors [{\"desc\":\"combo\(cNKKfZdGZckmEJscPWmyfMu1gobKQtvmrQLB5tXkAp2hyjqeX2nL\)#jkj656r4\"\,\"timestamp\":0}]
+    failureThreshold: 10
+    periodSeconds: 30
+    successThreshold: 1
+    timeoutSeconds: 60
+plugins:
+  postDeploy:
+    leaderboard:
+      admin_key: c54a2f7065003d9f23c1a2a77c96ea5c
+      entrypoint: ../../plugins/leaderboard
+      next_public_asset_prefix: /leaderboard
+services:
+- host: leaderboard.default
+  path: /leaderboard/
+  port: 3000
+  title: Leaderboard

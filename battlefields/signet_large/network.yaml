@@ -1,0 +1,3763 @@
+caddy:
+  enabled: true
+fork_observer:
+  configQueryInterval: 20
+  enabled: true
+nodes:
+- addnode:
+  - tank-0001-aqua
+  - tank-0052-mint
+  - tank-0135-yellow
+  - tank-0115-sapphire
+  - tank-0046-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0000-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 2ec0952b79f456d9d716b7e423f4de39
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0000-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0002-aqua
+  - tank-0048-mint
+  - tank-0065-navy
+  - tank-0121-silver
+  - tank-0071-olive
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0001-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: ed104eba66722190918bd8df2870ad95
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0001-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0003-aqua
+  - tank-0115-sapphire
+  - tank-0090-purple
+  - tank-0100-rust
+  - tank-0134-yellow
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0002-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 6f6e6cf4262ad6f88a2f18b2aa7e848e
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0002-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0004-aqua
+  - tank-0037-emerald
+  - tank-0022-coffee
+  - tank-0019-blue
+  - tank-0050-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0003-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 84df9786919877b149252a82985bb13c
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0003-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0005-aqua
+  - tank-0086-orange
+  - tank-0013-blue
+  - tank-0081-orange
+  - tank-0109-rust
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0004-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 8a22e419cb465dcb92eb9dc05225779a
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0004-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0006-aqua
+  - tank-0124-silver
+  - tank-0062-navy
+  - tank-0071-olive
+  - tank-0028-coffee
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0005-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 24a030bca5d3a05fd2672f354c460f80
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0005-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0007-aqua
+  - tank-0139-yellow
+  - tank-0078-orange
+  - tank-0104-rust
+  - tank-0037-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0006-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b8f3e5912413f3cd6fc78424a8e5698c
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0006-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0008-aqua
+  - tank-0095-purple
+  - tank-0018-blue
+  - tank-0045-mint
+  - tank-0046-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0007-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: daa7d4efb144966ce6a77aa7486b3e00
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0007-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0009-aqua
+  - tank-0016-blue
+  - tank-0057-navy
+  - tank-0057-navy
+  - tank-0134-yellow
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0008-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 9d1815de9006debcabfba99ba7ffd120
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0008-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0010-aqua
+  - tank-0059-navy
+  - tank-0085-orange
+  - tank-0064-navy
+  - tank-0044-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0009-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: db68cd59d5b3d5f0e47f8d09f73786ee
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0009-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0011-blue
+  - tank-0083-orange
+  - tank-0130-silver
+  - tank-0122-silver
+  - tank-0065-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0010-aqua\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: ae7d87f114e7575d3ec6fc61b300d886
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0010-aqua
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0012-blue
+  - tank-0007-aqua
+  - tank-0068-olive
+  - tank-0091-purple
+  - tank-0043-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0011-blue\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: a0e834079d6fdbcc4a908e99a7e4ab3c
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0011-blue
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0013-blue
+  - tank-0048-mint
+  - tank-0061-navy
+  - tank-0057-navy
+  - tank-0051-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0012-blue\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b96b30b0fd446a9408b7283af761e3d2
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0012-blue
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0014-blue
+  - tank-0111-sapphire
+  - tank-0139-yellow
+  - tank-0075-olive
+  - tank-0064-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0013-blue\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 2a93bc7b35558efb2f0eccf9f49524b0
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0013-blue
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0015-blue
+  - tank-0021-blue
+  - tank-0084-orange
+  - tank-0086-orange
+  - tank-0135-yellow
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0014-blue\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: edc93b2a7405ec4b3e940724268aa983
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0014-blue
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0016-blue
+  - tank-0085-orange
+  - tank-0066-olive
+  - tank-0068-olive
+  - tank-0033-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0015-blue\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 21db3ca64b110258349f69aee09ad6c0
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0015-blue
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0017-blue
+  - tank-0127-silver
+  - tank-0015-blue
+  - tank-0044-mint
+  - tank-0071-olive
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0016-blue\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 9ca823c139fdffacb0634d552103cfb5
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0016-blue
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0018-blue
+  - tank-0142-yellow
+  - tank-0097-purple
+  - tank-0016-blue
+  - tank-0085-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0017-blue\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: a8431573b782f4a306923521e043a597
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0017-blue
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0019-blue
+  - tank-0020-blue
+  - tank-0020-blue
+  - tank-0059-navy
+  - tank-0084-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0018-blue\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 2f6cd3c5283f33ec63b962a367e302f6
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0018-blue
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0020-blue
+  - tank-0018-blue
+  - tank-0010-aqua
+  - tank-0102-rust
+  - tank-0140-yellow
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0019-blue\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 6f93cc4b44bfef88c030bfe243354a34
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0019-blue
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0021-blue
+  - miner
+  - tank-0095-purple
+  - tank-0100-rust
+  - tank-0054-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0020-blue\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 6d107c1814fd65c58afcc8eb478da4ae
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0020-blue
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0022-coffee
+  - tank-0101-rust
+  - tank-0076-olive
+  - tank-0055-navy
+  - tank-0104-rust
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0021-blue\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: f9c90cbd3723b2f15ff0830949281731
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0021-blue
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0023-coffee
+  - tank-0082-orange
+  - tank-0078-orange
+  - tank-0042-emerald
+  - tank-0081-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0022-coffee\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 0f9bc57b2d857c374ab1b901f7ffc0a7
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0022-coffee
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0024-coffee
+  - tank-0046-mint
+  - tank-0076-olive
+  - tank-0139-yellow
+  - tank-0039-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0023-coffee\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: ddca986fde826f95335a51431cfb9d4d
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0023-coffee
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0025-coffee
+  - tank-0106-rust
+  - tank-0077-orange
+  - tank-0073-olive
+  - tank-0080-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0024-coffee\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b153afd7f3d8610e1090916b8083d182
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0024-coffee
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0026-coffee
+  - tank-0043-emerald
+  - tank-0142-yellow
+  - tank-0023-coffee
+  - tank-0058-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0025-coffee\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 975dddf13cef346aaf28256f36f8fe70
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0025-coffee
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0027-coffee
+  - tank-0009-aqua
+  - tank-0093-purple
+  - tank-0066-olive
+  - tank-0023-coffee
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0026-coffee\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: bd048ceeb513427fc1d77365addee451
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0026-coffee
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0028-coffee
+  - tank-0106-rust
+  - tank-0116-sapphire
+  - tank-0043-emerald
+  - tank-0039-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0027-coffee\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: bc2b96c89b3b46e8d117097a830f61a6
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0027-coffee
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0029-coffee
+  - tank-0062-navy
+  - tank-0045-mint
+  - tank-0066-olive
+  - tank-0039-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0028-coffee\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 9d0d13fc2f968fb28d5604a17553e676
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0028-coffee
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0030-coffee
+  - tank-0087-orange
+  - tank-0025-coffee
+  - tank-0092-purple
+  - tank-0002-aqua
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0029-coffee\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 2a9d01c241d596a541332161881b724b
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0029-coffee
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0031-coffee
+  - tank-0067-olive
+  - tank-0078-orange
+  - tank-0031-coffee
+  - tank-0086-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0030-coffee\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 48ba92fd38194b37f0761811f0d75468
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0030-coffee
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0032-coffee
+  - tank-0103-rust
+  - tank-0111-sapphire
+  - tank-0061-navy
+  - tank-0136-yellow
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0031-coffee\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 2025e0a52502050d9f454d5c1b5db705
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0031-coffee
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0033-emerald
+  - tank-0024-coffee
+  - tank-0057-navy
+  - tank-0053-mint
+  - tank-0074-olive
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0032-coffee\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 920c807165a02060941605273fdb8796
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0032-coffee
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0034-emerald
+  - tank-0057-navy
+  - tank-0032-coffee
+  - tank-0128-silver
+  - tank-0106-rust
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0033-emerald\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: ea36904d274d1c745546cc1abe046c03
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0033-emerald
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0035-emerald
+  - tank-0135-yellow
+  - tank-0006-aqua
+  - tank-0141-yellow
+  - tank-0105-rust
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0034-emerald\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 7178d1834c908a02f9ea91ccb30ea1e3
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0034-emerald
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0036-emerald
+  - tank-0070-olive
+  - tank-0018-blue
+  - tank-0055-navy
+  - tank-0046-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0035-emerald\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 411e539c30289306b32b4c447d47e849
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0035-emerald
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0037-emerald
+  - tank-0047-mint
+  - tank-0041-emerald
+  - tank-0060-navy
+  - tank-0057-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0036-emerald\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 5c65fb51726a2c64b361ed86ea3b31f5
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0036-emerald
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0038-emerald
+  - tank-0026-coffee
+  - tank-0134-yellow
+  - tank-0119-sapphire
+  - tank-0012-blue
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0037-emerald\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b0d28544e8048e40db84ee34d9f2388e
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0037-emerald
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0039-emerald
+  - tank-0062-navy
+  - tank-0109-rust
+  - tank-0084-orange
+  - tank-0050-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0038-emerald\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: d7fdd5d2e1f2744043d8b0d31b55da7e
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0038-emerald
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0040-emerald
+  - tank-0015-blue
+  - tank-0077-orange
+  - tank-0034-emerald
+  - tank-0004-aqua
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0039-emerald\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 18e6b6bb84dca61ff2ff8ee367d63215
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0039-emerald
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0041-emerald
+  - tank-0010-aqua
+  - tank-0012-blue
+  - tank-0054-mint
+  - tank-0128-silver
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0040-emerald\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 7a9bf6c070afe304a2856025f1976a3b
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0040-emerald
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0042-emerald
+  - tank-0027-coffee
+  - tank-0009-aqua
+  - tank-0022-coffee
+  - tank-0101-rust
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0041-emerald\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b1916cf4986d404bd3a20d5a255745cb
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0041-emerald
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0043-emerald
+  - tank-0012-blue
+  - tank-0124-silver
+  - tank-0062-navy
+  - tank-0020-blue
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0042-emerald\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: e02e5f44939ed6414530c9fbac91f9b5
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0042-emerald
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0044-mint
+  - tank-0040-emerald
+  - tank-0032-coffee
+  - tank-0140-yellow
+  - tank-0085-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0043-emerald\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 649aee7a3ebb06d8490746f718b13f0a
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0043-emerald
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0045-mint
+  - tank-0036-emerald
+  - tank-0047-mint
+  - tank-0066-olive
+  - tank-0004-aqua
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0044-mint\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 2e2c9164c40cdc6035b6698dd44629dc
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0044-mint
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0046-mint
+  - tank-0089-purple
+  - tank-0107-rust
+  - tank-0017-blue
+  - tank-0072-olive
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0045-mint\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 56859219364f23c5ce9f7555781ca9f5
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0045-mint
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0047-mint
+  - tank-0137-yellow
+  - tank-0127-silver
+  - tank-0118-sapphire
+  - tank-0115-sapphire
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0046-mint\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 70de983052424fa88c1749c302f6e0f5
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0046-mint
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0048-mint
+  - tank-0064-navy
+  - tank-0080-orange
+  - tank-0117-sapphire
+  - tank-0112-sapphire
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0047-mint\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: c150e43817e8acbf26d3a2b7811703f7
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0047-mint
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0049-mint
+  - tank-0064-navy
+  - tank-0127-silver
+  - tank-0060-navy
+  - tank-0123-silver
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0048-mint\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 912435b9cd56862512c183186183bf0c
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0048-mint
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0050-mint
+  - tank-0034-emerald
+  - tank-0081-orange
+  - tank-0073-olive
+  - tank-0135-yellow
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0049-mint\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: d85c911af557524c5708f1ad63ad749c
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0049-mint
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0051-mint
+  - tank-0086-orange
+  - tank-0107-rust
+  - tank-0070-olive
+  - tank-0096-purple
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0050-mint\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 2522eb984df9d5d0712c7b5c3f5d848e
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0050-mint
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0052-mint
+  - tank-0004-aqua
+  - tank-0084-orange
+  - tank-0000-aqua
+  - tank-0094-purple
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0051-mint\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b958b8a749041a1fa580230055e2ee4c
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0051-mint
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0053-mint
+  - tank-0001-aqua
+  - tank-0111-sapphire
+  - tank-0041-emerald
+  - tank-0083-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0052-mint\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: f96c2c2b95dcf932ce60549e49e57b97
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0052-mint
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0054-mint
+  - tank-0032-coffee
+  - tank-0009-aqua
+  - tank-0028-coffee
+  - tank-0037-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0053-mint\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 53dd39655e0d2405663c996f6cd1fd1d
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0053-mint
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0055-navy
+  - tank-0134-yellow
+  - tank-0083-orange
+  - tank-0062-navy
+  - tank-0102-rust
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0054-mint\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: aba27ce9a06cd7765f55102b18d7e081
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0054-mint
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0056-navy
+  - tank-0141-yellow
+  - tank-0139-yellow
+  - tank-0139-yellow
+  - tank-0066-olive
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0055-navy\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 882c870fe9eab69d51bc0469a2eb1451
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0055-navy
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0057-navy
+  - tank-0008-aqua
+  - tank-0007-aqua
+  - tank-0047-mint
+  - tank-0114-sapphire
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0056-navy\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 0f0ad99847b9e8a4a65552345a99a86c
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0056-navy
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0058-navy
+  - tank-0119-sapphire
+  - tank-0105-rust
+  - tank-0104-rust
+  - tank-0115-sapphire
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0057-navy\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: ec53e00c8784a7e08d7d42892d45e1b5
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0057-navy
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0059-navy
+  - tank-0009-aqua
+  - tank-0000-aqua
+  - tank-0073-olive
+  - tank-0082-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0058-navy\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 74d533b99905a06821d75c260ca3c4ba
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0058-navy
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0060-navy
+  - tank-0046-mint
+  - tank-0026-coffee
+  - tank-0105-rust
+  - tank-0121-silver
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0059-navy\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 439a98bae799374e3eb8e0c03d6a9b60
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0059-navy
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0061-navy
+  - tank-0045-mint
+  - tank-0130-silver
+  - tank-0006-aqua
+  - tank-0030-coffee
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0060-navy\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: e755a6baec6ab46c95e1b3f1c43282b4
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0060-navy
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0062-navy
+  - tank-0093-purple
+  - tank-0095-purple
+  - tank-0025-coffee
+  - tank-0131-silver
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0061-navy\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 05b2a19cfa9bb226d554314e0064b44d
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0061-navy
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0063-navy
+  - tank-0089-purple
+  - tank-0102-rust
+  - tank-0029-coffee
+  - tank-0015-blue
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0062-navy\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: abad15cb31861db33384857741493b90
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0062-navy
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0064-navy
+  - tank-0056-navy
+  - tank-0070-olive
+  - tank-0010-aqua
+  - tank-0099-rust
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0063-navy\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 966302f83e970e28b9950e99891126df
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0063-navy
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0065-navy
+  - tank-0022-coffee
+  - tank-0068-olive
+  - tank-0009-aqua
+  - tank-0108-rust
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0064-navy\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b6b6a5c8c4edd50dccd356356051e341
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0064-navy
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0066-olive
+  - tank-0081-orange
+  - tank-0079-orange
+  - tank-0130-silver
+  - tank-0014-blue
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0065-navy\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 4b9851990aabcf7b1f31d5de1c0405ca
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0065-navy
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0067-olive
+  - tank-0104-rust
+  - tank-0035-emerald
+  - tank-0013-blue
+  - tank-0001-aqua
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0066-olive\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 5c475a1e42c0cf90b07f3a39ec9f4301
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0066-olive
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0068-olive
+  - tank-0080-orange
+  - tank-0047-mint
+  - tank-0114-sapphire
+  - tank-0022-coffee
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0067-olive\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 92309cc11ae7e52368d70e161f779ecb
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0067-olive
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0069-olive
+  - tank-0073-olive
+  - tank-0002-aqua
+  - tank-0110-sapphire
+  - tank-0062-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0068-olive\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 77bf7b1ddc906a321dfdae579f20c6c2
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0068-olive
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0070-olive
+  - miner
+  - tank-0100-rust
+  - tank-0086-orange
+  - tank-0041-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0069-olive\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 0b142068dec6f73e10dc0e34e3cd7489
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0069-olive
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0071-olive
+  - tank-0007-aqua
+  - tank-0000-aqua
+  - tank-0139-yellow
+  - tank-0070-olive
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0070-olive\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 413bcb13aabde050385b019b4dec4098
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0070-olive
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0072-olive
+  - tank-0116-sapphire
+  - tank-0135-yellow
+  - tank-0076-olive
+  - tank-0051-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0071-olive\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 4e96b05500ea3a93888310c61b10c8c0
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0071-olive
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0073-olive
+  - tank-0057-navy
+  - tank-0076-olive
+  - tank-0073-olive
+  - tank-0089-purple
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0072-olive\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 4b4cdd387c0c8c20b5534ef816d17f88
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0072-olive
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0074-olive
+  - tank-0103-rust
+  - tank-0068-olive
+  - tank-0096-purple
+  - tank-0124-silver
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0073-olive\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b88a14d2d8547edc326aeb1fcec447b7
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0073-olive
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0075-olive
+  - tank-0005-aqua
+  - tank-0062-navy
+  - tank-0007-aqua
+  - tank-0096-purple
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0074-olive\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 76fdbce7aba2211674d92359bd8d081e
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0074-olive
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0076-olive
+  - tank-0119-sapphire
+  - tank-0057-navy
+  - tank-0139-yellow
+  - tank-0060-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0075-olive\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 631bb959036b7a977670677a8951640a
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0075-olive
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0077-orange
+  - tank-0128-silver
+  - tank-0048-mint
+  - tank-0137-yellow
+  - tank-0142-yellow
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0076-olive\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: bb82c67f166400e8d35f2d93331c8b63
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0076-olive
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0078-orange
+  - tank-0095-purple
+  - tank-0040-emerald
+  - tank-0077-orange
+  - tank-0056-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0077-orange\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 44281458f9e5f059a915f132f8ba500f
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0077-orange
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0079-orange
+  - tank-0117-sapphire
+  - tank-0063-navy
+  - tank-0003-aqua
+  - tank-0142-yellow
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0078-orange\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: dbaf19eac1871c810ce81aeccfdf9463
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0078-orange
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0080-orange
+  - tank-0056-navy
+  - tank-0124-silver
+  - tank-0140-yellow
+  - tank-0052-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0079-orange\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 7c383247e139e9bf854f7fb2d8edfc3a
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0079-orange
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0081-orange
+  - tank-0083-orange
+  - tank-0066-olive
+  - tank-0024-coffee
+  - tank-0050-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0080-orange\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 35ad07c2efc7376eed05ce5a4491a6f9
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0080-orange
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0082-orange
+  - tank-0102-rust
+  - tank-0099-rust
+  - tank-0031-coffee
+  - tank-0085-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0081-orange\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 48f1c033ec170f863bac12ce7e12ea23
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0081-orange
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0083-orange
+  - tank-0025-coffee
+  - tank-0121-silver
+  - tank-0090-purple
+  - tank-0077-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0082-orange\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 3cb57104235817ba8ccace6168aaa222
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0082-orange
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0084-orange
+  - tank-0046-mint
+  - tank-0087-orange
+  - tank-0053-mint
+  - tank-0066-olive
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0083-orange\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: f80e758c02fcfe62ac7f78069fa5c48a
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0083-orange
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0085-orange
+  - tank-0127-silver
+  - tank-0025-coffee
+  - tank-0068-olive
+  - tank-0080-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0084-orange\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 5c18be326a88d7d3898ebc77b579f3b1
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0084-orange
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0086-orange
+  - tank-0118-sapphire
+  - tank-0130-silver
+  - tank-0037-emerald
+  - tank-0116-sapphire
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0085-orange\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: a7a607ccabc0ddf438b9f5104c6c8a10
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0085-orange
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0087-orange
+  - tank-0124-silver
+  - tank-0126-silver
+  - tank-0140-yellow
+  - tank-0061-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0086-orange\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 739f2fffc0b54d71b5a4ba944d8a001b
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0086-orange
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0088-purple
+  - tank-0107-rust
+  - tank-0043-emerald
+  - tank-0090-purple
+  - tank-0036-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0087-orange\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 8e0a4d3fb6c2f50d28229d4a49b541d8
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0087-orange
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0089-purple
+  - tank-0070-olive
+  - tank-0098-purple
+  - tank-0042-emerald
+  - tank-0031-coffee
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0088-purple\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: c66fc7b4d9a9a946c7694ad4de4f89e1
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0088-purple
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0090-purple
+  - tank-0058-navy
+  - tank-0086-orange
+  - tank-0029-coffee
+  - tank-0102-rust
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0089-purple\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: cd0ab15daadc6808bd33a0d3eafea13d
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0089-purple
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0091-purple
+  - tank-0036-emerald
+  - tank-0132-yellow
+  - tank-0037-emerald
+  - tank-0016-blue
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0090-purple\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: bb48cd602c97cedf83d8087a18dd40cb
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0090-purple
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0092-purple
+  - tank-0033-emerald
+  - tank-0075-olive
+  - tank-0009-aqua
+  - tank-0089-purple
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0091-purple\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: ddeb56030f0539cd955e4c83db190336
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0091-purple
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0093-purple
+  - tank-0037-emerald
+  - tank-0035-emerald
+  - tank-0062-navy
+  - tank-0138-yellow
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0092-purple\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 13d7661553add28b0c6e4c85feb3b9b5
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0092-purple
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0094-purple
+  - tank-0019-blue
+  - tank-0072-olive
+  - tank-0015-blue
+  - tank-0036-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0093-purple\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b120fe2c7600167397a15b3f0675ff6d
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0093-purple
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0095-purple
+  - tank-0004-aqua
+  - tank-0019-blue
+  - tank-0082-orange
+  - tank-0023-coffee
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0094-purple\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: db25aceda269ed0db430297105801554
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0094-purple
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0096-purple
+  - tank-0104-rust
+  - tank-0095-purple
+  - tank-0102-rust
+  - tank-0112-sapphire
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0095-purple\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 6db8017d82bac51088d2a54ae0244eba
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0095-purple
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0097-purple
+  - tank-0071-olive
+  - tank-0135-yellow
+  - tank-0058-navy
+  - tank-0041-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0096-purple\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: da5583aaa3562c3d9107e41d212f5165
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0096-purple
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0098-purple
+  - tank-0110-sapphire
+  - tank-0137-yellow
+  - tank-0125-silver
+  - tank-0072-olive
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0097-purple\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 04d5a10f465803c08b26b7479b77c2b3
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0097-purple
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0099-rust
+  - tank-0105-rust
+  - tank-0062-navy
+  - tank-0107-rust
+  - tank-0111-sapphire
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0098-purple\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 6eb974b5acae4ea26ce6a4bdf5897400
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0098-purple
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0100-rust
+  - tank-0065-navy
+  - tank-0000-aqua
+  - tank-0030-coffee
+  - tank-0058-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0099-rust\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: d712d314f75b131533ee6f5a82654249
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0099-rust
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0101-rust
+  - tank-0136-yellow
+  - tank-0124-silver
+  - tank-0134-yellow
+  - tank-0091-purple
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0100-rust\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: d8b67af1330a2118675fca5180d2aa1f
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0100-rust
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0102-rust
+  - tank-0098-purple
+  - tank-0032-coffee
+  - tank-0140-yellow
+  - tank-0017-blue
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0101-rust\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: f82ddb6181398b5c5ec788e4af5781a1
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0101-rust
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0103-rust
+  - tank-0013-blue
+  - tank-0002-aqua
+  - tank-0060-navy
+  - tank-0089-purple
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0102-rust\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b60240936286345bc436e1e6ee41bba6
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0102-rust
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0104-rust
+  - tank-0071-olive
+  - tank-0119-sapphire
+  - tank-0118-sapphire
+  - tank-0118-sapphire
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0103-rust\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 6d13b24bb90cc9b7df36505cb838c534
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0103-rust
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0105-rust
+  - tank-0037-emerald
+  - tank-0105-rust
+  - tank-0023-coffee
+  - tank-0038-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0104-rust\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 44bbad040f5fce1e2f5e0dc5922bac14
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0104-rust
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0106-rust
+  - tank-0044-mint
+  - tank-0060-navy
+  - tank-0055-navy
+  - tank-0000-aqua
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0105-rust\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 6989dc51aa347c800c377fb8f0a2aebe
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0105-rust
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0107-rust
+  - tank-0090-purple
+  - tank-0001-aqua
+  - tank-0015-blue
+  - tank-0054-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0106-rust\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b2d98925ed25e7036ee3997b7de97909
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0106-rust
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0108-rust
+  - tank-0030-coffee
+  - tank-0101-rust
+  - tank-0137-yellow
+  - tank-0137-yellow
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0107-rust\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: c7e3888205f180839c685dfb568c6de9
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0107-rust
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0109-rust
+  - tank-0130-silver
+  - tank-0044-mint
+  - tank-0000-aqua
+  - tank-0046-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0108-rust\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b5da6ee2c37266bdb624c55657fd7f85
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0108-rust
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0110-sapphire
+  - tank-0057-navy
+  - tank-0009-aqua
+  - tank-0084-orange
+  - tank-0040-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0109-rust\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 96124ff580d7d134de20af929dd1cf71
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0109-rust
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0111-sapphire
+  - tank-0037-emerald
+  - miner
+  - tank-0011-blue
+  - tank-0041-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0110-sapphire\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 87328ee34fbfdbf5c161f3bc1d99f4b7
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0110-sapphire
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0112-sapphire
+  - tank-0141-yellow
+  - tank-0110-sapphire
+  - tank-0105-rust
+  - tank-0125-silver
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0111-sapphire\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 23cf9de8725ea1a8d914d4bd92b8ce39
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0111-sapphire
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0113-sapphire
+  - tank-0037-emerald
+  - tank-0104-rust
+  - tank-0138-yellow
+  - tank-0138-yellow
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0112-sapphire\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 7f166c3c7fa3714a7dda35640702c46e
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0112-sapphire
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0114-sapphire
+  - tank-0113-sapphire
+  - tank-0123-silver
+  - tank-0084-orange
+  - tank-0122-silver
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0113-sapphire\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: f3984a6694a8869197ec67b9b47cf729
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0113-sapphire
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0115-sapphire
+  - tank-0043-emerald
+  - tank-0118-sapphire
+  - tank-0042-emerald
+  - tank-0088-purple
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0114-sapphire\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 18e46e309aafa5c9ad97df6b2c88ae69
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0114-sapphire
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0116-sapphire
+  - tank-0098-purple
+  - tank-0008-aqua
+  - tank-0037-emerald
+  - tank-0106-rust
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0115-sapphire\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: eb5f8ed9cbbf8d6a49b8380fb0fb577c
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0115-sapphire
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0117-sapphire
+  - miner
+  - tank-0057-navy
+  - tank-0047-mint
+  - tank-0074-olive
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0116-sapphire\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: ad59a22a6d10f1232a23b54b19dce379
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0116-sapphire
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0118-sapphire
+  - tank-0105-rust
+  - tank-0061-navy
+  - tank-0095-purple
+  - tank-0042-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0117-sapphire\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 8ecbd1efd49fe7e1b16d2bb1303cff55
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0117-sapphire
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0119-sapphire
+  - tank-0131-silver
+  - tank-0103-rust
+  - tank-0116-sapphire
+  - tank-0086-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0118-sapphire\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 079dcba8bcef8a093d600f2ffc04e83e
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0118-sapphire
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0120-sapphire
+  - tank-0085-orange
+  - tank-0103-rust
+  - tank-0007-aqua
+  - tank-0095-purple
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0119-sapphire\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: ef84cf637f547a252c07768d113d7646
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0119-sapphire
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0121-silver
+  - tank-0057-navy
+  - tank-0038-emerald
+  - tank-0116-sapphire
+  - tank-0060-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0120-sapphire\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 9f6e430036881546c8934475e5ee5cb9
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0120-sapphire
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0122-silver
+  - tank-0084-orange
+  - tank-0055-navy
+  - tank-0121-silver
+  - tank-0120-sapphire
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0121-silver\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 06ff5f514411bb995623c09d859cf7a5
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0121-silver
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0123-silver
+  - tank-0110-sapphire
+  - tank-0138-yellow
+  - tank-0131-silver
+  - tank-0059-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0122-silver\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 3c032997633dd810adde35cb051ba530
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0122-silver
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0124-silver
+  - tank-0095-purple
+  - tank-0043-emerald
+  - tank-0133-yellow
+  - tank-0140-yellow
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0123-silver\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 09bf33b3c3c64bd9316f944514c62f4f
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0123-silver
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0125-silver
+  - tank-0135-yellow
+  - tank-0005-aqua
+  - tank-0063-navy
+  - tank-0065-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0124-silver\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 47a6036bb926bef39bfbdf7f590fb229
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0124-silver
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0126-silver
+  - tank-0081-orange
+  - tank-0065-navy
+  - tank-0046-mint
+  - tank-0123-silver
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0125-silver\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: c73b49b7b4feaf45d18daa96771d2603
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0125-silver
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0127-silver
+  - tank-0017-blue
+  - tank-0130-silver
+  - tank-0087-orange
+  - tank-0081-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0126-silver\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: db720104a856a47ae86238029042b79a
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0126-silver
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0128-silver
+  - tank-0007-aqua
+  - tank-0006-aqua
+  - tank-0076-olive
+  - tank-0042-emerald
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0127-silver\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: ce99259ee2cd37268b3f70c819875992
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0127-silver
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0129-silver
+  - tank-0058-navy
+  - tank-0075-olive
+  - tank-0132-yellow
+  - tank-0099-rust
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0128-silver\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 963141e62c1f025b172e0c8bc5f38f07
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0128-silver
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0130-silver
+  - tank-0007-aqua
+  - tank-0128-silver
+  - tank-0000-aqua
+  - tank-0082-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0129-silver\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 22fb10ba4bb28137e53150dce007bf32
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0129-silver
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0131-silver
+  - tank-0062-navy
+  - tank-0073-olive
+  - tank-0064-navy
+  - tank-0068-olive
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0130-silver\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 1aadc99631fe1eac4e5e82a860e7d31b
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0130-silver
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0132-yellow
+  - tank-0062-navy
+  - tank-0142-yellow
+  - tank-0102-rust
+  - tank-0089-purple
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0131-silver\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 72dae05b4d4f84c2c4bbab03c593cb80
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0131-silver
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0133-yellow
+  - tank-0036-emerald
+  - tank-0046-mint
+  - tank-0101-rust
+  - tank-0011-blue
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0132-yellow\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 450dea7763f201895a189faede977fd3
+  image:
+    tag: 94.0.0-5k-inv
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0132-yellow
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0134-yellow
+  - tank-0064-navy
+  - tank-0114-sapphire
+  - tank-0100-rust
+  - tank-0128-silver
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0133-yellow\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: b26f6ddf126010e21ab58ab4ed9914bb
+  image:
+    tag: 98.0.0-invalid-blocks
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0133-yellow
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0135-yellow
+  - tank-0130-silver
+  - tank-0110-sapphire
+  - tank-0088-purple
+  - tank-0114-sapphire
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0134-yellow\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 7cd6ced8c19e37452449982aafbbd124
+  image:
+    tag: 99.0.0-unknown-message
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0134-yellow
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0136-yellow
+  - tank-0082-orange
+  - tank-0041-emerald
+  - tank-0070-olive
+  - tank-0060-navy
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0135-yellow\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: f1abf0e71b78b9d1de6258e40439b623
+  image:
+    tag: 97.0.0-50-orphans
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0135-yellow
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0137-yellow
+  - tank-0099-rust
+  - tank-0109-rust
+  - tank-0046-mint
+  - tank-0047-mint
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0136-yellow\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 15cf7151d9fb4dd1febf44323fd3c32e
+  image:
+    tag: 96.0.0-no-mp-trim
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0136-yellow
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0138-yellow
+  - tank-0037-emerald
+  - tank-0037-emerald
+  - tank-0023-coffee
+  - tank-0075-olive
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0137-yellow\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: e1f70b3cbfcff019f5c27204e2e6f304
+  image:
+    tag: 95.0.0-disabled-opcodes
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0137-yellow
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0139-yellow
+  - tank-0029-coffee
+  - tank-0022-coffee
+  - tank-0005-aqua
+  - tank-0020-blue
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0138-yellow\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 3b700ea00b74755d3caa0f261c0bb637
+  image:
+    tag: 0.21.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0138-yellow
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0140-yellow
+  - tank-0116-sapphire
+  - tank-0054-mint
+  - tank-0121-silver
+  - tank-0012-blue
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0139-yellow\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: e81bccb75f2ce2b3a1f221a9b6ae7f79
+  image:
+    tag: 0.20.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0139-yellow
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0141-yellow
+  - tank-0139-yellow
+  - tank-0056-navy
+  - tank-0000-aqua
+  - tank-0106-rust
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0140-yellow\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 02d39a4372e2e19f6a1876ff685123c4
+  image:
+    tag: 0.19.2
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0140-yellow
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0142-yellow
+  - tank-0057-navy
+  - tank-0007-aqua
+  - tank-0066-olive
+  - tank-0122-silver
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0141-yellow\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 8222e4dd6d8f45aeecbaeefa4b3db3fd
+  image:
+    tag: 0.17.0
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0141-yellow
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - miner
+  - tank-0032-coffee
+  - tank-0080-orange
+  - tank-0063-navy
+  - tank-0081-orange
+  collectLogs: true
+  config: "maxconnections=1000\nuacomment=tank-0142-yellow\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n"
+  global:
+    chain: signet
+    rpcpassword: 4f433c013f642ae18237e3d944469d80
+  image:
+    tag: 0.16.1
+  metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"]
+    memfree=getmemoryinfo()["locked"]["free"]
+  metricsExport: true
+  name: tank-0142-yellow
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+- addnode:
+  - tank-0000-aqua
+  - tank-0111-sapphire
+  - tank-0058-navy
+  - tank-0140-yellow
+  - tank-0123-silver
+  config: "maxconnections=1000\nuacomment=miner\nrpcauth=forkobserver:1418183465eecbd407010cf60811c6a0$d4e5f0647a63429c218da1302d7f19fe627302aeb0a71a74de55346a25d8057c\n\
+    \ rpcwhitelist=forkobserver:getchaintips,getblockheader,getblockhash,getblock,getnetworkinfo\n\
+    \ rpcwhitelistdefault=0\n signetchallenge=00145f6607de857e0a436dd35d0e636ddc9cc9cd4453\n\
+    coinstatsindex=1\n "
+  global:
+    chain: signet
+    rpcpassword: 0b65daf86dd2dee59f743b5b56cc3bb8
+  image:
+    tag: 29.0-util
+  metrics: txrate=getchaintxstats(10)["txrate"] utxosetsize=gettxoutsetinfo()["txouts"]
+  metricsExport: true
+  name: miner
+  startupProbe:
+    exec:
+      command:
+      - /bin/sh
+      - -c
+      - bitcoin-cli createwallet miner && bitcoin-cli importdescriptors [{\"desc\":\"combo\(cPAMxmVwaHu4DxMePyYXF3k2CePFwHAwsrVeuzK7rHmQ9u9KM74M\)#9n0cz04t\"\,\"timestamp\":0}]
+    failureThreshold: 10
+    periodSeconds: 30
+    successThreshold: 1
+    timeoutSeconds: 60
+plugins:
+  postDeploy:
+    leaderboard:
+      admin_key: 460eee5425a5062d9a2c8f825d2731d4
+      entrypoint: ../../plugins/leaderboard
+      next_public_asset_prefix: /leaderboard
+services:
+- host: leaderboard.default
+  path: /leaderboard/
+  port: 3000
+  title: Leaderboard

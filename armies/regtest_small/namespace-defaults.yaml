@@ -1,0 +1,7 @@
+users:
+- name: warnet-user
+  roles:
+  - pod-viewer
+  - pod-manager
+  - ingress-viewer
+  - ingress-controller-viewer

@@ -1,0 +1,181 @@
+{
+  "title": "Battle of Galen Erso Dashboard",
+  "refresh": "5s",
+  "panels":
+  [
+    {
+      "datasource":
+      {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2094"
+      },
+      "targets":
+      [
+        {
+          "datasource":
+          {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2094"
+          },
+          "expr": "memused",
+          "legendFormat": "{{pod}}",
+          "range": true
+        }
+      ],
+      "title": "Memory used",
+      "type": "timeseries",
+      "gridPos":
+      {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "datasource":
+      {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2094"
+      },
+      "targets":
+      [
+        {
+          "datasource":
+          {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2094"
+          },
+          "expr": "memfree",
+          "legendFormat": "{{pod}}",
+          "range": true
+        }
+      ],
+      "title": "Memory free",
+      "type": "timeseries",
+      "gridPos":
+      {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "datasource":
+      {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2094"
+      },
+      "targets":
+      [
+        {
+          "datasource":
+          {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2094"
+          },
+          "expr": "mempool_size",
+          "legendFormat": "{{pod}}",
+          "range": true
+        }
+      ],
+      "title": "Mempool size",
+      "type": "timeseries",
+      "gridPos":
+      {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "datasource":
+      {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2094"
+      },
+      "targets":
+      [
+        {
+          "datasource":
+          {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2094"
+          },
+          "expr": "blocks",
+          "legendFormat": "{{pod}}",
+          "range": true
+        }
+      ],
+      "title": "Blocks",
+      "type": "timeseries",
+      "gridPos":
+      {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "datasource":
+      {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2094"
+      },
+      "targets":
+      [
+        {
+          "datasource":
+          {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2094"
+          },
+          "expr": "txrate",
+          "legendFormat": "{{pod}}",
+          "range": true
+        }
+      ],
+      "title": "TX rate",
+      "type": "timeseries",
+      "gridPos":
+      {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "datasource":
+      {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2094"
+      },
+      "targets":
+      [
+        {
+          "datasource":
+          {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2094"
+          },
+          "expr": "utxosetsize",
+          "legendFormat": "{{pod}}",
+          "range": true
+        }
+      ],
+      "title": "UTXO set size",
+      "type": "timeseries",
+      "gridPos":
+      {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ include "leaderboard.fullname" . }}
+  labels:
+    {{- include "leaderboard.labels" . | nindent 4 }}
+    app: {{ include "leaderboard.fullname" . }}
+spec:
+  containers:
+    - name: leaderboard
+      image: "bitcoindevproject/warnet-leaderboard:latest"
+      pullPolicy: IfNotPresent
+      ports:
+        - name: http
+          containerPort: 3000
+          protocol: TCP
+      env:
+        - name: ADMIN_KEY
+          value: {{ .Values.admin_key }}
+        - name: NEXT_PUBLIC_ASSET_PREFIX
+          value: {{ .Values.next_public_asset_prefix }}
