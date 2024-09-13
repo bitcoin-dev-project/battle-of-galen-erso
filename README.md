@@ -92,7 +92,8 @@ the menu.
 
 ### Additional tools
 
-Whether you run Kubernetes locally or use the remote cluster, we recommend the
+> [!TIP]
+> Whether you run Kubernetes locally or use the remote cluster, we recommend the
 terminal user interface [k9s](https://github.com/derailed/k9s) to monitor
 cluster status.
 
