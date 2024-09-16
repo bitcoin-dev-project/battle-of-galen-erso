@@ -166,7 +166,7 @@ section.
 ### Attack Development
 
 The primary method of interacting with the network and mounting an attack is by
-deploying a Scenario. 
+deploying a Scenario.
 
 A Scenario is a Python script written with the same structure and library as
 a Bitcoin Core functional test, utilizing a copy of the `test_framework`.
@@ -175,7 +175,7 @@ references to containerized Bitcoin Core nodes running inside the
 cluster rather than locally accessible bitcoind processes.
 
 An additional list `self.tanks[str]` is available to address Bitcoin nodes
-by their kubernetes pod name (as opposed to their numerical index).
+by their Kubernetes pod name (as opposed to their numerical index).
 
 A handful of example scenarios are included in the [`scenarios/`](/scenarios/) directory.
 In particular, [`scenarios/reconnaissance.py`](/scenarios/reconnaissance.py) is written with verbose comments
@@ -189,7 +189,7 @@ To create an attack modify the existing files in `scenarios/` or create new
 ones and deploy them to the network:
 
 ```
-(.venv) $ warnet run ./scenarios/reconnaissance.py 
+(.venv) $ warnet run ./scenarios/reconnaissance.py
 Successfully started scenario: reconnaissance
 Commander pod name: commander-reconnaissance-1726250994
 ```
