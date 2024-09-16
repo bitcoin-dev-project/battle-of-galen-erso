@@ -1,15 +1,22 @@
 # Warnet: The Battle of Atlanta 2024
 
-The object of the game is to attack Bitcoin Core nodes in a private network
+Your mission is to attack Bitcoin Core nodes in a private network
 running in a Kubernetes cluster.
 
-An attack is considered successful when a target node is no longer in sync with
-the most-work chain. This could be the result of:
-- An eclipse attack
-- An out-of-memory error kills the node process
-- A CPU denial-of-service prevents the node from verifying new blocks
+## Terminology
 
-## What is Warnet?
+- Tanks - Bitcoin Core nodes running in a Warnet network
+- Battlefield - A remote cluster with 100 tanks
+- Scenario - A program that deploys to the battlefield to attack the tanks
+
+## Objectives
+
+1. Install and set up Warnet
+2. Create attacks
+3. Test attacks locally
+4. Attack Bitcoin Core nodes on the battlefield
+
+## Intelligence Brief -- What is Warnet?
 
 Warnet is a system written in Python to deploy, manage, and interact with
 Bitcoin p2p networks inside a Kubernetes cluster. The official battlefield
@@ -22,28 +29,7 @@ To help facilitate Tank-attacking strategies on the battlefield, a smaller
 12-node network can be run on a regtest chain locally by attackers while
 developing.
 
-Attackers will not be able to generate their own blocks on the battlefield
-Signet chain, but have unlimited permission on their local regtest networks.
-
-## The Arsenal
-
-The primary method of interacting with the network is by deploying a Scenario.
-A Scenario is a Python script written with the same structure and library as
-a Bitcoin Core functional test, utilizing a copy of the `test_framework`. The
-primary difference is that the familiar `self.nodes[]` list contains references
-to containerized Bitcoin Core nodes running inside the cluster rather than
-locally accessible bitcoind processes.
-
-An additional list `self.tanks[str]` is available to address Bitcoin nodes
-by their kubernetes pod name (as opposed to their numerical index).
-
-A handful of example scenarios are included in the `scenarios/` directory.
-In particular, `scenarios/reconnaissance.py` is written with verbose comments
-to demonstrate how to execute RPC commands on available nodes, as well as how
-to utilize the framework's `P2PInterface` class to send arbitrary messages
-to targeted nodes.
-
-## Prepare For War
+## Build-up Phase
 
 To deploy attacks on the remote battlefield you will only need to have Warnet,
 Helm, and Kubectl installed locally. To experiment locally with a mini-network
@@ -97,7 +83,7 @@ the menu.
 terminal user interface [k9s](https://github.com/derailed/k9s) to monitor
 cluster status.
 
-## Local Simulation
+## Network Operations
 
 ### Start and Stop the Network
 
@@ -116,7 +102,7 @@ The local network can be shut down with the command:
 warnet down
 ```
 
-### Monitor the Network
+### Network Reconnaissance
 
 You can open the web based visualizer with Grafana dashboards and Fork Observer
 at `localhost:2019` by executing the command:
@@ -160,9 +146,39 @@ Total Tanks: 12 | Active Scenarios: 0
 Network connected  
 ```
 
-### ATTACK!
+You can use `k9s` as explained in the [additional tool](#additional-tools)
+section.
 
-Add or modify the files in `scenarios/` and deploy them to the network:
+(.venv) $ k9s
+
+![k9s screenshot](./images/k9s-screenshot.png)
+
+## Ordnance
+
+### Attack Development
+
+The primary method of interacting with the network and mounting an attack is by
+deploying a Scenario. 
+
+A Scenario is a Python script written with the same structure and library as
+a Bitcoin Core functional test, utilizing a copy of the `test_framework`.
+The primary difference is that the familiar `self.nodes[]` list contains
+references to containerized Bitcoin Core nodes running inside the
+cluster rather than locally accessible bitcoind processes.
+
+An additional list `self.tanks[str]` is available to address Bitcoin nodes
+by their kubernetes pod name (as opposed to their numerical index).
+
+A handful of example scenarios are included in the [`scenarios/`](/scenarios/) directory.
+In particular, [`scenarios/reconnaissance.py`](/scenarios/reconnaissance.py) is written with verbose comments
+to demonstrate how to execute RPC commands on available nodes, as well as how
+to utilize the framework's `P2PInterface` class to send arbitrary messages
+to targeted nodes.
+
+### Attack Employment
+
+To create an attack modify the existing files in `scenarios/` or create new
+ones and deploy them to the network:
 
 ```
 (.venv) $ warnet run ./scenarios/reconnaissance.py 
@@ -222,7 +238,21 @@ Reconnaissance Cleaning up /tmp/bitcoin_func_test_uixks5tx on exit
 Reconnaissance Tests successful
 ```
 
-## Fight On The Battlefield
+Once you run an attack, you can switch back to
+[Network Reconnaissance](#network-reconnaissance) in order to assess the effect.
+
+## Rules of Engagement
+
+An attack is considered successful when a target node is no longer in sync with
+the most-work chain. This could be the result of:
+- An eclipse attack
+- An out-of-memory error killing the node process
+- A CPU denial-of-service preventing the node from verifying new blocks
+
+Attackers will not be able to generate their own blocks on the battlefield
+Signet chain, but have unlimited permission on their local regtest networks.
+
+## On The Battlefield
 
 When you are ready to launch your attack for real, start by "switching context"
 from your local cluster to the remote cluster. You will have a config file
@@ -232,4 +262,4 @@ provided by the administrator:
 warnet auth /path/to/battlefield-100-large-kubeconfig.yaml
 ```
 
-
+Good luck!
