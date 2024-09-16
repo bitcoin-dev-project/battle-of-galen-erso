@@ -5,9 +5,9 @@ running in a Kubernetes cluster.
 
 ## Terminology
 
-- Tanks - Bitcoin Core nodes running on battlefield network
+- Tanks - Bitcoin Core nodes running in a Warnet network
 - Battlefield - A remote cluster with 100 tanks
-- Scenario - The way to interact with battlefield to attack the tanks
+- Scenario - A program that deploys to the battlefield to attack the tanks
 
 ## Objectives
 
@@ -102,7 +102,7 @@ The local network can be shut down with the command:
 warnet down
 ```
 
-### Network Reccognisance
+### Network Reconnaissance
 
 You can open the web based visualizer with Grafana dashboards and Fork Observer
 at `localhost:2019` by executing the command:
@@ -146,7 +146,7 @@ Total Tanks: 12 | Active Scenarios: 0
 Network connected  
 ```
 
-Or you can use k9s as explained in the [additional tool](#additional-tools)
+You can use `k9s` as explained in the [additional tool](#additional-tools)
 section.
 
 (.venv) $ k9s
@@ -239,7 +239,7 @@ Reconnaissance Tests successful
 ```
 
 Once you run an attack, you can switch back to
-[Network Reccognisance](#network-reccognisance) in order to assess the effect.
+[Network Reconnaissance](#network-reconnaissance) in order to assess the effect.
 
 ## Rules of Engagement
 
