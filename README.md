@@ -92,14 +92,17 @@ cluster status.
 
 ### Start and Stop the Network
 
-Deploy the 12-node network included in this repository with the command:
+You can see the topology of the network which will be deployed, and make
+modifications to it by looking at: `networks/regtest_12/network.yaml`
+This will also allow you to see which tanks are running which version of
+Bitcoin Core.
+
+Deploy the 12-node network included in this repository to a local Kubernetes
+cluster with the command:
 
 ```
 warnet deploy ./networks/regtest_12
 ```
-
-You can see the topology of this network as well as which tanks are running
-which Bitcoin Core versions in `networks/regtest_12/network.yaml`
 
 The local network can be shut down with the command:
 
