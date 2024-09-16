@@ -32,9 +32,10 @@ developing.
 ## Build-up Phase
 
 To deploy attacks on the remote battlefield you will only need to have Warnet,
-Helm, and Kubectl installed locally. To experiment locally with a mini-network
-you will also need Kubernetes installed (which requires a Docker daemon in
-addition to either Docker Desktop or MiniKube).
+Helm, and `kubectl` installed locally. To experiment locally with a mini-network
+you will also need a local Kubernetes cluster. This can be enabled as part of
+[docker desktop](https://docs.docker.com/desktop/kubernetes/), or otherwise will require Docker daemon to be running with a
+local Kubernetes provider such as [MiniKube](https://minikube.sigs.k8s.io/docs/start).
 
 Documentation for Warnet is available in its repository:
 
