@@ -254,7 +254,7 @@ Once you run an attack, you can switch back to
 An attack is considered successful when a target node is no longer in sync with
 the most-work chain. This could be the result of:
 - An eclipse attack
-- An out-of-memory error killing the node process
+- An out-of-memory error killing the node process (the nodes are programmed not to restart)
 - A CPU denial-of-service preventing the node from verifying new blocks
 
 Attackers will not be able to generate their own blocks on the battlefield
