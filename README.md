@@ -169,8 +169,8 @@ cluster rather than locally accessible bitcoind processes.
 An additional list `self.tanks[str]` is available to address Bitcoin nodes
 by their kubernetes pod name (as opposed to their numerical index).
 
-A handful of example scenarios are included in the `scenarios/` directory.
-In particular, `scenarios/reconnaissance.py` is written with verbose comments
+A handful of example scenarios are included in the [`scenarios/`](/scenarios/) directory.
+In particular, [`scenarios/reconnaissance.py`](/scenarios/reconnaissance.py) is written with verbose comments
 to demonstrate how to execute RPC commands on available nodes, as well as how
 to utilize the framework's `P2PInterface` class to send arbitrary messages
 to targeted nodes.
