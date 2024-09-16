@@ -32,9 +32,10 @@ developing.
 ## Build-up Phase
 
 To deploy attacks on the remote battlefield you will only need to have Warnet,
-Helm, and Kubectl installed locally. To experiment locally with a mini-network
-you will also need Kubernetes installed (which requires a Docker daemon in
-addition to either Docker Desktop or MiniKube).
+Helm, and `kubectl` installed locally. To experiment locally with a mini-network
+you will also need a local Kubernetes cluster. This can be enabled as part of
+[docker desktop](https://docs.docker.com/desktop/kubernetes/), or otherwise will require Docker daemon to be running with a
+local Kubernetes provider such as [MiniKube](https://minikube.sigs.k8s.io/docs/start).
 
 Documentation for Warnet is available in its repository:
 
@@ -83,18 +84,25 @@ the menu.
 terminal user interface [k9s](https://github.com/derailed/k9s) to monitor
 cluster status.
 
+> [!TIP]
+> IF you want to observe resource usage on a cluster with metrics enabled, you
+> may want to consider using [ktop](https://github.com/vladimirvivien/ktop)
+
 ## Network Operations
 
 ### Start and Stop the Network
 
-Deploy the 12-node network included in this repository with the command:
+You can see the topology of the network which will be deployed, and make
+modifications to it by looking at: `networks/regtest_12/network.yaml`
+This will also allow you to see which tanks are running which version of
+Bitcoin Core.
+
+Deploy the 12-node network included in this repository to a local Kubernetes
+cluster with the command:
 
 ```
 warnet deploy ./networks/regtest_12
 ```
-
-You can see the topology of this network as well as which tanks are running
-which Bitcoin Core versions in `networks/regtest_12/network.yaml`
 
 The local network can be shut down with the command:
 
@@ -158,7 +166,7 @@ section.
 ### Attack Development
 
 The primary method of interacting with the network and mounting an attack is by
-deploying a Scenario. 
+deploying a Scenario.
 
 A Scenario is a Python script written with the same structure and library as
 a Bitcoin Core functional test, utilizing a copy of the `test_framework`.
@@ -167,7 +175,7 @@ references to containerized Bitcoin Core nodes running inside the
 cluster rather than locally accessible bitcoind processes.
 
 An additional list `self.tanks[str]` is available to address Bitcoin nodes
-by their kubernetes pod name (as opposed to their numerical index).
+by their Kubernetes pod name (as opposed to their numerical index).
 
 A handful of example scenarios are included in the [`scenarios/`](/scenarios/) directory.
 In particular, [`scenarios/reconnaissance.py`](/scenarios/reconnaissance.py) is written with verbose comments
@@ -181,7 +189,7 @@ To create an attack modify the existing files in `scenarios/` or create new
 ones and deploy them to the network:
 
 ```
-(.venv) $ warnet run ./scenarios/reconnaissance.py 
+(.venv) $ warnet run ./scenarios/reconnaissance.py
 Successfully started scenario: reconnaissance
 Commander pod name: commander-reconnaissance-1726250994
 ```
@@ -246,7 +254,7 @@ Once you run an attack, you can switch back to
 An attack is considered successful when a target node is no longer in sync with
 the most-work chain. This could be the result of:
 - An eclipse attack
-- An out-of-memory error killing the node process
+- An out-of-memory error killing the node process (the nodes are programmed not to restart)
 - A CPU denial-of-service preventing the node from verifying new blocks
 
 Attackers will not be able to generate their own blocks on the battlefield
