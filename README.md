@@ -84,6 +84,10 @@ the menu.
 terminal user interface [k9s](https://github.com/derailed/k9s) to monitor
 cluster status.
 
+> [!TIP]
+> IF you want to observe resource usage on a cluster with metrics enabled, you
+> may want to consider using [ktop](https://github.com/vladimirvivien/ktop)
+
 ## Network Operations
 
 ### Start and Stop the Network
