@@ -4,1404 +4,1527 @@ fork_observer:
   configQueryInterval: 20
   enabled: true
 nodes:
+- config: uacomment=red
   connect:
-  - tank-0001
-  - tank-0002
-  - tank-0118
-  - tank-0096
-  - tank-0019
-  - tank-0079
-  - tank-0113
-  - tank-0021
+  - tank-0001-red
+  - tank-0040-green
+  - tank-0034-yellow
+  - tank-0011-red
+  - tank-0119-brown
+  - tank-0045-green
+  - tank-0055-blue
+  - tank-0101-grey
   image:
     tag: 99.0.1-5k-inv
   name: tank-0000-red
+- config: uacomment=red
   connect:
-  - tank-0002
-  - tank-0088
-  - tank-0045
-  - tank-0117
-  - tank-0056
-  - tank-0067
-  - tank-0008
-  - tank-0015
+  - tank-0002-red
+  - tank-0070-violet
+  - tank-0113-brown
+  - tank-0017-orange
+  - tank-0035-yellow
+  - tank-0087-white
+  - tank-0097-grey
+  - tank-0023-orange
   image:
     tag: 99.1.0-invalid-blocks
   name: tank-0001-red
+- config: uacomment=red
   connect:
-  - tank-0003
-  - tank-0063
-  - tank-0073
-  - tank-0042
-  - tank-0066
-  - tank-0105
-  - tank-0027
-  - tank-0106
+  - tank-0003-red
+  - tank-0028-yellow
+  - tank-0034-yellow
+  - tank-0092-white
+  - tank-0063-violet
+  - tank-0095-white
+  - tank-0015-orange
+  - tank-0111-brown
   image:
     tag: 99.1.0-50-orphans
   name: tank-0002-red
+- config: uacomment=red
   connect:
-  - tank-0004
-  - tank-0107
-  - tank-0020
-  - tank-0041
-  - tank-0112
-  - tank-0083
-  - tank-0038
-  - tank-0064
+  - tank-0004-red
+  - tank-0118-brown
+  - tank-0072-black
+  - tank-0019-orange
+  - tank-0086-white
+  - tank-0055-blue
+  - tank-0007-red
+  - tank-0035-yellow
   image:
     tag: 99.0.1-no-mp-trim
   name: tank-0003-red
+- config: uacomment=red
   connect:
-  - tank-0005
-  - tank-0096
-  - tank-0086
-  - tank-0113
-  - tank-0008
-  - tank-0094
-  - tank-0063
-  - tank-0039
+  - tank-0005-red
+  - tank-0015-orange
+  - tank-0082-black
+  - tank-0085-white
+  - tank-0022-orange
+  - tank-0021-orange
+  - tank-0019-orange
+  - tank-0111-brown
   image:
     tag: 99.1.0-disabled-opcodes
   name: tank-0004-red
+- config: uacomment=red
   connect:
-  - tank-0006
-  - tank-0010
-  - tank-0070
-  - tank-0023
-  - tank-0024
-  - tank-0073
-  - tank-0065
-  - tank-0104
+  - tank-0006-red
+  - tank-0079-black
+  - tank-0119-brown
+  - tank-0054-blue
+  - tank-0102-grey
+  - tank-0014-orange
+  - tank-0099-grey
+  - tank-0015-orange
   image:
     tag: 99.1.0-unknown-message
   name: tank-0005-red
+- config: uacomment=red
   connect:
-  - tank-0007
-  - tank-0034
-  - tank-0053
-  - tank-0103
-  - tank-0067
-  - tank-0045
-  - tank-0021
-  - tank-0077
+  - tank-0007-red
+  - tank-0063-violet
+  - tank-0051-blue
+  - tank-0084-white
+  - tank-0095-white
+  - tank-0011-red
+  - tank-0052-blue
+  - tank-0038-green
   image:
     tag: 0.16.1
   name: tank-0006-red
+- config: uacomment=red
   connect:
-  - tank-0008
-  - tank-0039
-  - tank-0061
-  - tank-0104
-  - tank-0074
-  - tank-0076
-  - tank-0057
-  - tank-0118
+  - tank-0008-red
+  - tank-0051-blue
+  - tank-0059-blue
+  - tank-0037-green
+  - tank-0000-red
+  - tank-0090-white
+  - tank-0097-grey
+  - tank-0029-yellow
   image:
     tag: 0.17.0
   name: tank-0007-red
+- config: uacomment=red
   connect:
-  - tank-0009
-  - tank-0115
-  - tank-0012
-  - tank-0038
-  - tank-0000
-  - tank-0073
-  - tank-0088
-  - tank-0061
+  - tank-0009-red
+  - tank-0057-blue
+  - tank-0020-orange
+  - tank-0061-violet
+  - tank-0117-brown
+  - tank-0035-yellow
+  - tank-0037-green
+  - tank-0018-orange
   image:
     tag: 0.19.2
   name: tank-0008-red
+- config: uacomment=red
   connect:
-  - tank-0010
-  - tank-0038
-  - tank-0032
-  - tank-0057
-  - tank-0003
-  - tank-0103
-  - tank-0104
-  - tank-0028
+  - tank-0010-red
+  - tank-0087-white
+  - tank-0056-blue
+  - tank-0027-yellow
+  - tank-0050-blue
+  - tank-0094-white
+  - tank-0112-brown
+  - tank-0086-white
   image:
     tag: 0.21.1
   name: tank-0009-red
+- config: uacomment=red
   connect:
-  - tank-0011
-  - tank-0103
-  - tank-0025
-  - tank-0081
-  - tank-0050
-  - tank-0004
-  - tank-0086
+  - tank-0011-red
+  - tank-0112-brown
+  - tank-0029-yellow
+  - tank-0053-blue
+  - tank-0057-blue
+  - tank-0044-green
+  - tank-0117-brown
+  - tank-0096-grey
   image:
     tag: '24.2'
   name: tank-0010-red
+- config: uacomment=red
   connect:
-  - tank-0012
-  - tank-0040
-  - tank-0075
-  - tank-0105
-  - tank-0006
-  - tank-0081
-  - tank-0009
-  - tank-0089
+  - tank-0012-orange
+  - tank-0030-yellow
+  - tank-0055-blue
+  - tank-0069-violet
+  - tank-0013-orange
+  - tank-0083-black
+  - tank-0016-orange
+  - tank-0005-red
   image:
-    tag: '25.0'
+    tag: '25.1'
   name: tank-0011-red
+- config: uacomment=orange
   connect:
-  - tank-0013
-  - tank-0109
-  - tank-0062
-  - tank-0073
-  - tank-0101
-  - tank-0001
-  - tank-0028
-  - tank-0080
+  - tank-0013-orange
+  - tank-0022-orange
+  - tank-0039-green
+  - tank-0040-green
+  - tank-0009-red
+  - tank-0072-black
+  - tank-0059-blue
+  - tank-0021-orange
   image:
     tag: 99.0.1-5k-inv
   name: tank-0012-orange
+- config: uacomment=orange
   connect:
-  - tank-0014
-  - tank-0084
-  - tank-0094
-  - tank-0029
-  - tank-0047
-  - tank-0074
-  - tank-0053
-  - tank-0061
+  - tank-0014-orange
+  - tank-0065-violet
+  - tank-0106-grey
+  - tank-0103-grey
+  - tank-0032-yellow
+  - tank-0059-blue
+  - tank-0069-violet
+  - tank-0053-blue
   image:
     tag: 99.1.0-invalid-blocks
   name: tank-0013-orange
+- config: uacomment=orange
   connect:
-  - tank-0015
-  - tank-0021
-  - tank-0093
-  - tank-0038
-  - tank-0062
-  - tank-0008
-  - tank-0063
-  - tank-0109
+  - tank-0015-orange
+  - tank-0059-blue
+  - tank-0033-yellow
+  - tank-0011-red
+  - tank-0114-brown
+  - tank-0067-violet
+  - tank-0060-violet
+  - tank-0006-red
   image:
     tag: 99.1.0-50-orphans
   name: tank-0014-orange
+- config: uacomment=orange
   connect:
-  - tank-0016
-  - tank-0083
-  - tank-0114
-  - tank-0008
-  - tank-0110
-  - tank-0081
-  - tank-0104
-  - tank-0038
+  - tank-0016-orange
+  - tank-0023-orange
+  - tank-0061-violet
+  - tank-0098-grey
+  - tank-0075-black
+  - tank-0087-white
+  - tank-0102-grey
+  - tank-0033-yellow
   image:
     tag: 99.0.1-no-mp-trim
   name: tank-0015-orange
+- config: uacomment=orange
   connect:
-  - tank-0017
-  - tank-0081
-  - tank-0008
-  - tank-0070
-  - tank-0056
-  - tank-0049
-  - tank-0083
-  - tank-0061
+  - tank-0017-orange
+  - tank-0110-brown
+  - tank-0102-grey
+  - tank-0057-blue
+  - tank-0079-black
+  - tank-0006-red
+  - tank-0067-violet
   image:
     tag: 99.1.0-disabled-opcodes
   name: tank-0016-orange
+- config: uacomment=orange
   connect:
-  - tank-0018
-  - tank-0011
-  - tank-0099
-  - tank-0036
-  - tank-0111
-  - tank-0050
-  - tank-0075
-  - tank-0114
+  - tank-0018-orange
+  - tank-0117-brown
+  - tank-0044-green
+  - tank-0113-brown
+  - tank-0096-grey
+  - tank-0115-brown
+  - tank-0000-red
+  - tank-0108-brown
   image:
     tag: 99.1.0-unknown-message
   name: tank-0017-orange
+- config: uacomment=orange
   connect:
-  - tank-0019
-  - tank-0067
-  - tank-0028
-  - tank-0051
-  - tank-0001
-  - tank-0115
-  - tank-0044
-  - tank-0101
+  - tank-0019-orange
+  - tank-0047-green
+  - tank-0049-blue
+  - tank-0075-black
+  - tank-0099-grey
+  - tank-0111-brown
+  - tank-0071-violet
+  - tank-0110-brown
   image:
     tag: 0.16.1
   name: tank-0018-orange
+- config: uacomment=orange
   connect:
-  - tank-0020
-  - tank-0031
-  - tank-0006
-  - tank-0015
-  - tank-0040
-  - tank-0051
-  - tank-0084
+  - tank-0020-orange
+  - tank-0114-brown
+  - tank-0108-brown
+  - tank-0113-brown
+  - tank-0043-green
+  - tank-0060-violet
+  - tank-0012-orange
+  - tank-0086-white
   image:
     tag: 0.17.0
   name: tank-0019-orange
+- config: uacomment=orange
   connect:
-  - tank-0021
-  - tank-0060
-  - tank-0100
-  - tank-0115
-  - tank-0013
-  - tank-0044
-  - tank-0089
-  - tank-0111
+  - tank-0021-orange
+  - tank-0036-green
+  - tank-0083-black
+  - tank-0078-black
+  - tank-0046-green
+  - tank-0058-blue
+  - tank-0048-blue
+  - tank-0076-black
   image:
     tag: 0.19.2
   name: tank-0020-orange
+- config: uacomment=orange
   connect:
-  - tank-0022
-  - tank-0041
-  - tank-0002
-  - tank-0051
-  - tank-0015
-  - tank-0012
-  - tank-0013
-  - tank-0052
+  - tank-0022-orange
+  - tank-0116-brown
+  - tank-0000-red
+  - tank-0112-brown
+  - tank-0117-brown
+  - tank-0081-black
+  - tank-0057-blue
+  - tank-0044-green
   image:
     tag: 0.21.1
   name: tank-0021-orange
+- config: uacomment=orange
   connect:
-  - tank-0023
-  - tank-0069
-  - tank-0008
-  - tank-0111
-  - tank-0053
-  - tank-0014
-  - tank-0059
-  - tank-0004
+  - tank-0023-orange
+  - tank-0057-blue
+  - tank-0111-brown
+  - tank-0086-white
+  - tank-0030-yellow
+  - tank-0051-blue
+  - tank-0116-brown
+  - tank-0001-red
   image:
     tag: '24.2'
   name: tank-0022-orange
+- config: uacomment=orange
   connect:
-  - tank-0024
-  - tank-0066
-  - tank-0043
-  - tank-0053
-  - tank-0100
-  - tank-0012
-  - tank-0108
-  - tank-0007
+  - tank-0024-yellow
+  - tank-0050-blue
+  - tank-0005-red
+  - tank-0080-black
+  - tank-0047-green
+  - tank-0003-red
+  - tank-0106-grey
+  - tank-0038-green
   image:
-    tag: '25.0'
+    tag: '25.1'
   name: tank-0023-orange
+- config: uacomment=yellow
   connect:
-  - tank-0025
-  - tank-0049
-  - tank-0071
-  - tank-0076
-  - tank-0083
-  - tank-0070
-  - tank-0084
-  - tank-0057
+  - tank-0025-yellow
+  - tank-0104-grey
+  - tank-0097-grey
+  - tank-0000-red
+  - tank-0069-violet
+  - tank-0047-green
+  - tank-0066-violet
+  - tank-0067-violet
   image:
     tag: 99.0.1-5k-inv
   name: tank-0024-yellow
+- config: uacomment=yellow
   connect:
-  - tank-0026
-  - tank-0067
-  - tank-0113
-  - tank-0058
-  - tank-0106
-  - tank-0086
-  - tank-0048
-  - tank-0030
+  - tank-0026-yellow
+  - tank-0082-black
+  - tank-0018-orange
+  - tank-0091-white
+  - tank-0064-violet
+  - tank-0038-green
+  - tank-0060-violet
+  - tank-0035-yellow
   image:
     tag: 99.1.0-invalid-blocks
   name: tank-0025-yellow
+- config: uacomment=yellow
   connect:
-  - tank-0027
-  - tank-0049
-  - tank-0043
-  - tank-0060
-  - tank-0052
-  - tank-0116
-  - tank-0072
-  - tank-0050
+  - tank-0027-yellow
+  - tank-0093-white
+  - tank-0060-violet
+  - tank-0094-white
+  - tank-0003-red
+  - tank-0042-green
+  - tank-0009-red
+  - tank-0011-red
   image:
     tag: 99.1.0-50-orphans
   name: tank-0026-yellow
+- config: uacomment=yellow
   connect:
-  - tank-0028
-  - tank-0007
-  - tank-0003
-  - tank-0053
-  - tank-0037
-  - tank-0030
-  - tank-0076
-  - tank-0079
+  - tank-0028-yellow
+  - tank-0016-orange
+  - tank-0068-violet
+  - tank-0066-violet
+  - tank-0061-violet
+  - tank-0102-grey
+  - tank-0037-green
+  - tank-0022-orange
   image:
     tag: 99.0.1-no-mp-trim
   name: tank-0027-yellow
+- config: uacomment=yellow
   connect:
-  - tank-0029
-  - tank-0061
-  - tank-0024
-  - tank-0011
-  - tank-0098
-  - tank-0056
-  - tank-0075
+  - tank-0029-yellow
+  - tank-0041-green
+  - tank-0088-white
+  - tank-0053-blue
+  - tank-0040-green
+  - tank-0100-grey
+  - tank-0008-red
+  - tank-0015-orange
   image:
     tag: 99.1.0-disabled-opcodes
   name: tank-0028-yellow
+- config: uacomment=yellow
   connect:
-  - tank-0030
-  - tank-0012
-  - tank-0055
-  - tank-0116
-  - tank-0042
-  - tank-0079
-  - tank-0052
-  - tank-0080
+  - tank-0030-yellow
+  - tank-0022-orange
+  - tank-0105-grey
+  - tank-0047-green
+  - tank-0091-white
+  - tank-0008-red
+  - tank-0024-yellow
   image:
     tag: 99.1.0-unknown-message
   name: tank-0029-yellow
+- config: uacomment=yellow
   connect:
-  - tank-0031
-  - tank-0045
-  - tank-0019
-  - tank-0028
-  - tank-0117
-  - tank-0052
-  - tank-0008
+  - tank-0031-yellow
+  - tank-0037-green
+  - tank-0101-grey
+  - tank-0009-red
+  - tank-0026-yellow
+  - tank-0046-green
+  - tank-0024-yellow
+  - tank-0019-orange
   image:
     tag: 0.16.1
   name: tank-0030-yellow
+- config: uacomment=yellow
   connect:
-  - tank-0032
-  - tank-0109
-  - tank-0081
-  - tank-0080
-  - tank-0000
-  - tank-0037
-  - tank-0022
-  - tank-0110
+  - tank-0032-yellow
+  - tank-0079-black
+  - tank-0082-black
+  - tank-0091-white
+  - tank-0048-blue
+  - tank-0110-brown
+  - tank-0073-black
+  - tank-0003-red
   image:
     tag: 0.17.0
   name: tank-0031-yellow
+- config: uacomment=yellow
   connect:
-  - tank-0033
-  - tank-0070
-  - tank-0051
-  - tank-0049
-  - tank-0023
-  - tank-0019
-  - tank-0083
-  - tank-0000
+  - tank-0033-yellow
+  - tank-0066-violet
+  - tank-0042-green
+  - tank-0006-red
+  - tank-0095-white
+  - tank-0029-yellow
+  - tank-0035-yellow
+  - tank-0055-blue
   image:
     tag: 0.19.2
   name: tank-0032-yellow
+- config: uacomment=yellow
   connect:
-  - tank-0034
-  - tank-0106
-  - tank-0117
-  - tank-0113
-  - tank-0048
-  - tank-0015
-  - tank-0112
-  - tank-0100
+  - tank-0034-yellow
+  - tank-0049-blue
+  - tank-0008-red
+  - tank-0100-grey
+  - tank-0060-violet
+  - tank-0084-white
+  - tank-0012-orange
+  - tank-0041-green
   image:
     tag: 0.21.1
   name: tank-0033-yellow
+- config: uacomment=yellow
   connect:
-  - tank-0035
-  - tank-0024
-  - tank-0001
-  - tank-0068
-  - tank-0105
-  - tank-0005
-  - tank-0085
-  - tank-0110
+  - tank-0035-yellow
+  - tank-0089-white
+  - tank-0036-green
+  - tank-0081-black
+  - tank-0019-orange
+  - tank-0041-green
+  - tank-0116-brown
   image:
     tag: '24.2'
   name: tank-0034-yellow
+- config: uacomment=yellow
   connect:
-  - tank-0036
-  - tank-0072
-  - tank-0042
-  - tank-0063
-  - tank-0003
-  - tank-0015
-  - tank-0077
-  - tank-0119
+  - tank-0036-green
+  - tank-0044-green
+  - tank-0093-white
+  - tank-0052-blue
+  - tank-0092-white
+  - tank-0097-grey
+  - tank-0084-white
   image:
-    tag: '25.0'
+    tag: '25.1'
   name: tank-0035-yellow
+- config: uacomment=green
   connect:
-  - tank-0037
-  - tank-0119
-  - tank-0007
-  - tank-0018
-  - tank-0011
-  - tank-0074
-  - tank-0072
-  - tank-0079
+  - tank-0037-green
+  - tank-0096-grey
+  - tank-0015-orange
+  - tank-0025-yellow
+  - tank-0094-white
+  - tank-0109-brown
+  - tank-0087-white
+  - tank-0093-white
   image:
     tag: 99.0.1-5k-inv
   name: tank-0036-green
+- config: uacomment=green
   connect:
-  - tank-0038
-  - tank-0025
-  - tank-0033
-  - tank-0104
-  - tank-0001
-  - tank-0081
-  - tank-0075
+  - tank-0038-green
+  - tank-0023-orange
+  - tank-0056-blue
+  - tank-0024-yellow
+  - tank-0000-red
+  - tank-0013-orange
+  - tank-0035-yellow
+  - tank-0045-green
   image:
     tag: 99.1.0-invalid-blocks
   name: tank-0037-green
+- config: uacomment=green
   connect:
-  - tank-0039
-  - tank-0099
-  - tank-0065
-  - tank-0023
-  - tank-0029
-  - tank-0084
-  - tank-0032
-  - tank-0095
+  - tank-0039-green
+  - tank-0000-red
+  - tank-0071-violet
+  - tank-0093-white
+  - tank-0089-white
+  - tank-0097-grey
   image:
     tag: 99.1.0-50-orphans
   name: tank-0038-green
+- config: uacomment=green
   connect:
-  - tank-0040
-  - tank-0110
-  - tank-0003
-  - tank-0062
-  - tank-0080
-  - tank-0100
-  - tank-0034
+  - tank-0040-green
+  - tank-0028-yellow
+  - tank-0034-yellow
+  - tank-0025-yellow
+  - tank-0118-brown
+  - tank-0049-blue
+  - tank-0079-black
   image:
     tag: 99.0.1-no-mp-trim
   name: tank-0039-green
+- config: uacomment=green
   connect:
-  - tank-0041
-  - tank-0067
-  - tank-0107
-  - tank-0059
-  - tank-0029
-  - tank-0009
-  - tank-0026
-  - tank-0030
+  - tank-0041-green
+  - tank-0101-grey
+  - tank-0088-white
+  - tank-0022-orange
+  - tank-0054-blue
+  - tank-0107-grey
+  - tank-0058-blue
   image:
     tag: 99.1.0-disabled-opcodes
   name: tank-0040-green
+- config: uacomment=green
   connect:
-  - tank-0042
-  - tank-0034
-  - tank-0107
-  - tank-0078
-  - tank-0109
-  - tank-0048
-  - tank-0005
-  - tank-0012
+  - tank-0042-green
+  - tank-0088-white
+  - tank-0065-violet
+  - tank-0047-green
+  - tank-0083-black
+  - tank-0004-red
+  - tank-0032-yellow
+  - tank-0113-brown
   image:
     tag: 99.1.0-unknown-message
   name: tank-0041-green
+- config: uacomment=green
   connect:
-  - tank-0043
-  - tank-0066
-  - tank-0067
-  - tank-0065
-  - tank-0050
-  - tank-0024
-  - tank-0064
-  - tank-0098
+  - tank-0043-green
+  - tank-0061-violet
+  - tank-0084-white
+  - tank-0080-black
+  - tank-0072-black
+  - tank-0050-blue
+  - tank-0030-yellow
+  - tank-0017-orange
   image:
     tag: 0.16.1
   name: tank-0042-green
+- config: uacomment=green
   connect:
-  - tank-0044
-  - tank-0020
-  - tank-0014
-  - tank-0050
-  - tank-0008
-  - tank-0098
-  - tank-0045
+  - tank-0044-green
+  - tank-0060-violet
+  - tank-0001-red
+  - tank-0032-yellow
+  - tank-0075-black
+  - tank-0066-violet
+  - tank-0056-blue
+  - tank-0095-white
   image:
     tag: 0.17.0
   name: tank-0043-green
+- config: uacomment=green
   connect:
-  - tank-0045
-  - tank-0095
-  - tank-0094
-  - tank-0016
-  - tank-0051
-  - tank-0010
-  - tank-0037
-  - tank-0097
+  - tank-0045-green
+  - tank-0089-white
+  - tank-0098-grey
+  - tank-0020-orange
+  - tank-0031-yellow
+  - tank-0014-orange
   image:
     tag: 0.19.2
   name: tank-0044-green
+- config: uacomment=green
   connect:
-  - tank-0046
-  - tank-0052
-  - tank-0060
-  - tank-0069
-  - tank-0071
-  - tank-0064
-  - tank-0083
-  - tank-0053
+  - tank-0046-green
+  - tank-0034-yellow
+  - tank-0076-black
+  - tank-0061-violet
+  - tank-0002-red
+  - tank-0111-brown
+  - tank-0065-violet
+  - tank-0032-yellow
   image:
     tag: 0.21.1
   name: tank-0045-green
+- config: uacomment=green
   connect:
-  - tank-0047
-  - tank-0043
-  - tank-0026
-  - tank-0015
-  - tank-0030
-  - tank-0059
-  - tank-0092
-  - tank-0114
+  - tank-0047-green
+  - tank-0081-black
+  - tank-0029-yellow
+  - tank-0089-white
+  - tank-0026-yellow
+  - tank-0003-red
+  - tank-0053-blue
+  - tank-0101-grey
   image:
     tag: '24.2'
   name: tank-0046-green
+- config: uacomment=green
   connect:
-  - tank-0048
-  - tank-0086
-  - tank-0110
-  - tank-0066
-  - tank-0020
-  - tank-0039
-  - tank-0033
-  - tank-0055
+  - tank-0048-blue
+  - tank-0094-white
+  - tank-0084-white
+  - tank-0087-white
+  - tank-0026-yellow
+  - tank-0012-orange
+  - tank-0082-black
   image:
-    tag: '25.0'
+    tag: '25.1'
   name: tank-0047-green
+- config: uacomment=blue
   connect:
-  - tank-0049
-  - tank-0026
-  - tank-0103
-  - tank-0036
-  - tank-0029
-  - tank-0099
-  - tank-0052
-  - tank-0056
+  - tank-0049-blue
+  - tank-0084-white
+  - tank-0051-blue
+  - tank-0104-grey
+  - tank-0101-grey
+  - tank-0078-black
+  - tank-0111-brown
+  - tank-0114-brown
   image:
     tag: 99.0.1-5k-inv
   name: tank-0048-blue
+- config: uacomment=blue
   connect:
-  - tank-0050
-  - tank-0023
-  - tank-0073
-  - tank-0005
-  - tank-0052
-  - tank-0071
-  - tank-0070
-  - tank-0057
+  - tank-0050-blue
+  - tank-0046-green
+  - tank-0113-brown
+  - tank-0025-yellow
+  - tank-0061-violet
+  - tank-0037-green
+  - tank-0067-violet
+  - tank-0081-black
   image:
     tag: 99.1.0-invalid-blocks
   name: tank-0049-blue
+- config: uacomment=blue
   connect:
-  - tank-0051
-  - tank-0048
-  - tank-0111
-  - tank-0024
-  - tank-0077
-  - tank-0009
-  - tank-0038
-  - tank-0097
+  - tank-0051-blue
+  - tank-0041-green
+  - tank-0001-red
+  - tank-0043-green
+  - tank-0078-black
+  - tank-0103-grey
+  - tank-0031-yellow
+  - tank-0067-violet
   image:
     tag: 99.1.0-50-orphans
   name: tank-0050-blue
+- config: uacomment=blue
   connect:
-  - tank-0052
-  - tank-0093
-  - tank-0007
-  - tank-0100
-  - tank-0070
-  - tank-0068
-  - tank-0117
-  - tank-0080
+  - tank-0052-blue
+  - tank-0087-white
+  - tank-0054-blue
+  - tank-0053-blue
+  - tank-0063-violet
+  - tank-0088-white
+  - tank-0100-grey
+  - tank-0026-yellow
   image:
     tag: 99.0.1-no-mp-trim
   name: tank-0051-blue
+- config: uacomment=blue
   connect:
-  - tank-0053
-  - tank-0089
-  - tank-0014
-  - tank-0097
-  - tank-0066
-  - tank-0084
-  - tank-0064
-  - tank-0108
+  - tank-0053-blue
+  - tank-0107-grey
+  - tank-0039-green
+  - tank-0109-brown
+  - tank-0083-black
+  - tank-0026-yellow
+  - tank-0104-grey
+  - tank-0022-orange
   image:
     tag: 99.1.0-disabled-opcodes
   name: tank-0052-blue
+- config: uacomment=blue
   connect:
-  - tank-0054
-  - tank-0085
-  - tank-0097
-  - tank-0010
-  - tank-0086
-  - tank-0095
-  - tank-0039
-  - tank-0110
+  - tank-0054-blue
+  - tank-0014-orange
+  - tank-0107-grey
+  - tank-0001-red
+  - tank-0093-white
+  - tank-0057-blue
+  - tank-0056-blue
+  - tank-0029-yellow
   image:
     tag: 99.1.0-unknown-message
   name: tank-0053-blue
+- config: uacomment=blue
   connect:
-  - tank-0055
-  - tank-0001
-  - tank-0110
-  - tank-0104
-  - tank-0035
-  - tank-0049
-  - tank-0024
-  - tank-0051
+  - tank-0055-blue
+  - tank-0100-grey
+  - tank-0114-brown
+  - tank-0020-orange
+  - tank-0086-white
+  - tank-0043-green
+  - tank-0046-green
+  - tank-0004-red
   image:
     tag: 0.16.1
   name: tank-0054-blue
+- config: uacomment=blue
   connect:
-  - tank-0056
-  - tank-0032
-  - tank-0037
-  - tank-0118
-  - tank-0068
-  - tank-0050
-  - tank-0009
-  - tank-0071
+  - tank-0056-blue
+  - tank-0087-white
+  - tank-0048-blue
+  - tank-0107-grey
+  - tank-0021-orange
+  - tank-0014-orange
+  - tank-0101-grey
+  - tank-0074-black
   image:
     tag: 0.17.0
   name: tank-0055-blue
+- config: uacomment=blue
   connect:
-  - tank-0057
-  - tank-0093
-  - tank-0012
-  - tank-0072
-  - tank-0050
-  - tank-0108
-  - tank-0103
-  - tank-0118
+  - tank-0057-blue
+  - tank-0119-brown
+  - tank-0029-yellow
+  - tank-0090-white
+  - tank-0004-red
+  - tank-0008-red
+  - tank-0063-violet
   image:
     tag: 0.19.2
   name: tank-0056-blue
+- config: uacomment=blue
   connect:
-  - tank-0058
-  - tank-0017
-  - tank-0001
-  - tank-0067
-  - tank-0111
-  - tank-0075
-  - tank-0097
-  - tank-0114
+  - tank-0058-blue
+  - tank-0028-yellow
+  - tank-0072-black
+  - tank-0046-green
+  - tank-0055-blue
+  - tank-0004-red
+  - tank-0080-black
   image:
     tag: 0.21.1
   name: tank-0057-blue
+- config: uacomment=blue
   connect:
-  - tank-0059
-  - tank-0102
-  - tank-0093
-  - tank-0089
-  - tank-0063
-  - tank-0083
-  - tank-0008
-  - tank-0016
+  - tank-0059-blue
+  - tank-0113-brown
+  - tank-0011-red
+  - tank-0114-brown
+  - tank-0031-yellow
+  - tank-0084-white
+  - tank-0018-orange
+  - tank-0003-red
   image:
     tag: '24.2'
   name: tank-0058-blue
+- config: uacomment=blue
   connect:
-  - tank-0060
-  - tank-0005
-  - tank-0048
-  - tank-0028
-  - tank-0107
-  - tank-0074
-  - tank-0056
-  - tank-0085
+  - tank-0060-violet
+  - tank-0077-black
+  - tank-0049-blue
+  - tank-0045-green
+  - tank-0111-brown
+  - tank-0114-brown
   image:
-    tag: '25.0'
+    tag: '25.1'
   name: tank-0059-blue
+- config: uacomment=violet
   connect:
-  - tank-0061
-  - tank-0104
-  - tank-0108
-  - tank-0013
-  - tank-0066
-  - tank-0046
-  - tank-0058
-  - tank-0000
+  - tank-0061-violet
+  - tank-0039-green
+  - tank-0091-white
+  - tank-0042-green
+  - tank-0064-violet
+  - tank-0063-violet
+  - tank-0053-blue
   image:
     tag: 99.0.1-5k-inv
   name: tank-0060-violet
+- config: uacomment=violet
   connect:
-  - tank-0062
-  - tank-0027
-  - tank-0026
-  - tank-0049
-  - tank-0017
-  - tank-0069
-  - tank-0094
-  - tank-0000
+  - tank-0062-violet
+  - tank-0102-grey
+  - tank-0019-orange
+  - tank-0105-grey
+  - tank-0009-red
+  - tank-0082-black
+  - tank-0048-blue
+  - tank-0002-red
   image:
     tag: 99.1.0-invalid-blocks
   name: tank-0061-violet
+- config: uacomment=violet
   connect:
-  - tank-0063
-  - tank-0110
-  - tank-0077
-  - tank-0113
-  - tank-0080
-  - tank-0058
-  - tank-0106
-  - tank-0118
+  - tank-0063-violet
+  - tank-0016-orange
+  - tank-0064-violet
+  - tank-0066-violet
+  - tank-0006-red
+  - tank-0087-white
+  - tank-0075-black
+  - tank-0106-grey
   image:
     tag: 99.1.0-50-orphans
   name: tank-0062-violet
+- config: uacomment=violet
   connect:
-  - tank-0064
-  - tank-0040
-  - tank-0098
-  - tank-0003
-  - tank-0032
-  - tank-0008
-  - tank-0018
+  - tank-0064-violet
+  - tank-0106-grey
+  - tank-0023-orange
+  - tank-0052-blue
+  - tank-0030-yellow
+  - tank-0066-violet
+  - tank-0107-grey
   image:
     tag: 99.0.1-no-mp-trim
   name: tank-0063-violet
+- config: uacomment=violet
   connect:
-  - tank-0065
-  - tank-0119
-  - tank-0040
-  - tank-0008
-  - tank-0048
-  - tank-0005
-  - tank-0116
-  - tank-0099
+  - tank-0065-violet
+  - tank-0030-yellow
+  - tank-0118-brown
+  - tank-0003-red
+  - tank-0043-green
+  - tank-0017-orange
+  - tank-0023-orange
   image:
     tag: 99.1.0-disabled-opcodes
   name: tank-0064-violet
+- config: uacomment=violet
   connect:
-  - tank-0066
-  - tank-0002
-  - tank-0051
-  - tank-0116
-  - tank-0106
-  - tank-0029
-  - tank-0015
+  - tank-0066-violet
+  - tank-0040-green
+  - tank-0015-orange
+  - tank-0016-orange
+  - tank-0034-yellow
+  - tank-0031-yellow
+  - tank-0090-white
+  - tank-0117-brown
   image:
     tag: 99.1.0-unknown-message
   name: tank-0065-violet
+- config: uacomment=violet
   connect:
-  - tank-0067
-  - tank-0117
-  - tank-0030
-  - tank-0078
-  - tank-0071
-  - tank-0009
-  - tank-0048
+  - tank-0067-violet
+  - tank-0077-black
+  - tank-0099-grey
+  - tank-0048-blue
+  - tank-0000-red
+  - tank-0033-yellow
+  - tank-0007-red
+  - tank-0113-brown
   image:
     tag: 0.16.1
   name: tank-0066-violet
+- config: uacomment=violet
   connect:
-  - tank-0068
-  - tank-0038
-  - tank-0016
-  - tank-0117
-  - tank-0085
-  - tank-0103
-  - tank-0026
-  - tank-0106
+  - tank-0068-violet
+  - tank-0060-violet
+  - tank-0017-orange
+  - tank-0080-black
+  - tank-0038-green
+  - tank-0098-grey
+  - tank-0056-blue
+  - tank-0020-orange
   image:
     tag: 0.17.0
   name: tank-0067-violet
+- config: uacomment=violet
   connect:
-  - tank-0069
-  - tank-0032
-  - tank-0098
-  - tank-0000
-  - tank-0062
-  - tank-0108
-  - tank-0065
-  - tank-0063
+  - tank-0069-violet
+  - tank-0003-red
+  - tank-0001-red
+  - tank-0086-white
+  - tank-0079-black
+  - tank-0005-red
+  - tank-0036-green
+  - tank-0038-green
   image:
     tag: 0.19.2
   name: tank-0068-violet
+- config: uacomment=violet
   connect:
-  - tank-0070
-  - tank-0119
-  - tank-0046
-  - tank-0079
-  - tank-0090
-  - tank-0067
-  - tank-0075
-  - tank-0104
+  - tank-0070-violet
+  - tank-0045-green
+  - tank-0042-green
+  - tank-0004-red
+  - tank-0117-brown
+  - tank-0082-black
+  - tank-0044-green
+  - tank-0025-yellow
   image:
     tag: 0.21.1
   name: tank-0069-violet
+- config: uacomment=violet
   connect:
-  - tank-0071
-  - tank-0054
-  - tank-0080
-  - tank-0020
-  - tank-0034
-  - tank-0067
-  - tank-0001
-  - tank-0086
+  - tank-0071-violet
+  - tank-0114-brown
+  - tank-0032-yellow
+  - tank-0062-violet
+  - tank-0103-grey
+  - tank-0061-violet
+  - tank-0098-grey
+  - tank-0115-brown
   image:
     tag: '24.2'
   name: tank-0070-violet
+- config: uacomment=violet
   connect:
-  - tank-0072
-  - tank-0060
-  - tank-0109
-  - tank-0036
-  - tank-0053
-  - tank-0108
-  - tank-0015
+  - tank-0072-black
+  - tank-0076-black
+  - tank-0116-brown
+  - tank-0021-orange
+  - tank-0093-white
+  - tank-0056-blue
+  - tank-0031-yellow
+  - tank-0054-blue
   image:
-    tag: '25.0'
+    tag: '25.1'
   name: tank-0071-violet
+- config: uacomment=black
   connect:
-  - tank-0073
-  - tank-0001
-  - tank-0061
-  - tank-0094
-  - tank-0111
-  - tank-0089
-  - tank-0053
+  - tank-0073-black
+  - tank-0115-brown
+  - tank-0048-blue
+  - tank-0037-green
+  - tank-0087-white
+  - tank-0050-blue
+  - tank-0107-grey
+  - tank-0079-black
   image:
     tag: 99.0.1-5k-inv
   name: tank-0072-black
+- config: uacomment=black
   connect:
-  - tank-0074
-  - tank-0090
-  - tank-0083
-  - tank-0057
-  - tank-0055
-  - tank-0079
-  - tank-0118
+  - tank-0074-black
+  - tank-0107-grey
+  - tank-0033-yellow
+  - tank-0091-white
+  - tank-0052-blue
+  - tank-0084-white
+  - tank-0016-orange
   image:
     tag: 99.1.0-invalid-blocks
   name: tank-0073-black
+- config: uacomment=black
   connect:
-  - tank-0075
-  - tank-0085
-  - tank-0023
-  - tank-0118
-  - tank-0021
-  - tank-0000
-  - tank-0095
+  - tank-0075-black
+  - tank-0004-red
+  - tank-0009-red
+  - tank-0023-orange
+  - tank-0118-brown
+  - tank-0013-orange
+  - tank-0083-black
+  - tank-0079-black
   image:
     tag: 99.1.0-50-orphans
   name: tank-0074-black
+- config: uacomment=black
   connect:
-  - tank-0076
-  - tank-0033
-  - tank-0054
-  - tank-0080
-  - tank-0107
-  - tank-0086
-  - tank-0045
+  - tank-0076-black
+  - tank-0091-white
+  - tank-0089-white
+  - tank-0102-grey
+  - tank-0112-brown
+  - tank-0010-red
+  - tank-0082-black
   image:
     tag: 99.0.1-no-mp-trim
   name: tank-0075-black
+- config: uacomment=black
   connect:
-  - tank-0077
-  - tank-0038
-  - tank-0069
-  - tank-0021
-  - tank-0062
-  - tank-0113
-  - tank-0095
-  - tank-0098
+  - tank-0077-black
+  - tank-0054-blue
+  - tank-0081-black
+  - tank-0114-brown
+  - tank-0088-white
+  - tank-0084-white
+  - tank-0047-green
   image:
     tag: 99.1.0-disabled-opcodes
   name: tank-0076-black
+- config: uacomment=black
   connect:
-  - tank-0078
-  - tank-0001
-  - tank-0107
-  - tank-0081
-  - tank-0086
-  - tank-0075
-  - tank-0114
-  - tank-0090
+  - tank-0078-black
+  - tank-0073-black
+  - tank-0040-green
+  - tank-0099-grey
+  - tank-0089-white
+  - tank-0010-red
+  - tank-0004-red
+  - tank-0018-orange
   image:
     tag: 99.1.0-unknown-message
   name: tank-0077-black
+- config: uacomment=black
   connect:
-  - tank-0079
-  - tank-0099
-  - tank-0005
-  - tank-0112
-  - tank-0022
-  - tank-0010
-  - tank-0000
-  - tank-0062
+  - tank-0079-black
+  - tank-0074-black
+  - tank-0089-white
+  - tank-0008-red
+  - tank-0016-orange
+  - tank-0011-red
+  - tank-0047-green
   image:
     tag: 0.16.1
   name: tank-0078-black
+- config: uacomment=black
   connect:
-  - tank-0080
-  - tank-0088
-  - tank-0037
-  - tank-0074
-  - tank-0083
-  - tank-0103
-  - tank-0058
-  - tank-0006
+  - tank-0080-black
+  - tank-0052-blue
+  - tank-0116-brown
+  - tank-0076-black
+  - tank-0046-green
+  - tank-0106-grey
+  - tank-0044-green
+  - tank-0073-black
   image:
     tag: 0.17.0
   name: tank-0079-black
+- config: uacomment=black
   connect:
-  - tank-0081
-  - tank-0049
-  - tank-0057
-  - tank-0043
-  - tank-0115
-  - tank-0098
-  - tank-0107
+  - tank-0081-black
+  - tank-0030-yellow
+  - tank-0111-brown
+  - tank-0038-green
+  - tank-0018-orange
+  - tank-0096-grey
+  - tank-0113-brown
+  - tank-0104-grey
   image:
     tag: 0.19.2
   name: tank-0080-black
+- config: uacomment=black
   connect:
-  - tank-0082
-  - tank-0072
-  - tank-0094
-  - tank-0033
-  - tank-0004
-  - tank-0050
-  - tank-0076
+  - tank-0082-black
+  - tank-0098-grey
+  - tank-0099-grey
+  - tank-0115-brown
+  - tank-0044-green
+  - tank-0058-blue
+  - tank-0055-blue
   image:
     tag: 0.21.1
   name: tank-0081-black
+- config: uacomment=black
   connect:
-  - tank-0083
-  - tank-0101
-  - tank-0057
-  - tank-0022
-  - tank-0010
-  - tank-0095
-  - tank-0035
-  - tank-0006
+  - tank-0083-black
+  - tank-0107-grey
+  - tank-0092-white
+  - tank-0070-violet
+  - tank-0068-violet
+  - tank-0034-yellow
+  - tank-0008-red
   image:
     tag: '24.2'
   name: tank-0082-black
+- config: uacomment=black
   connect:
-  - tank-0084
-  - tank-0107
-  - tank-0004
-  - tank-0119
-  - tank-0111
-  - tank-0051
+  - tank-0084-white
+  - tank-0006-red
+  - tank-0038-green
+  - tank-0014-orange
+  - tank-0029-yellow
+  - tank-0058-blue
+  - tank-0086-white
+  - tank-0093-white
   image:
-    tag: '25.0'
+    tag: '25.1'
   name: tank-0083-black
+- config: uacomment=white
   connect:
-  - tank-0085
-  - tank-0096
-  - tank-0100
-  - tank-0014
-  - tank-0074
-  - tank-0103
-  - tank-0032
+  - tank-0085-white
+  - tank-0088-white
+  - tank-0037-green
+  - tank-0070-violet
+  - tank-0026-yellow
+  - tank-0051-blue
   image:
     tag: 99.0.1-5k-inv
   name: tank-0084-white
+- config: uacomment=white
   connect:
-  - tank-0086
-  - tank-0033
-  - tank-0054
-  - tank-0041
-  - tank-0022
-  - tank-0015
-  - tank-0105
-  - tank-0088
+  - tank-0086-white
+  - tank-0102-grey
+  - tank-0109-brown
+  - tank-0017-orange
+  - tank-0016-orange
+  - tank-0089-white
+  - tank-0056-blue
+  - tank-0093-white
   image:
     tag: 99.1.0-invalid-blocks
   name: tank-0085-white
+- config: uacomment=white
   connect:
-  - tank-0087
-  - tank-0099
-  - tank-0089
-  - tank-0036
-  - tank-0048
-  - tank-0043
-  - tank-0002
-  - tank-0063
+  - tank-0087-white
+  - tank-0072-black
+  - tank-0096-grey
+  - tank-0015-orange
+  - tank-0099-grey
+  - tank-0059-blue
+  - tank-0092-white
+  - tank-0020-orange
   image:
     tag: 99.1.0-50-orphans
   name: tank-0086-white
+- config: uacomment=white
   connect:
-  - tank-0088
-  - tank-0024
-  - tank-0016
-  - tank-0052
-  - tank-0046
-  - tank-0049
-  - tank-0062
-  - tank-0063
+  - tank-0088-white
+  - tank-0066-violet
+  - tank-0078-black
+  - tank-0050-blue
+  - tank-0000-red
+  - tank-0023-orange
+  - tank-0079-black
+  - tank-0094-white
   image:
     tag: 99.0.1-no-mp-trim
   name: tank-0087-white
+- config: uacomment=white
   connect:
-  - tank-0089
-  - tank-0011
-  - tank-0029
-  - tank-0084
-  - tank-0097
-  - tank-0110
-  - tank-0005
-  - tank-0065
+  - tank-0089-white
+  - tank-0063-violet
+  - tank-0003-red
+  - tank-0093-white
+  - tank-0059-blue
+  - tank-0039-green
+  - tank-0070-violet
+  - tank-0022-orange
   image:
     tag: 99.1.0-disabled-opcodes
   name: tank-0088-white
+- config: uacomment=white
   connect:
-  - tank-0090
-  - tank-0105
-  - tank-0017
-  - tank-0084
-  - tank-0118
-  - tank-0082
-  - tank-0071
+  - tank-0090-white
+  - tank-0093-white
+  - tank-0116-brown
+  - tank-0080-black
+  - tank-0043-green
+  - tank-0107-grey
+  - tank-0119-brown
   image:
     tag: 99.1.0-unknown-message
   name: tank-0089-white
+- config: uacomment=white
   connect:
-  - tank-0091
-  - tank-0061
-  - tank-0080
-  - tank-0010
-  - tank-0107
-  - tank-0021
-  - tank-0060
-  - tank-0029
+  - tank-0091-white
+  - tank-0050-blue
+  - tank-0002-red
+  - tank-0008-red
+  - tank-0054-blue
+  - tank-0017-orange
+  - tank-0026-yellow
   image:
     tag: 0.16.1
   name: tank-0090-white
+- config: uacomment=white
   connect:
-  - tank-0092
-  - tank-0029
-  - tank-0049
-  - tank-0000
-  - tank-0060
-  - tank-0057
-  - tank-0077
-  - tank-0087
+  - tank-0092-white
+  - tank-0007-red
+  - tank-0037-green
+  - tank-0018-orange
+  - tank-0011-red
+  - tank-0096-grey
   image:
     tag: 0.17.0
   name: tank-0091-white
+- config: uacomment=white
   connect:
-  - tank-0093
-  - tank-0085
-  - tank-0115
-  - tank-0106
-  - tank-0105
-  - tank-0081
-  - tank-0059
-  - tank-0031
+  - tank-0093-white
+  - tank-0096-grey
+  - tank-0059-blue
+  - tank-0025-yellow
+  - tank-0017-orange
+  - tank-0119-brown
+  - tank-0112-brown
+  - tank-0104-grey
   image:
     tag: 0.19.2
   name: tank-0092-white
+- config: uacomment=white
   connect:
-  - tank-0094
-  - tank-0085
-  - tank-0010
-  - tank-0107
-  - tank-0024
-  - tank-0108
-  - tank-0106
-  - tank-0007
+  - tank-0094-white
+  - tank-0020-orange
+  - tank-0005-red
+  - tank-0059-blue
+  - tank-0064-violet
+  - tank-0066-violet
+  - tank-0058-blue
+  - tank-0003-red
   image:
     tag: 0.21.1
   name: tank-0093-white
+- config: uacomment=white
   connect:
-  - tank-0095
-  - tank-0019
-  - tank-0005
-  - tank-0058
-  - tank-0071
-  - tank-0001
-  - tank-0056
+  - tank-0095-white
+  - tank-0031-yellow
+  - tank-0043-green
+  - tank-0018-orange
+  - tank-0052-blue
+  - tank-0041-green
+  - tank-0098-grey
   image:
     tag: '24.2'
   name: tank-0094-white
+- config: uacomment=white
   connect:
-  - tank-0096
-  - tank-0003
-  - tank-0020
-  - tank-0069
-  - tank-0097
-  - tank-0090
+  - tank-0096-grey
+  - tank-0035-yellow
+  - tank-0042-green
+  - tank-0013-orange
+  - tank-0111-brown
+  - tank-0099-grey
+  - tank-0052-blue
+  - tank-0115-brown
   image:
-    tag: '25.0'
+    tag: '25.1'
   name: tank-0095-white
+- config: uacomment=grey
   connect:
-  - tank-0097
-  - tank-0048
-  - tank-0119
-  - tank-0006
-  - tank-0088
-  - tank-0035
-  - tank-0022
+  - tank-0097-grey
+  - tank-0073-black
+  - tank-0104-grey
+  - tank-0060-violet
+  - tank-0071-violet
+  - tank-0002-red
+  - tank-0053-blue
+  - tank-0032-yellow
   image:
     tag: 99.0.1-5k-inv
   name: tank-0096-grey
+- config: uacomment=grey
   connect:
-  - tank-0098
-  - tank-0000
-  - tank-0054
-  - tank-0042
-  - tank-0010
-  - tank-0100
-  - tank-0024
+  - tank-0098-grey
+  - tank-0036-green
+  - tank-0058-blue
+  - tank-0017-orange
+  - tank-0095-white
+  - tank-0084-white
+  - tank-0048-blue
+  - tank-0020-orange
   image:
     tag: 99.1.0-invalid-blocks
   name: tank-0097-grey
+- config: uacomment=grey
   connect:
-  - tank-0099
-  - tank-0027
-  - tank-0058
-  - tank-0045
-  - tank-0095
-  - tank-0070
-  - tank-0078
+  - tank-0099-grey
+  - tank-0023-orange
+  - tank-0021-orange
+  - tank-0069-violet
+  - tank-0039-green
+  - tank-0060-violet
+  - tank-0027-yellow
+  - tank-0055-blue
   image:
     tag: 99.1.0-50-orphans
   name: tank-0098-grey
+- config: uacomment=grey
   connect:
-  - tank-0100
-  - tank-0101
-  - tank-0107
-  - tank-0020
-  - tank-0096
-  - tank-0045
-  - tank-0093
-  - tank-0061
+  - tank-0100-grey
+  - tank-0043-green
+  - tank-0047-green
+  - tank-0006-red
+  - tank-0088-white
+  - tank-0050-blue
+  - tank-0008-red
+  - tank-0061-violet
   image:
     tag: 99.0.1-no-mp-trim
   name: tank-0099-grey
+- config: uacomment=grey
   connect:
-  - tank-0101
-  - tank-0034
-  - tank-0022
-  - tank-0042
-  - tank-0027
-  - tank-0071
-  - tank-0082
+  - tank-0101-grey
+  - tank-0052-blue
+  - tank-0089-white
+  - tank-0086-white
+  - tank-0059-blue
+  - tank-0012-orange
+  - tank-0049-blue
   image:
     tag: 99.1.0-disabled-opcodes
   name: tank-0100-grey
+- config: uacomment=grey
   connect:
-  - tank-0102
-  - tank-0057
-  - tank-0053
-  - tank-0114
-  - tank-0008
-  - tank-0110
-  - tank-0078
-  - tank-0005
+  - tank-0102-grey
+  - tank-0060-violet
+  - tank-0091-white
+  - tank-0001-red
+  - tank-0011-red
+  - tank-0071-violet
+  - tank-0051-blue
+  - tank-0022-orange
   image:
     tag: 99.1.0-unknown-message
   name: tank-0101-grey
+- config: uacomment=grey
   connect:
-  - tank-0103
-  - tank-0055
-  - tank-0052
-  - tank-0070
-  - tank-0079
-  - tank-0001
-  - tank-0004
-  - tank-0063
+  - tank-0103-grey
+  - tank-0000-red
+  - tank-0009-red
+  - tank-0084-white
+  - tank-0071-violet
+  - tank-0062-violet
+  - tank-0041-green
+  - tank-0105-grey
   image:
     tag: 0.16.1
   name: tank-0102-grey
+- config: uacomment=grey
   connect:
-  - tank-0104
-  - tank-0097
-  - tank-0093
-  - tank-0073
-  - tank-0091
-  - tank-0038
-  - tank-0027
+  - tank-0104-grey
+  - tank-0027-yellow
+  - tank-0082-black
+  - tank-0023-orange
+  - tank-0088-white
+  - tank-0108-brown
+  - tank-0015-orange
+  - tank-0024-yellow
   image:
     tag: 0.17.0
   name: tank-0103-grey
+- config: uacomment=grey
   connect:
-  - tank-0105
-  - tank-0072
-  - tank-0018
-  - tank-0086
-  - tank-0084
-  - tank-0044
-  - tank-0010
+  - tank-0105-grey
+  - tank-0117-brown
+  - tank-0076-black
+  - tank-0002-red
+  - tank-0101-grey
+  - tank-0086-white
+  - tank-0013-orange
+  - tank-0021-orange
   image:
     tag: 0.19.2
   name: tank-0104-grey
+- config: uacomment=grey
   connect:
-  - tank-0106
-  - tank-0081
-  - tank-0090
-  - tank-0056
-  - tank-0118
-  - tank-0019
-  - tank-0015
+  - tank-0106-grey
+  - tank-0097-grey
+  - tank-0072-black
+  - tank-0092-white
+  - tank-0078-black
+  - tank-0059-blue
+  - tank-0006-red
+  - tank-0109-brown
   image:
     tag: 0.21.1
   name: tank-0105-grey
+- config: uacomment=grey
   connect:
-  - tank-0107
-  - tank-0058
-  - tank-0057
-  - tank-0114
-  - tank-0013
-  - tank-0072
-  - tank-0074
+  - tank-0107-grey
+  - tank-0017-orange
+  - tank-0088-white
+  - tank-0036-green
+  - tank-0001-red
+  - tank-0098-grey
+  - tank-0083-black
+  - tank-0096-grey
   image:
     tag: '24.2'
   name: tank-0106-grey
+- config: uacomment=grey
   connect:
-  - tank-0108
-  - tank-0021
-  - tank-0032
-  - tank-0036
-  - tank-0111
-  - tank-0027
+  - tank-0108-brown
+  - tank-0006-red
+  - tank-0005-red
+  - tank-0087-white
+  - tank-0025-yellow
+  - tank-0003-red
+  - tank-0031-yellow
+  - tank-0048-blue
   image:
-    tag: '25.0'
+    tag: '25.1'
   name: tank-0107-grey
+- config: uacomment=brown
   connect:
-  - tank-0109
-  - tank-0033
-  - tank-0051
-  - tank-0075
-  - tank-0091
-  - tank-0041
-  - tank-0011
-  - tank-0040
+  - tank-0109-brown
+  - tank-0008-red
+  - tank-0115-brown
+  - tank-0062-violet
+  - tank-0050-blue
+  - tank-0119-brown
+  - tank-0010-red
   image:
     tag: 99.0.1-5k-inv
   name: tank-0108-brown
+- config: uacomment=brown
   connect:
-  - tank-0110
-  - tank-0016
-  - tank-0075
-  - tank-0052
-  - tank-0009
-  - tank-0099
-  - tank-0015
-  - tank-0081
+  - tank-0110-brown
+  - tank-0048-blue
+  - tank-0051-blue
+  - tank-0073-black
+  - tank-0049-blue
+  - tank-0069-violet
+  - tank-0063-violet
+  - tank-0054-blue
   image:
     tag: 99.1.0-invalid-blocks
   name: tank-0109-brown
+- config: uacomment=brown
   connect:
-  - tank-0111
-  - tank-0022
-  - tank-0100
-  - tank-0113
-  - tank-0045
-  - tank-0000
-  - tank-0108
-  - tank-0103
+  - tank-0111-brown
+  - tank-0050-blue
+  - tank-0097-grey
+  - tank-0047-green
+  - tank-0022-orange
+  - tank-0007-red
+  - tank-0046-green
+  - tank-0001-red
   image:
     tag: 99.1.0-50-orphans
   name: tank-0110-brown
+- config: uacomment=brown
   connect:
-  - tank-0112
-  - tank-0106
-  - tank-0068
-  - tank-0035
-  - tank-0099
-  - tank-0003
-  - tank-0037
-  - tank-0056
+  - tank-0112-brown
+  - tank-0058-blue
+  - tank-0008-red
+  - tank-0108-brown
+  - tank-0073-black
+  - tank-0076-black
+  - tank-0040-green
+  - tank-0087-white
   image:
     tag: 99.0.1-no-mp-trim
   name: tank-0111-brown
+- config: uacomment=brown
   connect:
-  - tank-0113
-  - tank-0029
-  - tank-0058
-  - tank-0092
-  - tank-0091
-  - tank-0072
-  - tank-0119
+  - tank-0113-brown
+  - tank-0116-brown
+  - tank-0087-white
+  - tank-0048-blue
+  - tank-0080-black
+  - tank-0118-brown
+  - tank-0018-orange
+  - tank-0001-red
   image:
     tag: 99.1.0-disabled-opcodes
   name: tank-0112-brown
+- config: uacomment=brown
   connect:
-  - tank-0114
-  - tank-0101
-  - tank-0088
-  - tank-0029
-  - tank-0075
-  - tank-0043
-  - tank-0048
+  - tank-0114-brown
+  - tank-0050-blue
+  - tank-0015-orange
+  - tank-0108-brown
+  - tank-0043-green
+  - tank-0101-grey
+  - tank-0064-violet
+  - tank-0099-grey
   image:
     tag: 99.1.0-unknown-message
   name: tank-0113-brown
+- config: uacomment=brown
   connect:
-  - tank-0115
-  - tank-0066
-  - tank-0088
-  - tank-0095
-  - tank-0002
-  - tank-0039
-  - tank-0060
-  - tank-0081
+  - tank-0115-brown
+  - tank-0107-grey
+  - tank-0067-violet
+  - tank-0045-green
+  - tank-0106-grey
+  - tank-0022-orange
+  - tank-0002-red
+  - tank-0109-brown
   image:
     tag: 0.16.1
   name: tank-0114-brown
+- config: uacomment=brown
   connect:
-  - tank-0116
-  - tank-0089
-  - tank-0108
-  - tank-0113
-  - tank-0082
-  - tank-0084
-  - tank-0004
+  - tank-0116-brown
+  - tank-0060-violet
+  - tank-0015-orange
+  - tank-0034-yellow
+  - tank-0088-white
+  - tank-0091-white
+  - tank-0049-blue
+  - tank-0000-red
   image:
     tag: 0.17.0
   name: tank-0115-brown
+- config: uacomment=brown
   connect:
-  - tank-0117
-  - tank-0053
-  - tank-0118
-  - tank-0020
-  - tank-0061
-  - tank-0056
-  - tank-0105
-  - tank-0027
+  - tank-0117-brown
+  - tank-0049-blue
+  - tank-0060-violet
+  - tank-0017-orange
+  - tank-0091-white
+  - tank-0035-yellow
+  - tank-0041-green
   image:
     tag: 0.19.2
   name: tank-0116-brown
+- config: uacomment=brown
   connect:
-  - tank-0118
-  - tank-0047
-  - tank-0080
-  - tank-0037
-  - tank-0003
-  - tank-0071
-  - tank-0074
-  - tank-0068
+  - tank-0118-brown
+  - tank-0046-green
+  - tank-0004-red
+  - tank-0088-white
+  - tank-0036-green
+  - tank-0084-white
+  - tank-0090-white
   image:
     tag: 0.21.1
   name: tank-0117-brown
+- config: uacomment=brown
   connect:
-  - tank-0119
-  - tank-0061
-  - tank-0031
-  - tank-0048
-  - tank-0047
-  - tank-0107
-  - tank-0113
+  - tank-0119-brown
+  - tank-0106-grey
+  - tank-0114-brown
+  - tank-0019-orange
+  - tank-0076-black
+  - tank-0077-black
+  - tank-0055-blue
   image:
     tag: '24.2'
   name: tank-0118-brown
+- config: uacomment=brown
   connect:
-  - tank-0000
-  - tank-0041
-  - tank-0100
-  - tank-0114
-  - tank-0025
-  - tank-0059
-  - tank-0052
+  - tank-0000-red
+  - tank-0029-yellow
+  - tank-0082-black
+  - tank-0116-brown
+  - tank-0009-red
+  - tank-0109-brown
+  - tank-0037-green
+  - tank-0080-black
   image:
-    tag: '25.0'
+    tag: '25.1'
   name: tank-0119-brown

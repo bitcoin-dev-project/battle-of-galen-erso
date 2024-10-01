@@ -6,7 +6,7 @@ image:
   repository: bitcoindevproject/bitcoin
   pullPolicy: IfNotPresent
   tag: '27.0'
-config: |
+defaultConfig: |
   dns=1
   debug=rpc
   debug=net
