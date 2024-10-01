@@ -1,4 +1,4 @@
-# Warnet: The Battle of Atlanta 2024
+# Warnet: The Battle of Galen Erso
 
 Your mission is to attack Bitcoin Core nodes in a private network
 running in a Kubernetes cluster.
@@ -27,40 +27,26 @@ Bitcoin Core with
 
 To help facilitate Tank-attacking strategies on the battlefield, a smaller
 12-node network can be run on a regtest chain locally by attackers while
-developing.
+developing scenarios.
 
-## Build-up Phase
-
-To deploy attacks on the remote battlefield you will only need to have Warnet,
-Helm, and `kubectl` installed locally. To experiment locally with a mini-network
-you will also need a local Kubernetes cluster. This can be enabled as part of
-[docker desktop](https://docs.docker.com/desktop/kubernetes/), or otherwise will require Docker daemon to be running with a
-local Kubernetes provider such as [MiniKube](https://minikube.sigs.k8s.io/docs/start).
+### Install Warnet
 
 Documentation for Warnet is available in its repository:
 
 https://github.com/bitcoin-dev-project/warnet
 
-### Install Warnet
-
-Using a Python virtual environment is strongly recommended.
-
-```
-git clone <this repo>
-cd <this repo>
-
-python -m venv .venv
-source .venv/bin/activate
-
-pip install --upgrade pip
-pip install warnet
-```
-
 ### Setup Warnet
 
-Warnet itself can guide you through the setup process, you can choose to skip
-the local backend and work only on the remote cluster by making selections in
-the menu.
+Warnet itself will guide you through the setup process.
+
+> [!TIP]
+> **There are several options to carefully choose when setting up Warnet!**
+> - You only need to install docker and/or minikube if you plan to run the 12-node regtest network locally for experimentation and development.
+> - Accessing the remote 100-node signet battlefield does not require a local container interface, but may still require installation of `kubectl`.
+
+#### One Warnet is installed, execute `warnet setup`
+
+Example:
 
 ```
 (.venv) $ warnet setup
@@ -183,48 +169,37 @@ to demonstrate how to execute RPC commands on available nodes, as well as how
 to utilize the framework's `P2PInterface` class to send arbitrary messages
 to targeted nodes.
 
-### Attack Employment
+### Attack Deployment
 
 To create an attack modify the existing files in `scenarios/` or create new
-ones and deploy them to the network:
+ones and deploy them to the network. The `--debug` flag will print the log output
+of the scenario back to the terminal, and delete the container when it finishes
+running by either success, failure, or interruption by `ctrl-C`
+
+Example:
 
 ```
-(.venv) $ warnet run ./scenarios/reconnaissance.py
-Successfully started scenario: reconnaissance
-Commander pod name: commander-reconnaissance-1726250994
-```
-
-Follow the output of the scenario:
-
-```
-(.venv) $ warnet logs -f
-[?] Please choose a pod: 
- ❯ commander-reconnaissance-1726250994
-   tank-0000
-   tank-0001
-   tank-0002
-   tank-0003
-   tank-0004
-   tank-0005
-   tank-0006
-   tank-0007
-   tank-0008
-   tank-0009
-   tank-0010
-   tank-0011
-
-Reconnaissance Adding TestNode #0 from pod tank-0000 with IP 10.1.35.165
-Reconnaissance Adding TestNode #1 from pod tank-0001 with IP 10.1.35.166
-Reconnaissance Adding TestNode #2 from pod tank-0002 with IP 10.1.35.168
-Reconnaissance Adding TestNode #3 from pod tank-0003 with IP 10.1.35.170
-Reconnaissance Adding TestNode #4 from pod tank-0004 with IP 10.1.35.169
-Reconnaissance Adding TestNode #5 from pod tank-0005 with IP 10.1.35.171
-Reconnaissance Adding TestNode #6 from pod tank-0006 with IP 10.1.35.172
-Reconnaissance Adding TestNode #7 from pod tank-0007 with IP 10.1.35.173
-Reconnaissance Adding TestNode #8 from pod tank-0008 with IP 10.1.35.174
-Reconnaissance Adding TestNode #9 from pod tank-0009 with IP 10.1.35.175
-Reconnaissance Adding TestNode #10 from pod tank-0010 with IP 10.1.35.176
-Reconnaissance Adding TestNode #11 from pod tank-0011 with IP 10.1.35.177
+(.venv) --> warnet run scenarios/reconnaissance.py --debug
+...
+Successfully deployed scenario commander: reconnaissance
+Commander pod name: commander-reconnaissance-1727792531
+initContainer in pod commander-reconnaissance-1727792531 is ready
+Successfully copied data to commander-reconnaissance-1727792531(init):/shared/warnet.json
+Successfully copied data to commander-reconnaissance-1727792531(init):/shared/archive.pyz
+Successfully uploaded scenario data to commander: reconnaissance
+Waiting for commander pod to start...
+Reconnaissance Adding TestNode #0 from pod tank-0000 with IP 10.1.38.68
+Reconnaissance Adding TestNode #1 from pod tank-0001 with IP 10.1.38.69
+Reconnaissance Adding TestNode #2 from pod tank-0002 with IP 10.1.38.70
+Reconnaissance Adding TestNode #3 from pod tank-0003 with IP 10.1.38.71
+Reconnaissance Adding TestNode #4 from pod tank-0004 with IP 10.1.38.72
+Reconnaissance Adding TestNode #5 from pod tank-0005 with IP 10.1.38.73
+Reconnaissance Adding TestNode #6 from pod tank-0006 with IP 10.1.38.74
+Reconnaissance Adding TestNode #7 from pod tank-0007 with IP 10.1.38.75
+Reconnaissance Adding TestNode #8 from pod tank-0008 with IP 10.1.38.76
+Reconnaissance Adding TestNode #9 from pod tank-0009 with IP 10.1.38.77
+Reconnaissance Adding TestNode #10 from pod tank-0010 with IP 10.1.38.78
+Reconnaissance Adding TestNode #11 from pod tank-0011 with IP 10.1.38.79
 Reconnaissance User supplied random seed 131260415370612
 Reconnaissance PRNG seed is: 131260415370612
 Reconnaissance Getting peer info
@@ -232,22 +207,22 @@ Reconnaissance tank-0001 /Satoshi:27.0.0/
 Reconnaissance tank-0002 /Satoshi:27.0.0/
 Reconnaissance tank-0003 /Satoshi:27.0.0/
 Reconnaissance tank-0005 /Satoshi:25.1.0/
-Reconnaissance 10.1.35.173:60926 /Satoshi:0.21.1/
+Reconnaissance 10.1.38.75:59622 /Satoshi:0.21.1/
 Reconnaissance tank-0006 /Satoshi:24.2.0/
 Reconnaissance tank-0004 /Satoshi:26.0.0/
-Reconnaissance 10.1.35.177:60262 /Satoshi:0.16.1/
-Reconnaissance 10.1.35.174:48636 /Satoshi:0.20.0/
-Reconnaissance tank-0011 /Satoshi:0.16.1/
+Reconnaissance 10.1.38.79:36980 /Satoshi:0.16.1/
+Reconnaissance 10.1.38.76:40020 /Satoshi:0.20.0/
 Reconnaissance tank-0010 /Satoshi:0.17.0/
-Reconnaissance Attacking 10.102.248.229:18444
-Reconnaissance Got notfound message from 10.102.248.229:18444
+Reconnaissance tank-0011 /Satoshi:0.16.1/
+Reconnaissance Attacking 10.111.179.151:18444
+Reconnaissance Got notfound message from 10.111.179.151:18444
 Reconnaissance Stopping nodes
-Reconnaissance Cleaning up /tmp/bitcoin_func_test_uixks5tx on exit
+Reconnaissance Cleaning up /tmp/bitcoin_func_test_4zh_53n0 on exit
 Reconnaissance Tests successful
-```
+Deleting pod...
+pod "commander-reconnaissance-1727792531" deleted
 
-Once you run an attack, you can switch back to
-[Network Reconnaissance](#network-reconnaissance) in order to assess the effect.
+```
 
 ## Rules of Engagement
 
