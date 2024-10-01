@@ -65,14 +65,20 @@ Example:
 
 ### Additional tools
 
-> [!TIP]
-> Whether you run Kubernetes locally or use the remote cluster, we recommend the
+#### K9s
+
+Whether you run Kubernetes locally or use the remote cluster, we recommend the
 terminal user interface [k9s](https://github.com/derailed/k9s) to monitor
 cluster status.
 
-> [!TIP]
-> IF you want to observe resource usage on a cluster with metrics enabled, you
-> may want to consider using [ktop](https://github.com/vladimirvivien/ktop)
+![k9s screenshot](./images/k9s-screenshot.png)
+
+#### ktop
+
+If you want to observe resource usage on a cluster with metrics enabled, you
+may want to consider using [ktop](https://github.com/vladimirvivien/ktop)
+
+![ktop screenshot](./images/ktop-screenshot.png)
 
 ## Network Operations
 
@@ -139,13 +145,6 @@ Example:
 Total Tanks: 12 | Active Scenarios: 0
 Network connected  
 ```
-
-You can use `k9s` as explained in the [additional tool](#additional-tools)
-section.
-
-(.venv) $ k9s
-
-![k9s screenshot](./images/k9s-screenshot.png)
 
 ## Ordnance
 

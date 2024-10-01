@@ -1,0 +1,1407 @@
+caddy:
+  enabled: true
+fork_observer:
+  configQueryInterval: 20
+  enabled: true
+nodes:
+  connect:
+  - tank-0001
+  - tank-0002
+  - tank-0118
+  - tank-0096
+  - tank-0019
+  - tank-0079
+  - tank-0113
+  - tank-0021
+  image:
+    tag: 99.0.1-5k-inv
+  name: tank-0000-red
+  connect:
+  - tank-0002
+  - tank-0088
+  - tank-0045
+  - tank-0117
+  - tank-0056
+  - tank-0067
+  - tank-0008
+  - tank-0015
+  image:
+    tag: 99.1.0-invalid-blocks
+  name: tank-0001-red
+  connect:
+  - tank-0003
+  - tank-0063
+  - tank-0073
+  - tank-0042
+  - tank-0066
+  - tank-0105
+  - tank-0027
+  - tank-0106
+  image:
+    tag: 99.1.0-50-orphans
+  name: tank-0002-red
+  connect:
+  - tank-0004
+  - tank-0107
+  - tank-0020
+  - tank-0041
+  - tank-0112
+  - tank-0083
+  - tank-0038
+  - tank-0064
+  image:
+    tag: 99.0.1-no-mp-trim
+  name: tank-0003-red
+  connect:
+  - tank-0005
+  - tank-0096
+  - tank-0086
+  - tank-0113
+  - tank-0008
+  - tank-0094
+  - tank-0063
+  - tank-0039
+  image:
+    tag: 99.1.0-disabled-opcodes
+  name: tank-0004-red
+  connect:
+  - tank-0006
+  - tank-0010
+  - tank-0070
+  - tank-0023
+  - tank-0024
+  - tank-0073
+  - tank-0065
+  - tank-0104
+  image:
+    tag: 99.1.0-unknown-message
+  name: tank-0005-red
+  connect:
+  - tank-0007
+  - tank-0034
+  - tank-0053
+  - tank-0103
+  - tank-0067
+  - tank-0045
+  - tank-0021
+  - tank-0077
+  image:
+    tag: 0.16.1
+  name: tank-0006-red
+  connect:
+  - tank-0008
+  - tank-0039
+  - tank-0061
+  - tank-0104
+  - tank-0074
+  - tank-0076
+  - tank-0057
+  - tank-0118
+  image:
+    tag: 0.17.0
+  name: tank-0007-red
+  connect:
+  - tank-0009
+  - tank-0115
+  - tank-0012
+  - tank-0038
+  - tank-0000
+  - tank-0073
+  - tank-0088
+  - tank-0061
+  image:
+    tag: 0.19.2
+  name: tank-0008-red
+  connect:
+  - tank-0010
+  - tank-0038
+  - tank-0032
+  - tank-0057
+  - tank-0003
+  - tank-0103
+  - tank-0104
+  - tank-0028
+  image:
+    tag: 0.21.1
+  name: tank-0009-red
+  connect:
+  - tank-0011
+  - tank-0103
+  - tank-0025
+  - tank-0081
+  - tank-0050
+  - tank-0004
+  - tank-0086
+  image:
+    tag: '24.2'
+  name: tank-0010-red
+  connect:
+  - tank-0012
+  - tank-0040
+  - tank-0075
+  - tank-0105
+  - tank-0006
+  - tank-0081
+  - tank-0009
+  - tank-0089
+  image:
+    tag: '25.0'
+  name: tank-0011-red
+  connect:
+  - tank-0013
+  - tank-0109
+  - tank-0062
+  - tank-0073
+  - tank-0101
+  - tank-0001
+  - tank-0028
+  - tank-0080
+  image:
+    tag: 99.0.1-5k-inv
+  name: tank-0012-orange
+  connect:
+  - tank-0014
+  - tank-0084
+  - tank-0094
+  - tank-0029
+  - tank-0047
+  - tank-0074
+  - tank-0053
+  - tank-0061
+  image:
+    tag: 99.1.0-invalid-blocks
+  name: tank-0013-orange
+  connect:
+  - tank-0015
+  - tank-0021
+  - tank-0093
+  - tank-0038
+  - tank-0062
+  - tank-0008
+  - tank-0063
+  - tank-0109
+  image:
+    tag: 99.1.0-50-orphans
+  name: tank-0014-orange
+  connect:
+  - tank-0016
+  - tank-0083
+  - tank-0114
+  - tank-0008
+  - tank-0110
+  - tank-0081
+  - tank-0104
+  - tank-0038
+  image:
+    tag: 99.0.1-no-mp-trim
+  name: tank-0015-orange
+  connect:
+  - tank-0017
+  - tank-0081
+  - tank-0008
+  - tank-0070
+  - tank-0056
+  - tank-0049
+  - tank-0083
+  - tank-0061
+  image:
+    tag: 99.1.0-disabled-opcodes
+  name: tank-0016-orange
+  connect:
+  - tank-0018
+  - tank-0011
+  - tank-0099
+  - tank-0036
+  - tank-0111
+  - tank-0050
+  - tank-0075
+  - tank-0114
+  image:
+    tag: 99.1.0-unknown-message
+  name: tank-0017-orange
+  connect:
+  - tank-0019
+  - tank-0067
+  - tank-0028
+  - tank-0051
+  - tank-0001
+  - tank-0115
+  - tank-0044
+  - tank-0101
+  image:
+    tag: 0.16.1
+  name: tank-0018-orange
+  connect:
+  - tank-0020
+  - tank-0031
+  - tank-0006
+  - tank-0015
+  - tank-0040
+  - tank-0051
+  - tank-0084
+  image:
+    tag: 0.17.0
+  name: tank-0019-orange
+  connect:
+  - tank-0021
+  - tank-0060
+  - tank-0100
+  - tank-0115
+  - tank-0013
+  - tank-0044
+  - tank-0089
+  - tank-0111
+  image:
+    tag: 0.19.2
+  name: tank-0020-orange
+  connect:
+  - tank-0022
+  - tank-0041
+  - tank-0002
+  - tank-0051
+  - tank-0015
+  - tank-0012
+  - tank-0013
+  - tank-0052
+  image:
+    tag: 0.21.1
+  name: tank-0021-orange
+  connect:
+  - tank-0023
+  - tank-0069
+  - tank-0008
+  - tank-0111
+  - tank-0053
+  - tank-0014
+  - tank-0059
+  - tank-0004
+  image:
+    tag: '24.2'
+  name: tank-0022-orange
+  connect:
+  - tank-0024
+  - tank-0066
+  - tank-0043
+  - tank-0053
+  - tank-0100
+  - tank-0012
+  - tank-0108
+  - tank-0007
+  image:
+    tag: '25.0'
+  name: tank-0023-orange
+  connect:
+  - tank-0025
+  - tank-0049
+  - tank-0071
+  - tank-0076
+  - tank-0083
+  - tank-0070
+  - tank-0084
+  - tank-0057
+  image:
+    tag: 99.0.1-5k-inv
+  name: tank-0024-yellow
+  connect:
+  - tank-0026
+  - tank-0067
+  - tank-0113
+  - tank-0058
+  - tank-0106
+  - tank-0086
+  - tank-0048
+  - tank-0030
+  image:
+    tag: 99.1.0-invalid-blocks
+  name: tank-0025-yellow
+  connect:
+  - tank-0027
+  - tank-0049
+  - tank-0043
+  - tank-0060
+  - tank-0052
+  - tank-0116
+  - tank-0072
+  - tank-0050
+  image:
+    tag: 99.1.0-50-orphans
+  name: tank-0026-yellow
+  connect:
+  - tank-0028
+  - tank-0007
+  - tank-0003
+  - tank-0053
+  - tank-0037
+  - tank-0030
+  - tank-0076
+  - tank-0079
+  image:
+    tag: 99.0.1-no-mp-trim
+  name: tank-0027-yellow
+  connect:
+  - tank-0029
+  - tank-0061
+  - tank-0024
+  - tank-0011
+  - tank-0098
+  - tank-0056
+  - tank-0075
+  image:
+    tag: 99.1.0-disabled-opcodes
+  name: tank-0028-yellow
+  connect:
+  - tank-0030
+  - tank-0012
+  - tank-0055
+  - tank-0116
+  - tank-0042
+  - tank-0079
+  - tank-0052
+  - tank-0080
+  image:
+    tag: 99.1.0-unknown-message
+  name: tank-0029-yellow
+  connect:
+  - tank-0031
+  - tank-0045
+  - tank-0019
+  - tank-0028
+  - tank-0117
+  - tank-0052
+  - tank-0008
+  image:
+    tag: 0.16.1
+  name: tank-0030-yellow
+  connect:
+  - tank-0032
+  - tank-0109
+  - tank-0081
+  - tank-0080
+  - tank-0000
+  - tank-0037
+  - tank-0022
+  - tank-0110
+  image:
+    tag: 0.17.0
+  name: tank-0031-yellow
+  connect:
+  - tank-0033
+  - tank-0070
+  - tank-0051
+  - tank-0049
+  - tank-0023
+  - tank-0019
+  - tank-0083
+  - tank-0000
+  image:
+    tag: 0.19.2
+  name: tank-0032-yellow
+  connect:
+  - tank-0034
+  - tank-0106
+  - tank-0117
+  - tank-0113
+  - tank-0048
+  - tank-0015
+  - tank-0112
+  - tank-0100
+  image:
+    tag: 0.21.1
+  name: tank-0033-yellow
+  connect:
+  - tank-0035
+  - tank-0024
+  - tank-0001
+  - tank-0068
+  - tank-0105
+  - tank-0005
+  - tank-0085
+  - tank-0110
+  image:
+    tag: '24.2'
+  name: tank-0034-yellow
+  connect:
+  - tank-0036
+  - tank-0072
+  - tank-0042
+  - tank-0063
+  - tank-0003
+  - tank-0015
+  - tank-0077
+  - tank-0119
+  image:
+    tag: '25.0'
+  name: tank-0035-yellow
+  connect:
+  - tank-0037
+  - tank-0119
+  - tank-0007
+  - tank-0018
+  - tank-0011
+  - tank-0074
+  - tank-0072
+  - tank-0079
+  image:
+    tag: 99.0.1-5k-inv
+  name: tank-0036-green
+  connect:
+  - tank-0038
+  - tank-0025
+  - tank-0033
+  - tank-0104
+  - tank-0001
+  - tank-0081
+  - tank-0075
+  image:
+    tag: 99.1.0-invalid-blocks
+  name: tank-0037-green
+  connect:
+  - tank-0039
+  - tank-0099
+  - tank-0065
+  - tank-0023
+  - tank-0029
+  - tank-0084
+  - tank-0032
+  - tank-0095
+  image:
+    tag: 99.1.0-50-orphans
+  name: tank-0038-green
+  connect:
+  - tank-0040
+  - tank-0110
+  - tank-0003
+  - tank-0062
+  - tank-0080
+  - tank-0100
+  - tank-0034
+  image:
+    tag: 99.0.1-no-mp-trim
+  name: tank-0039-green
+  connect:
+  - tank-0041
+  - tank-0067
+  - tank-0107
+  - tank-0059
+  - tank-0029
+  - tank-0009
+  - tank-0026
+  - tank-0030
+  image:
+    tag: 99.1.0-disabled-opcodes
+  name: tank-0040-green
+  connect:
+  - tank-0042
+  - tank-0034
+  - tank-0107
+  - tank-0078
+  - tank-0109
+  - tank-0048
+  - tank-0005
+  - tank-0012
+  image:
+    tag: 99.1.0-unknown-message
+  name: tank-0041-green
+  connect:
+  - tank-0043
+  - tank-0066
+  - tank-0067
+  - tank-0065
+  - tank-0050
+  - tank-0024
+  - tank-0064
+  - tank-0098
+  image:
+    tag: 0.16.1
+  name: tank-0042-green
+  connect:
+  - tank-0044
+  - tank-0020
+  - tank-0014
+  - tank-0050
+  - tank-0008
+  - tank-0098
+  - tank-0045
+  image:
+    tag: 0.17.0
+  name: tank-0043-green
+  connect:
+  - tank-0045
+  - tank-0095
+  - tank-0094
+  - tank-0016
+  - tank-0051
+  - tank-0010
+  - tank-0037
+  - tank-0097
+  image:
+    tag: 0.19.2
+  name: tank-0044-green
+  connect:
+  - tank-0046
+  - tank-0052
+  - tank-0060
+  - tank-0069
+  - tank-0071
+  - tank-0064
+  - tank-0083
+  - tank-0053
+  image:
+    tag: 0.21.1
+  name: tank-0045-green
+  connect:
+  - tank-0047
+  - tank-0043
+  - tank-0026
+  - tank-0015
+  - tank-0030
+  - tank-0059
+  - tank-0092
+  - tank-0114
+  image:
+    tag: '24.2'
+  name: tank-0046-green
+  connect:
+  - tank-0048
+  - tank-0086
+  - tank-0110
+  - tank-0066
+  - tank-0020
+  - tank-0039
+  - tank-0033
+  - tank-0055
+  image:
+    tag: '25.0'
+  name: tank-0047-green
+  connect:
+  - tank-0049
+  - tank-0026
+  - tank-0103
+  - tank-0036
+  - tank-0029
+  - tank-0099
+  - tank-0052
+  - tank-0056
+  image:
+    tag: 99.0.1-5k-inv
+  name: tank-0048-blue
+  connect:
+  - tank-0050
+  - tank-0023
+  - tank-0073
+  - tank-0005
+  - tank-0052
+  - tank-0071
+  - tank-0070
+  - tank-0057
+  image:
+    tag: 99.1.0-invalid-blocks
+  name: tank-0049-blue
+  connect:
+  - tank-0051
+  - tank-0048
+  - tank-0111
+  - tank-0024
+  - tank-0077
+  - tank-0009
+  - tank-0038
+  - tank-0097
+  image:
+    tag: 99.1.0-50-orphans
+  name: tank-0050-blue
+  connect:
+  - tank-0052
+  - tank-0093
+  - tank-0007
+  - tank-0100
+  - tank-0070
+  - tank-0068
+  - tank-0117
+  - tank-0080
+  image:
+    tag: 99.0.1-no-mp-trim
+  name: tank-0051-blue
+  connect:
+  - tank-0053
+  - tank-0089
+  - tank-0014
+  - tank-0097
+  - tank-0066
+  - tank-0084
+  - tank-0064
+  - tank-0108
+  image:
+    tag: 99.1.0-disabled-opcodes
+  name: tank-0052-blue
+  connect:
+  - tank-0054
+  - tank-0085
+  - tank-0097
+  - tank-0010
+  - tank-0086
+  - tank-0095
+  - tank-0039
+  - tank-0110
+  image:
+    tag: 99.1.0-unknown-message
+  name: tank-0053-blue
+  connect:
+  - tank-0055
+  - tank-0001
+  - tank-0110
+  - tank-0104
+  - tank-0035
+  - tank-0049
+  - tank-0024
+  - tank-0051
+  image:
+    tag: 0.16.1
+  name: tank-0054-blue
+  connect:
+  - tank-0056
+  - tank-0032
+  - tank-0037
+  - tank-0118
+  - tank-0068
+  - tank-0050
+  - tank-0009
+  - tank-0071
+  image:
+    tag: 0.17.0
+  name: tank-0055-blue
+  connect:
+  - tank-0057
+  - tank-0093
+  - tank-0012
+  - tank-0072
+  - tank-0050
+  - tank-0108
+  - tank-0103
+  - tank-0118
+  image:
+    tag: 0.19.2
+  name: tank-0056-blue
+  connect:
+  - tank-0058
+  - tank-0017
+  - tank-0001
+  - tank-0067
+  - tank-0111
+  - tank-0075
+  - tank-0097
+  - tank-0114
+  image:
+    tag: 0.21.1
+  name: tank-0057-blue
+  connect:
+  - tank-0059
+  - tank-0102
+  - tank-0093
+  - tank-0089
+  - tank-0063
+  - tank-0083
+  - tank-0008
+  - tank-0016
+  image:
+    tag: '24.2'
+  name: tank-0058-blue
+  connect:
+  - tank-0060
+  - tank-0005
+  - tank-0048
+  - tank-0028
+  - tank-0107
+  - tank-0074
+  - tank-0056
+  - tank-0085
+  image:
+    tag: '25.0'
+  name: tank-0059-blue
+  connect:
+  - tank-0061
+  - tank-0104
+  - tank-0108
+  - tank-0013
+  - tank-0066
+  - tank-0046
+  - tank-0058
+  - tank-0000
+  image:
+    tag: 99.0.1-5k-inv
+  name: tank-0060-violet
+  connect:
+  - tank-0062
+  - tank-0027
+  - tank-0026
+  - tank-0049
+  - tank-0017
+  - tank-0069
+  - tank-0094
+  - tank-0000
+  image:
+    tag: 99.1.0-invalid-blocks
+  name: tank-0061-violet
+  connect:
+  - tank-0063
+  - tank-0110
+  - tank-0077
+  - tank-0113
+  - tank-0080
+  - tank-0058
+  - tank-0106
+  - tank-0118
+  image:
+    tag: 99.1.0-50-orphans
+  name: tank-0062-violet
+  connect:
+  - tank-0064
+  - tank-0040
+  - tank-0098
+  - tank-0003
+  - tank-0032
+  - tank-0008
+  - tank-0018
+  image:
+    tag: 99.0.1-no-mp-trim
+  name: tank-0063-violet
+  connect:
+  - tank-0065
+  - tank-0119
+  - tank-0040
+  - tank-0008
+  - tank-0048
+  - tank-0005
+  - tank-0116
+  - tank-0099
+  image:
+    tag: 99.1.0-disabled-opcodes
+  name: tank-0064-violet
+  connect:
+  - tank-0066
+  - tank-0002
+  - tank-0051
+  - tank-0116
+  - tank-0106
+  - tank-0029
+  - tank-0015
+  image:
+    tag: 99.1.0-unknown-message
+  name: tank-0065-violet
+  connect:
+  - tank-0067
+  - tank-0117
+  - tank-0030
+  - tank-0078
+  - tank-0071
+  - tank-0009
+  - tank-0048
+  image:
+    tag: 0.16.1
+  name: tank-0066-violet
+  connect:
+  - tank-0068
+  - tank-0038
+  - tank-0016
+  - tank-0117
+  - tank-0085
+  - tank-0103
+  - tank-0026
+  - tank-0106
+  image:
+    tag: 0.17.0
+  name: tank-0067-violet
+  connect:
+  - tank-0069
+  - tank-0032
+  - tank-0098
+  - tank-0000
+  - tank-0062
+  - tank-0108
+  - tank-0065
+  - tank-0063
+  image:
+    tag: 0.19.2
+  name: tank-0068-violet
+  connect:
+  - tank-0070
+  - tank-0119
+  - tank-0046
+  - tank-0079
+  - tank-0090
+  - tank-0067
+  - tank-0075
+  - tank-0104
+  image:
+    tag: 0.21.1
+  name: tank-0069-violet
+  connect:
+  - tank-0071
+  - tank-0054
+  - tank-0080
+  - tank-0020
+  - tank-0034
+  - tank-0067
+  - tank-0001
+  - tank-0086
+  image:
+    tag: '24.2'
+  name: tank-0070-violet
+  connect:
+  - tank-0072
+  - tank-0060
+  - tank-0109
+  - tank-0036
+  - tank-0053
+  - tank-0108
+  - tank-0015
+  image:
+    tag: '25.0'
+  name: tank-0071-violet
+  connect:
+  - tank-0073
+  - tank-0001
+  - tank-0061
+  - tank-0094
+  - tank-0111
+  - tank-0089
+  - tank-0053
+  image:
+    tag: 99.0.1-5k-inv
+  name: tank-0072-black
+  connect:
+  - tank-0074
+  - tank-0090
+  - tank-0083
+  - tank-0057
+  - tank-0055
+  - tank-0079
+  - tank-0118
+  image:
+    tag: 99.1.0-invalid-blocks
+  name: tank-0073-black
+  connect:
+  - tank-0075
+  - tank-0085
+  - tank-0023
+  - tank-0118
+  - tank-0021
+  - tank-0000
+  - tank-0095
+  image:
+    tag: 99.1.0-50-orphans
+  name: tank-0074-black
+  connect:
+  - tank-0076
+  - tank-0033
+  - tank-0054
+  - tank-0080
+  - tank-0107
+  - tank-0086
+  - tank-0045
+  image:
+    tag: 99.0.1-no-mp-trim
+  name: tank-0075-black
+  connect:
+  - tank-0077
+  - tank-0038
+  - tank-0069
+  - tank-0021
+  - tank-0062
+  - tank-0113
+  - tank-0095
+  - tank-0098
+  image:
+    tag: 99.1.0-disabled-opcodes
+  name: tank-0076-black
+  connect:
+  - tank-0078
+  - tank-0001
+  - tank-0107
+  - tank-0081
+  - tank-0086
+  - tank-0075
+  - tank-0114
+  - tank-0090
+  image:
+    tag: 99.1.0-unknown-message
+  name: tank-0077-black
+  connect:
+  - tank-0079
+  - tank-0099
+  - tank-0005
+  - tank-0112
+  - tank-0022
+  - tank-0010
+  - tank-0000
+  - tank-0062
+  image:
+    tag: 0.16.1
+  name: tank-0078-black
+  connect:
+  - tank-0080
+  - tank-0088
+  - tank-0037
+  - tank-0074
+  - tank-0083
+  - tank-0103
+  - tank-0058
+  - tank-0006
+  image:
+    tag: 0.17.0
+  name: tank-0079-black
+  connect:
+  - tank-0081
+  - tank-0049
+  - tank-0057
+  - tank-0043
+  - tank-0115
+  - tank-0098
+  - tank-0107
+  image:
+    tag: 0.19.2
+  name: tank-0080-black
+  connect:
+  - tank-0082
+  - tank-0072
+  - tank-0094
+  - tank-0033
+  - tank-0004
+  - tank-0050
+  - tank-0076
+  image:
+    tag: 0.21.1
+  name: tank-0081-black
+  connect:
+  - tank-0083
+  - tank-0101
+  - tank-0057
+  - tank-0022
+  - tank-0010
+  - tank-0095
+  - tank-0035
+  - tank-0006
+  image:
+    tag: '24.2'
+  name: tank-0082-black
+  connect:
+  - tank-0084
+  - tank-0107
+  - tank-0004
+  - tank-0119
+  - tank-0111
+  - tank-0051
+  image:
+    tag: '25.0'
+  name: tank-0083-black
+  connect:
+  - tank-0085
+  - tank-0096
+  - tank-0100
+  - tank-0014
+  - tank-0074
+  - tank-0103
+  - tank-0032
+  image:
+    tag: 99.0.1-5k-inv
+  name: tank-0084-white
+  connect:
+  - tank-0086
+  - tank-0033
+  - tank-0054
+  - tank-0041
+  - tank-0022
+  - tank-0015
+  - tank-0105
+  - tank-0088
+  image:
+    tag: 99.1.0-invalid-blocks
+  name: tank-0085-white
+  connect:
+  - tank-0087
+  - tank-0099
+  - tank-0089
+  - tank-0036
+  - tank-0048
+  - tank-0043
+  - tank-0002
+  - tank-0063
+  image:
+    tag: 99.1.0-50-orphans
+  name: tank-0086-white
+  connect:
+  - tank-0088
+  - tank-0024
+  - tank-0016
+  - tank-0052
+  - tank-0046
+  - tank-0049
+  - tank-0062
+  - tank-0063
+  image:
+    tag: 99.0.1-no-mp-trim
+  name: tank-0087-white
+  connect:
+  - tank-0089
+  - tank-0011
+  - tank-0029
+  - tank-0084
+  - tank-0097
+  - tank-0110
+  - tank-0005
+  - tank-0065
+  image:
+    tag: 99.1.0-disabled-opcodes
+  name: tank-0088-white
+  connect:
+  - tank-0090
+  - tank-0105
+  - tank-0017
+  - tank-0084
+  - tank-0118
+  - tank-0082
+  - tank-0071
+  image:
+    tag: 99.1.0-unknown-message
+  name: tank-0089-white
+  connect:
+  - tank-0091
+  - tank-0061
+  - tank-0080
+  - tank-0010
+  - tank-0107
+  - tank-0021
+  - tank-0060
+  - tank-0029
+  image:
+    tag: 0.16.1
+  name: tank-0090-white
+  connect:
+  - tank-0092
+  - tank-0029
+  - tank-0049
+  - tank-0000
+  - tank-0060
+  - tank-0057
+  - tank-0077
+  - tank-0087
+  image:
+    tag: 0.17.0
+  name: tank-0091-white
+  connect:
+  - tank-0093
+  - tank-0085
+  - tank-0115
+  - tank-0106
+  - tank-0105
+  - tank-0081
+  - tank-0059
+  - tank-0031
+  image:
+    tag: 0.19.2
+  name: tank-0092-white
+  connect:
+  - tank-0094
+  - tank-0085
+  - tank-0010
+  - tank-0107
+  - tank-0024
+  - tank-0108
+  - tank-0106
+  - tank-0007
+  image:
+    tag: 0.21.1
+  name: tank-0093-white
+  connect:
+  - tank-0095
+  - tank-0019
+  - tank-0005
+  - tank-0058
+  - tank-0071
+  - tank-0001
+  - tank-0056
+  image:
+    tag: '24.2'
+  name: tank-0094-white
+  connect:
+  - tank-0096
+  - tank-0003
+  - tank-0020
+  - tank-0069
+  - tank-0097
+  - tank-0090
+  image:
+    tag: '25.0'
+  name: tank-0095-white
+  connect:
+  - tank-0097
+  - tank-0048
+  - tank-0119
+  - tank-0006
+  - tank-0088
+  - tank-0035
+  - tank-0022
+  image:
+    tag: 99.0.1-5k-inv
+  name: tank-0096-grey
+  connect:
+  - tank-0098
+  - tank-0000
+  - tank-0054
+  - tank-0042
+  - tank-0010
+  - tank-0100
+  - tank-0024
+  image:
+    tag: 99.1.0-invalid-blocks
+  name: tank-0097-grey
+  connect:
+  - tank-0099
+  - tank-0027
+  - tank-0058
+  - tank-0045
+  - tank-0095
+  - tank-0070
+  - tank-0078
+  image:
+    tag: 99.1.0-50-orphans
+  name: tank-0098-grey
+  connect:
+  - tank-0100
+  - tank-0101
+  - tank-0107
+  - tank-0020
+  - tank-0096
+  - tank-0045
+  - tank-0093
+  - tank-0061
+  image:
+    tag: 99.0.1-no-mp-trim
+  name: tank-0099-grey
+  connect:
+  - tank-0101
+  - tank-0034
+  - tank-0022
+  - tank-0042
+  - tank-0027
+  - tank-0071
+  - tank-0082
+  image:
+    tag: 99.1.0-disabled-opcodes
+  name: tank-0100-grey
+  connect:
+  - tank-0102
+  - tank-0057
+  - tank-0053
+  - tank-0114
+  - tank-0008
+  - tank-0110
+  - tank-0078
+  - tank-0005
+  image:
+    tag: 99.1.0-unknown-message
+  name: tank-0101-grey
+  connect:
+  - tank-0103
+  - tank-0055
+  - tank-0052
+  - tank-0070
+  - tank-0079
+  - tank-0001
+  - tank-0004
+  - tank-0063
+  image:
+    tag: 0.16.1
+  name: tank-0102-grey
+  connect:
+  - tank-0104
+  - tank-0097
+  - tank-0093
+  - tank-0073
+  - tank-0091
+  - tank-0038
+  - tank-0027
+  image:
+    tag: 0.17.0
+  name: tank-0103-grey
+  connect:
+  - tank-0105
+  - tank-0072
+  - tank-0018
+  - tank-0086
+  - tank-0084
+  - tank-0044
+  - tank-0010
+  image:
+    tag: 0.19.2
+  name: tank-0104-grey
+  connect:
+  - tank-0106
+  - tank-0081
+  - tank-0090
+  - tank-0056
+  - tank-0118
+  - tank-0019
+  - tank-0015
+  image:
+    tag: 0.21.1
+  name: tank-0105-grey
+  connect:
+  - tank-0107
+  - tank-0058
+  - tank-0057
+  - tank-0114
+  - tank-0013
+  - tank-0072
+  - tank-0074
+  image:
+    tag: '24.2'
+  name: tank-0106-grey
+  connect:
+  - tank-0108
+  - tank-0021
+  - tank-0032
+  - tank-0036
+  - tank-0111
+  - tank-0027
+  image:
+    tag: '25.0'
+  name: tank-0107-grey
+  connect:
+  - tank-0109
+  - tank-0033
+  - tank-0051
+  - tank-0075
+  - tank-0091
+  - tank-0041
+  - tank-0011
+  - tank-0040
+  image:
+    tag: 99.0.1-5k-inv
+  name: tank-0108-brown
+  connect:
+  - tank-0110
+  - tank-0016
+  - tank-0075
+  - tank-0052
+  - tank-0009
+  - tank-0099
+  - tank-0015
+  - tank-0081
+  image:
+    tag: 99.1.0-invalid-blocks
+  name: tank-0109-brown
+  connect:
+  - tank-0111
+  - tank-0022
+  - tank-0100
+  - tank-0113
+  - tank-0045
+  - tank-0000
+  - tank-0108
+  - tank-0103
+  image:
+    tag: 99.1.0-50-orphans
+  name: tank-0110-brown
+  connect:
+  - tank-0112
+  - tank-0106
+  - tank-0068
+  - tank-0035
+  - tank-0099
+  - tank-0003
+  - tank-0037
+  - tank-0056
+  image:
+    tag: 99.0.1-no-mp-trim
+  name: tank-0111-brown
+  connect:
+  - tank-0113
+  - tank-0029
+  - tank-0058
+  - tank-0092
+  - tank-0091
+  - tank-0072
+  - tank-0119
+  image:
+    tag: 99.1.0-disabled-opcodes
+  name: tank-0112-brown
+  connect:
+  - tank-0114
+  - tank-0101
+  - tank-0088
+  - tank-0029
+  - tank-0075
+  - tank-0043
+  - tank-0048
+  image:
+    tag: 99.1.0-unknown-message
+  name: tank-0113-brown
+  connect:
+  - tank-0115
+  - tank-0066
+  - tank-0088
+  - tank-0095
+  - tank-0002
+  - tank-0039
+  - tank-0060
+  - tank-0081
+  image:
+    tag: 0.16.1
+  name: tank-0114-brown
+  connect:
+  - tank-0116
+  - tank-0089
+  - tank-0108
+  - tank-0113
+  - tank-0082
+  - tank-0084
+  - tank-0004
+  image:
+    tag: 0.17.0
+  name: tank-0115-brown
+  connect:
+  - tank-0117
+  - tank-0053
+  - tank-0118
+  - tank-0020
+  - tank-0061
+  - tank-0056
+  - tank-0105
+  - tank-0027
+  image:
+    tag: 0.19.2
+  name: tank-0116-brown
+  connect:
+  - tank-0118
+  - tank-0047
+  - tank-0080
+  - tank-0037
+  - tank-0003
+  - tank-0071
+  - tank-0074
+  - tank-0068
+  image:
+    tag: 0.21.1
+  name: tank-0117-brown
+  connect:
+  - tank-0119
+  - tank-0061
+  - tank-0031
+  - tank-0048
+  - tank-0047
+  - tank-0107
+  - tank-0113
+  image:
+    tag: '24.2'
+  name: tank-0118-brown
+  connect:
+  - tank-0000
+  - tank-0041
+  - tank-0100
+  - tank-0114
+  - tank-0025
+  - tank-0059
+  - tank-0052
+  image:
+    tag: '25.0'
+  name: tank-0119-brown
