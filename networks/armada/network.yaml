@@ -1,0 +1,4 @@
+nodes:
+- name: armada-0
+- name: armada-1
+- name: armada-2

@@ -1,0 +1,11 @@
+namespaces:
+- name: wargames-red
+- name: wargames-orange
+- name: wargames-yellow
+- name: wargames-green
+- name: wargames-blue
+- name: wargames-violet
+- name: wargames-black
+- name: wargames-white
+- name: wargames-grey
+- name: wargames-brown

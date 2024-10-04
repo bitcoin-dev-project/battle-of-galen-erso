@@ -1,0 +1,7 @@
+chain: regtest
+image:
+  repository: bitcoindevproject/bitcoin
+  pullPolicy: IfNotPresent
+  tag: '27.0'
+connect:
+  - miner.default

@@ -1,5 +1,6 @@
 import os
 import random
+import secrets
 import sys
 import yaml
 
@@ -29,11 +30,10 @@ VERSIONS = [
     "0.17.0",
     "0.19.2",
     "0.21.1",
+    "0.20.0",
     "24.2",
     "25.1"
 ]
-
-network_dir = Path(os.path.dirname(__file__)).parent / "networks" / "battlefield_120"
 
 
 def cycle_versions(versions):
@@ -45,7 +45,7 @@ version_generator = cycle_versions(VERSIONS)
 
 
 def custom_graph(
-    num_nodes: int,
+    teams: int,
     num_connections: int,
     version: str,
     datadir: Path,
@@ -65,6 +65,15 @@ def custom_graph(
     nodes = []
     connections = set()
 
+    # add central admin miner node
+    nodes.append({
+        "name": "miner",
+        "connect": [],
+        "image": {"tag": "27.0"},
+        "config": "maxconnections=1000\nuacomment=miner"
+    })
+
+    num_nodes = teams * len(VERSIONS)
     for i in range(num_nodes):
         team = TEAMS[i // len(VERSIONS)]
         name = f"tank-{i:04d}-{team}"
@@ -72,6 +81,7 @@ def custom_graph(
             "name": name,
             "connect": [],
             "image": {"tag": next(version_generator)},
+            "rpcpassword": secrets.token_hex(16),
             "config": f"uacomment={team}"
         })
 
@@ -81,8 +91,8 @@ def custom_graph(
         node["connect"].append(nodes[next_node_index]["name"])
         connections.add((i, next_node_index))
 
-        # Add random connections
-        available_nodes = list(range(num_nodes))
+        # Add random connections including miner
+        available_nodes = list(range(num_nodes + 1))
         available_nodes.remove(i)
         if next_node_index in available_nodes:
             available_nodes.remove(next_node_index)
@@ -108,31 +118,32 @@ def custom_graph(
     with open(os.path.join(datadir, "network.yaml"), "w") as f:
         yaml.dump(network_yaml_data, f, default_flow_style=False)
 
-#     # Generate node-defaults.yaml
-#     default_yaml_path = (
-#         files("resources.networks").joinpath("fork_observer").joinpath("node-defaults.yaml")
-#     )
-#     with open(str(default_yaml_path)) as f:
-#         defaults_yaml_content = yaml.safe_load(f)
-
-#     # Configure logging
-#     defaults_yaml_content["collectLogs"] = logging
-
-#     with open(os.path.join(datadir, "node-defaults.yaml"), "w") as f:
-#         yaml.dump(defaults_yaml_content, f, default_flow_style=False, sort_keys=False)
-
-#     click.echo(
-#         f"Project '{datadir}' has been created with 'network.yaml' and 'node-defaults.yaml'."
-#     )
-
-
 
 custom_graph(
-    num_nodes=120,
+    teams=len(TEAMS),
     num_connections=8,
     version="27.0",
-    datadir=network_dir,
+    datadir=Path(os.path.dirname(__file__)).parent / "networks" / "battlefield",
     fork_observer=True,
     fork_obs_query_interval=20,
     caddy=True,
     logging=True)
+
+
+custom_graph(
+    teams=1,
+    num_connections=8,
+    version="27.0",
+    datadir=Path(os.path.dirname(__file__)).parent / "networks" / "scrimmage",
+    fork_observer=True,
+    fork_obs_query_interval=20,
+    caddy=True,
+    logging=True)
+
+armies = {"namespaces": []}
+for team in TEAMS:
+    armies["namespaces"].append({"name": f"wargames-{team}"})
+with open(Path(os.path.dirname(__file__)).parent / "namespaces" / "armies" / "namespaces.yaml", "w") as f:
+    yaml.dump(armies, f, default_flow_style=False)
+
+
