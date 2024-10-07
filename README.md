@@ -41,8 +41,8 @@ Warnet itself will guide you through the setup process.
 
 > [!TIP]
 > **There are several options to carefully choose when setting up Warnet!**
-> - You only need to install docker and/or minikube if you plan to run the 12-node regtest network locally for experimentation and development.
-> - Accessing the remote 100-node signet battlefield does not require a local container interface, but may still require installation of `kubectl`.
+> - You only need to install minikube or docker desktop's kubernetes if you plan to run the 12-node regtest network locally for experimentation and development.
+> - Accessing the remote 100-node signet battlefield does not require a local kubenetes distribution, but will still require installation of `kubectl`.
 
 #### One Warnet is installed, execute `warnet setup`
 
