@@ -8,7 +8,7 @@ nodes that are vulnerable to fully-disclosed historical attacks or novel
 intentional flaws. A **FAKE** website with blog posts about all types of
 vulnerabilities available for exploit on Warnet can be seen here:
 
-https://bitcorncore.org/
+https://bitcorncore.org/en/blog/
 
 ⚠️ This website is for entertainment purposes only ⚠️
 
@@ -31,14 +31,18 @@ https://bitcorncore.org/
 
 Warnet is a system written in Python to deploy, manage, and interact with
 Bitcoin p2p networks inside a Kubernetes cluster. The official battlefield
-will be a remote cluster with 100 Bitcoin nodes (referred to as "Tanks")
+will be a remote cluster with over 100 Bitcoin nodes (referred to as "Tanks")
 running on a custom Signet chain. Many of these nodes will be old versions of
 Bitcoin Core with
-[publicly disclosed vulnerabilities](https://bitcoincore.org/en/blog/).
+[publicly disclosed vulnerabilities](https://bitcoincore.org/en/blog/). There will
+also be additional nodes that have been compiled with intentional flaws and
+[FAKE disclosures](https://bitcorncore.org/en/blog/)
 
 To help facilitate Tank-attacking strategies on the battlefield, a smaller
 12-node network called scrimmage can be run on a regtest chain locally by attackers while
-developing scenarios.
+developing scenarios. Scrimmage requires running kubernetes locally (either
+Docker Desktop or minikube) which is not required to run attacks on the remote
+battlefield.
 
 ### Install Warnet
 
@@ -52,7 +56,7 @@ Warnet itself will guide you through the setup process.
 
 > [!TIP]
 > **There are several options to carefully choose when setting up Warnet!**
-> - You only need to install minikube or docker desktop's kubernetes if you plan to run the 12-node regtest network locally for experimentation and development.
+> - You only need to install minikube or docker desktop's kubernetes if you plan to run the scrimmage network locally for experimentation and development.
 > - Accessing the remote 100-node signet battlefield does not require a local kubenetes distribution, but will still require installation of `kubectl`.
 
 #### One Warnet is installed, execute `warnet setup`
