@@ -1,19 +1,30 @@
 # Warnet: The Battle of Galen Erso
 
+![vulnerability](./images/vulerability.gif)
+
 Your mission is to attack Bitcoin Core nodes in a private network
-running in a Kubernetes cluster.
+running in a Kubernetes cluster. The private network consists of Bitcoin Core
+nodes that are vulnerable to fully-disclosed historical attacks or novel
+intentional flaws. A **FAKE** website with blog posts about all types of
+vulnerabilities available for exploit on Warnet can be seen here:
+
+https://bitcorncore.org/
+
+⚠️ This website is for entertainment purposes only ⚠️
 
 ## Terminology
 
 - Tanks - Bitcoin Core nodes running in a Warnet network
-- Battlefield - A remote cluster with 100 tanks
+- Battlefield - A remote cluster with 100 vulnerable tanks
+- Scrimmage - A local cluster with only a few vulnerable tanks
+- Armada - a small set of tanks running the latest Bitcoin Core release under the attacker's control
 - Scenario - A program that deploys to the battlefield to attack the tanks
 
 ## Objectives
 
 1. Install and set up Warnet
 2. Create attacks
-3. Test attacks locally
+3. Test attacks locally in scrimmage
 4. Attack Bitcoin Core nodes on the battlefield
 
 ## Intelligence Brief -- What is Warnet?
@@ -84,6 +95,9 @@ may want to consider using [ktop](https://github.com/vladimirvivien/ktop)
 
 ### Start and Stop the Network
 
+> [!TIP]
+> This section is only relevant in scrimmage (you are running kubernetes locally)
+
 You can see the topology of the network which will be deployed, and make
 modifications to it by looking at: `networks/scrimmage/network.yaml`
 This will also allow you to see which tanks are running which version of
@@ -104,46 +118,68 @@ warnet down
 
 ### Network Reconnaissance
 
+> [!TIP]
+> This section is only relevant in scrimmage (you are running kubernetes locally)
+
 You can open the web based visualizer with Grafana dashboards and Fork Observer
-at `localhost:2019` by executing the command:
+at by executing the command:
 
 ```
 warnet dashboard
 ```
 
+Warnet will get the `localhost` port of the dashboard web server and
+open it in your system's default browser.
+
+### Network Communications
+
+> [!TIP]
+> On the battlefield, these commands will only be able to retrieve data from
+> tanks in your armada. In local scrimmage mode, you will have access to all tanks.
+
 See the [Warnet documentation](https://github.com/bitcoin-dev-project/warnet/blob/main/docs/warnet.md)
-for more CLI commands to retrieve logs, p2p messages, and other status
+for all available CLI commands to retrieve logs, p2p messages, and other status
 information.
 
-Example:
+Examples:
+#### Status
 
 ```
-(.venv) $ warnet status
-╭─────────────── Warnet Overview ───────────────╮
-│                                               │
-│                 Warnet Status                 │
-│ ┏━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓ │
-│ ┃ Component ┃ Name                ┃ Status  ┃ │
-│ ┡━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩ │
-│ │ Tank      │ tank-0000           │ running │ │
-│ │ Tank      │ tank-0001           │ running │ │
-│ │ Tank      │ tank-0002           │ running │ │
-│ │ Tank      │ tank-0003           │ running │ │
-│ │ Tank      │ tank-0004           │ running │ │
-│ │ Tank      │ tank-0005           │ running │ │
-│ │ Tank      │ tank-0006           │ running │ │
-│ │ Tank      │ tank-0007           │ running │ │
-│ │ Tank      │ tank-0008           │ running │ │
-│ │ Tank      │ tank-0009           │ running │ │
-│ │ Tank      │ tank-0010           │ running │ │
-│ │ Tank      │ tank-0011           │ running │ │
-│ │ Scenario  │ No active scenarios │         │ │
-│ └───────────┴─────────────────────┴─────────┘ │
-│                                               │
-╰───────────────────────────────────────────────╯
+(.venv) --> warnet status
+╭────────────────────── Warnet Overview ───────────────────────╮
+│                                                              │
+│                        Warnet Status                         │
+│ ┏━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━┓ │
+│ ┃ Component ┃ Name                ┃ Status  ┃ Namespace    ┃ │
+│ ┡━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━┩ │
+│ │ Tank      │ armada-0            │ running │ wargames-red │ │
+│ │ Tank      │ armada-1            │ running │ wargames-red │ │
+│ │ Tank      │ armada-2            │ running │ wargames-red │ │
+│ │ Scenario  │ No active scenarios │         │              │ │
+│ └───────────┴─────────────────────┴─────────┴──────────────┘ │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
 
-Total Tanks: 12 | Active Scenarios: 0
-Network connected  
+Total Tanks: 3 | Active Scenarios: 0
+Network connected
+```
+
+#### bitcoin-cli
+```
+(.venv) --> warnet bitcoin rpc armada-0 -getinfo
+Chain: regtest
+Blocks: 0
+Headers: 0
+Verification progress: 100.0000%
+Difficulty: 4.656542373906925e-10
+
+Network: in 0, out 1, total 1
+Version: 270000
+Time offset (s): 0
+Proxies: n/a
+Min tx relay fee rate (BTC/kvB): 0.00001000
+
+Warnings: (none)
 ```
 
 ## Ordnance
@@ -154,13 +190,16 @@ The primary method of interacting with the network and mounting an attack is by
 deploying a Scenario.
 
 A Scenario is a Python script written with the same structure and library as
-a Bitcoin Core functional test, utilizing a copy of the `test_framework`.
+a Bitcoin Core functional test, utilizing a copy of the `test_framework`, which is
+[included](/scenarios/test_framework) in this repo and may be modified if necessary.
 The primary difference is that the familiar `self.nodes[]` list contains
 references to containerized Bitcoin Core nodes running inside the
 cluster rather than locally accessible bitcoind processes.
 
 An additional list `self.tanks[str]` is available to address Bitcoin nodes
 by their Kubernetes pod name (as opposed to their numerical index).
+
+**The only tanks you as an attacker have RPC access to are in your own armada**
 
 A handful of example scenarios are included in the [`scenarios/`](/scenarios/) directory.
 In particular, [`scenarios/reconnaissance.py`](/scenarios/reconnaissance.py) is written with verbose comments
