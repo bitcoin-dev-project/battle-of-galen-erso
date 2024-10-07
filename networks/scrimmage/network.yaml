@@ -29,7 +29,7 @@ nodes:
   - tank-0007-red
   - tank-0010-red
   image:
-    tag: 99.0.1-5k-inv
+    tag: 99.1.0-5k-inv
   name: tank-0000-red
   rpcpassword: 3e557ae559bed7096fc1fa84075ac74e
 - config: uacomment=red
