@@ -26,7 +26,7 @@ Bitcoin Core with
 [publicly disclosed vulnerabilities](https://bitcoincore.org/en/blog/).
 
 To help facilitate Tank-attacking strategies on the battlefield, a smaller
-12-node network can be run on a regtest chain locally by attackers while
+12-node network called scrimmage can be run on a regtest chain locally by attackers while
 developing scenarios.
 
 ### Install Warnet
@@ -85,15 +85,15 @@ may want to consider using [ktop](https://github.com/vladimirvivien/ktop)
 ### Start and Stop the Network
 
 You can see the topology of the network which will be deployed, and make
-modifications to it by looking at: `networks/regtest_12/network.yaml`
+modifications to it by looking at: `networks/scrimmage/network.yaml`
 This will also allow you to see which tanks are running which version of
 Bitcoin Core.
 
-Deploy the 12-node network included in this repository to a local Kubernetes
+Deploy the 12-node scrimmage network included in this repository to a local Kubernetes
 cluster with the command:
 
 ```
-warnet deploy ./networks/regtest_12
+warnet deploy ./networks/scrimmage
 ```
 
 The local network can be shut down with the command:
