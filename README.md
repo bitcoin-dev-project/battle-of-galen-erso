@@ -1,6 +1,6 @@
 # Warnet: The Battle of Galen Erso
 
-![vulnerability](./images/vulerability.gif)
+![vulnerability](./images/vulnerability.gif)
 
 Your mission is to attack Bitcoin Core nodes in a private network
 running in a Kubernetes cluster. The private network consists of Bitcoin Core
