@@ -142,7 +142,7 @@ def custom_graph(
 
 
 custom_graph(
-    teams=1,#len(TEAMS),
+    teams=len(TEAMS),
     num_connections=8,
     version="27.0",
     datadir=Path(os.path.dirname(__file__)).parent / "networks" / "battlefield",
