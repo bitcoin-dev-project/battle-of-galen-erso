@@ -1,4 +1,4 @@
-chain: regtest
+chain: signet
 image:
   repository: bitcoindevproject/bitcoin
   pullPolicy: IfNotPresent

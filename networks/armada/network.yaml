@@ -1,4 +1,7 @@
 nodes:
-- name: armada-0
-- name: armada-1
-- name: armada-2
+- config: signetchallenge=0014c0dd01a0adbf4400a26c4497fab5f7a8d32bc9d2
+  name: armada-0
+- config: signetchallenge=0014c0dd01a0adbf4400a26c4497fab5f7a8d32bc9d2
+  name: armada-1
+- config: signetchallenge=0014c0dd01a0adbf4400a26c4497fab5f7a8d32bc9d2
+  name: armada-2

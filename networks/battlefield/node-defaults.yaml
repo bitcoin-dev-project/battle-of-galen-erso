@@ -1,4 +1,4 @@
-chain: regtest
+chain: signet
 collectLogs: true
 metricsExport: true
 resources: {}

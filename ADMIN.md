@@ -5,20 +5,30 @@
     - battlefield has all 10 teams @ all vuln versions (13 currently)
     - scrimmage has just 1 team x 13 vuln nodes
 - `warnet deploy namespaces/armies`:
-    - deploys 13 team namespaces + 1 admin namespace ("wargames-battlefield")
+    - deploys 13 team namespaces
     - can be used locally or remotely for either network, but locally only "red" is used
 - `warnet admin create-kubeconfigs`
     - Generates config files with TTL of 2 days
     - dont bother saving or committing these to github
-- `warnet deploy networks/scrimmage`
-    - as the admin for your cluster with namespace `"default"`, deploy the network
 
 ## For remote battlefield admin:
+
+- `warnet deploy networks/battlefield`
+    - as the admin for your cluster with namespace `"default"`, deploy the network
 
 - `warnet deploy networks/armada --to-all-users`
     - deploys a 3-tank (v27) armada in each users' namespace, connected to `miner.default`
 
+- `bash scripts/miner_wallet.sh`
+    - creates wallet in "miner" tank and imports signet signer key as descriptor
+
+- `warnet run scenarios/signet_miner.py --tank=0 generate  --min-nbits --address=tb1qsre7e4ls9z3kh8hn0gqtvds33desz6768cuag8 --ongoing --debug`
+    - starts mining blocks. Get a new address first!
+
 ## For local scrimmage:
+
+- `warnet deploy networks/scrimmage`
+    - as the admin for your cluster with namespace `"default"`, deploy the network
 
 - `warnet auth kubeconfigs/warnet-user-wargames-red-kubeconfig`
 - `warnet deploy networks/armada`

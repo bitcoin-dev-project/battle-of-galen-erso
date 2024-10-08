@@ -1,10 +1,16 @@
+import json
 import os
 import random
 import secrets
 import sys
 import yaml
-
 from pathlib import Path
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from test_framework.key import ECKey  # noqa: E402
+from test_framework.script_util import key_to_p2wpkh_script  # noqa: E402
+from test_framework.wallet_util import bytes_to_wif  # noqa: E402
+from test_framework.descriptors import descsum_create  # noqa: E402
 
 TEAMS = [
     "red",
@@ -20,21 +26,34 @@ TEAMS = [
 ]
 
 VERSIONS = [
-    "99.0.1-5k-inv",
     "99.1.0-invalid-blocks",
-    "99.1.0-50-orphans",
-    "99.0.1-no-mp-trim",
-    "99.1.0-disabled-opcodes",
+    "99.1.0-no-mp-trim",
     "99.1.0-unknown-message",
+    "99.1.0-5k-inv",
+    "99.1.0-disabled-opcodes",
+    "99.1.0-50-orphans",
+    "0.20.0",
     "0.16.1",
     "0.17.0",
     "0.19.2",
-    "0.21.1",
-    "0.20.0",
-    "24.2",
-    "25.1"
+    "0.21.1"
 ]
 
+# generate and specify signet challenge (simple p2wpkh script)
+secret=secrets.token_bytes(32)
+privkey = ECKey()
+privkey.set(secret, True)
+pubkey = privkey.get_pubkey().get_bytes()
+challenge = key_to_p2wpkh_script(pubkey)
+signetchallenge=challenge.hex()
+privkeywif=bytes_to_wif(secret)
+desc = descsum_create('combo(' + privkeywif + ')')
+desc_import = [{
+    'desc': desc,
+    'timestamp': 0
+}]
+desc_string = json.dumps(desc_import)
+desc_string = desc_string.replace("\"", "\\\"").replace(" ", "").replace("(", "\\(").replace(")", "\\)").replace(",", "\\,")
 
 def cycle_versions(versions):
     index = 0
@@ -53,6 +72,7 @@ def custom_graph(
     fork_obs_query_interval: int,
     caddy: bool,
     logging: bool,
+    signetchallenge: str
 ):
     try:
         datadir.mkdir(parents=False, exist_ok=True)
@@ -65,14 +85,16 @@ def custom_graph(
     nodes = []
     connections = set()
 
+    extra = f"\nsignetchallenge={signetchallenge}" if signetchallenge else ""
+
     # add central admin miner node
     nodes.append({
         "name": "miner",
         "connect": [],
         "image": {"tag": "27.0"},
-        "config": "maxconnections=1000\nuacomment=miner"
+        "rpcpassword": secrets.token_hex(16),
+        "config": f"maxconnections=1000\nuacomment=miner{extra}"
     })
-
     num_nodes = teams * len(VERSIONS)
     for i in range(num_nodes):
         team = TEAMS[i // len(VERSIONS)]
@@ -82,7 +104,7 @@ def custom_graph(
             "connect": [],
             "image": {"tag": next(version_generator)},
             "rpcpassword": secrets.token_hex(16),
-            "config": f"uacomment={team}"
+            "config": f"uacomment={team}{extra}"
         })
 
     for i, node in enumerate(nodes):
@@ -120,14 +142,15 @@ def custom_graph(
 
 
 custom_graph(
-    teams=len(TEAMS),
+    teams=1,#len(TEAMS),
     num_connections=8,
     version="27.0",
     datadir=Path(os.path.dirname(__file__)).parent / "networks" / "battlefield",
     fork_observer=True,
     fork_obs_query_interval=20,
     caddy=True,
-    logging=True)
+    logging=True,
+    signetchallenge=signetchallenge)
 
 
 custom_graph(
@@ -138,7 +161,8 @@ custom_graph(
     fork_observer=True,
     fork_obs_query_interval=20,
     caddy=True,
-    logging=True)
+    logging=True,
+    signetchallenge=None)
 
 armies = {"namespaces": []}
 for team in TEAMS:
@@ -146,4 +170,15 @@ for team in TEAMS:
 with open(Path(os.path.dirname(__file__)).parent / "namespaces" / "armies" / "namespaces.yaml", "w") as f:
     yaml.dump(armies, f, default_flow_style=False)
 
+armadanet = {
+    "nodes": [
+        {"name": "armada-0", "config": f"signetchallenge={signetchallenge}"},
+        {"name": "armada-1", "config": f"signetchallenge={signetchallenge}"},
+        {"name": "armada-2", "config": f"signetchallenge={signetchallenge}"}
+    ]
+}
+with open(Path(os.path.dirname(__file__)).parent / "networks" / "armada" / "network.yaml", "w") as f:
+    yaml.dump(armadanet, f, default_flow_style=False)
 
+with open(Path(os.path.dirname(__file__)) / "miner_wallet.sh", "w") as f:
+    f.write(f"warnet bitcoin rpc miner createwallet miner\nwarnet bitcoin rpc miner importdescriptors '{desc_string}'")
