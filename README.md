@@ -46,9 +46,11 @@ battlefield.
 
 ### Install Warnet
 
-Documentation for Warnet is available in its repository:
+Documentation for Warnet is available in the repository.
 
-https://github.com/bitcoin-dev-project/warnet
+Install into a virtual environment from the Python repository:
+
+https://github.com/bitcoin-dev-project/warnet/blob/main/docs/install.md#install-warnet
 
 ### Setup Warnet
 
