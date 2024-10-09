@@ -6,1747 +6,1576 @@ fork_observer:
 nodes:
 - addnode:
   - tank-0000-red
-  - tank-0085-white
-  - tank-0035-green
-  - tank-0102-brown
-  - tank-0098-grey
-  - tank-0031-yellow
-  - tank-0006-red
-  - tank-0026-yellow
+  - tank-0048-blue
+  - tank-0047-blue
+  - tank-0084-grey
+  - tank-0071-white
+  - tank-0076-white
+  - tank-0083-grey
+  - tank-0094-brown
   config: 'maxconnections=1000
 
     uacomment=miner
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
     tag: '27.0'
   name: miner
-  rpcpassword: 71d0aedb6abeee76b5872fcd05303222
+  rpcpassword: 733db23e59655699da8b7849142331a7
 - addnode:
   - tank-0001-red
-  - tank-0041-green
-  - tank-0097-grey
-  - tank-0107-brown
-  - tank-0060-violet
-  - tank-0035-green
-  - tank-0034-green
-  - tank-0103-brown
-  config: 'uacomment=red
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 98.0.0-invalid-blocks
-  name: tank-0000-red
-  rpcpassword: 8bd24747c1f8e35523dbc7d4b2d8c41d
-- addnode:
-  - tank-0002-red
-  - tank-0081-white
+  - tank-0068-black
+  - tank-0029-yellow
+  - tank-0058-violet
+  - tank-0064-black
   - tank-0066-black
-  - miner
-  - tank-0010-red
-  - tank-0006-red
-  - tank-0047-blue
-  - tank-0073-black
+  - tank-0075-white
+  - tank-0069-black
   config: 'uacomment=red
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 96.0.0-no-mp-trim
-  name: tank-0001-red
-  rpcpassword: 710685cae5fa69ddce184968004dbcf3
-- addnode:
-  - tank-0003-red
-  - tank-0008-red
-  - tank-0092-grey
-  - tank-0076-black
-  - tank-0057-violet
-  - tank-0042-green
-  - tank-0054-blue
-  - tank-0009-red
-  config: 'uacomment=red
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
     tag: 99.0.0-unknown-message
+  name: tank-0000-red
+  rpcpassword: 860ee52439fe2a3f02acf7759c7cb713
+- addnode:
+  - tank-0002-red
+  - tank-0075-white
+  - tank-0096-brown
+  - tank-0024-yellow
+  - tank-0065-black
+  - tank-0031-green
+  - tank-0007-red
+  - tank-0042-blue
+  config: 'uacomment=red
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 98.0.0-invalid-blocks
+  name: tank-0001-red
+  rpcpassword: d55374302fdf149a4558aae335b2d457
+- addnode:
+  - tank-0003-red
+  - tank-0054-violet
+  - tank-0029-yellow
+  - tank-0090-brown
+  - tank-0042-blue
+  - tank-0057-violet
+  - tank-0000-red
+  - tank-0070-white
+  config: 'uacomment=red
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 97.0.0-50-orphans
   name: tank-0002-red
-  rpcpassword: 449c9f8d9a2a2adb75f9424d0b744f8f
+  rpcpassword: 41acd4c7fd888423e3fa824f1606ffb0
 - addnode:
   - tank-0004-red
-  - tank-0107-brown
-  - tank-0069-black
-  - tank-0094-grey
-  - tank-0046-blue
-  - tank-0008-red
-  - tank-0072-black
-  - tank-0001-red
+  - tank-0066-black
+  - tank-0080-grey
+  - tank-0024-yellow
+  - tank-0095-brown
+  - tank-0073-white
+  - tank-0027-yellow
+  - tank-0012-orange
   config: 'uacomment=red
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 94.0.0-5k-inv
+    tag: 96.0.0-no-mp-trim
   name: tank-0003-red
-  rpcpassword: 7d831cf954dad95e98c9d67f120f94c5
+  rpcpassword: bb08150fe99a69b9aef2b1881ace0160
 - addnode:
   - tank-0005-red
-  - tank-0105-brown
-  - tank-0087-white
-  - tank-0072-black
-  - tank-0043-green
-  - tank-0086-white
-  - tank-0047-blue
-  - tank-0084-white
+  - tank-0027-yellow
+  - tank-0093-brown
+  - tank-0086-grey
+  - tank-0092-brown
+  - tank-0025-yellow
+  - tank-0088-grey
+  - tank-0074-white
   config: 'uacomment=red
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
     tag: 95.0.0-disabled-opcodes
   name: tank-0004-red
-  rpcpassword: d9bfbef26c6c67e5e8eb226bb1fa0a8f
+  rpcpassword: 5bc3d681fb46ecd7c4b7355c4d1479a7
 - addnode:
   - tank-0006-red
-  - tank-0076-black
-  - tank-0065-violet
-  - tank-0070-black
-  - tank-0093-grey
-  - tank-0019-orange
-  - tank-0012-orange
-  - tank-0048-blue
+  - tank-0067-black
+  - tank-0046-blue
+  - tank-0040-blue
+  - tank-0089-grey
+  - tank-0060-black
+  - tank-0011-orange
+  - tank-0084-grey
   config: 'uacomment=red
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 97.0.0-50-orphans
+    tag: 94.0.0-5k-inv
   name: tank-0005-red
-  rpcpassword: 46941cd0786173d90a5a28044a0752d3
+  rpcpassword: 875c38b2fd1ab3d989bcf4918dacbf4f
 - addnode:
   - tank-0007-red
-  - tank-0106-brown
-  - tank-0003-red
-  - tank-0051-blue
-  - tank-0081-white
-  - tank-0017-orange
-  - tank-0100-brown
-  - tank-0056-violet
+  - tank-0093-brown
+  - tank-0018-orange
+  - tank-0023-yellow
+  - tank-0075-white
+  - tank-0040-blue
+  - tank-0090-brown
+  - tank-0011-orange
   config: 'uacomment=red
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 0.20.0
+    tag: 0.21.10.20.0
   name: tank-0006-red
-  rpcpassword: 850cb9b5839690986530cc7e67446b72
+  rpcpassword: 0105efe3078e3754190a671d2c4ca9e0
 - addnode:
   - tank-0008-red
-  - tank-0033-green
-  - tank-0017-orange
-  - tank-0005-red
-  - tank-0015-orange
-  - tank-0022-yellow
-  - tank-0086-white
-  - tank-0101-brown
+  - tank-0084-grey
+  - tank-0073-white
+  - tank-0053-violet
+  - tank-0043-blue
+  - tank-0038-green
+  - tank-0067-black
+  - tank-0091-brown
   config: 'uacomment=red
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 0.16.1
+    tag: 0.19.2
   name: tank-0007-red
-  rpcpassword: 06e52b62c4b9e82280f01b35e13a6e14
+  rpcpassword: b502d4890523ea55f0491382d875c453
 - addnode:
   - tank-0009-red
-  - tank-0074-black
-  - miner
-  - tank-0098-grey
-  - tank-0004-red
-  - tank-0070-black
-  - tank-0041-green
-  - tank-0023-yellow
+  - tank-0006-red
+  - tank-0026-yellow
+  - tank-0016-orange
+  - tank-0059-violet
+  - tank-0064-black
+  - tank-0090-brown
+  - tank-0000-red
   config: 'uacomment=red
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
     tag: 0.17.0
   name: tank-0008-red
-  rpcpassword: 40ef015ecb7a205de61b96100beecdd8
+  rpcpassword: 0e39565c56ae76d5b16cbf5583af8938
 - addnode:
-  - tank-0010-red
-  - tank-0109-brown
-  - tank-0059-violet
-  - tank-0043-green
-  - tank-0093-grey
-  - tank-0041-green
-  - tank-0001-red
-  - tank-0076-black
-  config: 'uacomment=red
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.19.2
-  name: tank-0009-red
-  rpcpassword: 8ca19b5cc4d1560c9711073572ee1954
-- addnode:
-  - tank-0011-orange
-  - tank-0012-orange
-  - tank-0052-blue
-  - tank-0039-green
-  - tank-0021-orange
-  - tank-0062-violet
-  - tank-0008-red
-  - tank-0031-yellow
-  config: 'uacomment=red
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.21.1
-  name: tank-0010-red
-  rpcpassword: 50c79ad8b60b4148ffa5597fdb258db2
-- addnode:
-  - tank-0012-orange
-  - tank-0093-grey
-  - tank-0017-orange
-  - tank-0053-blue
-  - tank-0090-grey
-  - tank-0087-white
-  - tank-0007-red
+  - tank-0010-orange
+  - tank-0084-grey
+  - tank-0031-green
+  - tank-0099-brown
+  - tank-0075-white
   - tank-0077-white
-  config: 'uacomment=orange
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-invalid-blocks
-  name: tank-0011-orange
-  rpcpassword: 933e4fc51aeaeba40d888858baa10f3e
-- addnode:
-  - tank-0013-orange
-  - tank-0036-green
-  - tank-0083-white
-  - tank-0046-blue
-  - tank-0039-green
-  - tank-0019-orange
-  - tank-0063-violet
-  - tank-0037-green
-  config: 'uacomment=orange
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-no-mp-trim
-  name: tank-0012-orange
-  rpcpassword: 6b9484664a37baf5999ba4101e693cba
-- addnode:
-  - tank-0014-orange
-  - tank-0018-orange
-  - tank-0049-blue
-  - tank-0055-violet
-  - tank-0071-black
-  - tank-0040-green
-  - tank-0002-red
-  - tank-0017-orange
-  config: 'uacomment=orange
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-unknown-message
-  name: tank-0013-orange
-  rpcpassword: c50180d76b395e681743a558ec72ad0e
-- addnode:
-  - tank-0015-orange
-  - tank-0039-green
-  - tank-0109-brown
-  - tank-0097-grey
-  - tank-0092-grey
-  - tank-0094-grey
-  - tank-0029-yellow
-  - tank-0089-grey
-  config: 'uacomment=orange
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-5k-inv
-  name: tank-0014-orange
-  rpcpassword: 163a8080e0cc15fbb978e3924f88047d
-- addnode:
-  - tank-0016-orange
-  - tank-0080-white
-  - tank-0076-black
-  - tank-0064-violet
-  - tank-0019-orange
-  - tank-0008-red
-  - tank-0024-yellow
-  - tank-0090-grey
-  config: 'uacomment=orange
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-disabled-opcodes
-  name: tank-0015-orange
-  rpcpassword: 5b867412c891ac62ec3ac402d611550c
-- addnode:
-  - tank-0017-orange
-  - tank-0063-violet
-  - tank-0097-grey
-  - tank-0098-grey
-  - tank-0031-yellow
-  - tank-0012-orange
-  - tank-0045-blue
-  - tank-0021-orange
-  config: 'uacomment=orange
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-50-orphans
-  name: tank-0016-orange
-  rpcpassword: 030f946499c821ea108d343c6d35a02e
-- addnode:
-  - tank-0018-orange
-  - tank-0033-green
-  - tank-0083-white
-  - tank-0014-orange
-  - tank-0054-blue
-  - tank-0081-white
-  - tank-0065-violet
-  config: 'uacomment=orange
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.20.0
-  name: tank-0017-orange
-  rpcpassword: 7f41fc4ab557deed530bb3a087587968
-- addnode:
-  - tank-0019-orange
-  - tank-0066-black
   - tank-0058-violet
-  - tank-0073-black
-  - tank-0041-green
-  - tank-0005-red
-  - tank-0089-grey
-  - tank-0022-yellow
-  config: 'uacomment=orange
+  - tank-0041-blue
+  config: 'uacomment=red
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
     tag: 0.16.1
-  name: tank-0018-orange
-  rpcpassword: 9c8a03de7fed062ff0be81a5fc82a3b2
+  name: tank-0009-red
+  rpcpassword: 2ec90e7160595a0e18a85671daf62b3e
 - addnode:
-  - tank-0020-orange
-  - tank-0109-brown
-  - tank-0010-red
-  - tank-0096-grey
-  - tank-0063-violet
-  - tank-0046-blue
-  - tank-0066-black
-  - tank-0070-black
+  - tank-0011-orange
+  - tank-0015-orange
+  - tank-0047-blue
+  - tank-0073-white
+  - tank-0013-orange
+  - tank-0007-red
+  - tank-0099-brown
+  - tank-0037-green
   config: 'uacomment=orange
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 0.17.0
-  name: tank-0019-orange
-  rpcpassword: 6c6ecb31e8b466ae30f42c6481d7ab2d
+    tag: 99.0.0-unknown-message
+  name: tank-0010-orange
+  rpcpassword: 2c0177af87729f58d69e93521980626c
 - addnode:
-  - tank-0021-orange
-  - tank-0093-grey
-  - tank-0107-brown
-  - tank-0102-brown
-  - tank-0091-grey
-  - tank-0050-blue
-  - tank-0051-blue
-  - tank-0062-violet
+  - tank-0012-orange
+  - tank-0070-white
+  - tank-0075-white
+  - tank-0097-brown
+  - tank-0014-orange
+  - tank-0048-blue
+  - tank-0033-green
   config: 'uacomment=orange
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 98.0.0-invalid-blocks
+  name: tank-0011-orange
+  rpcpassword: d1b146eb03a2dcff4571908061607e25
+- addnode:
+  - tank-0013-orange
+  - tank-0051-violet
+  - tank-0070-white
+  - tank-0080-grey
+  - tank-0084-grey
+  - tank-0046-blue
+  - tank-0097-brown
+  - tank-0042-blue
+  config: 'uacomment=orange
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 97.0.0-50-orphans
+  name: tank-0012-orange
+  rpcpassword: 86c86aa882ed6a383fbd732b13cad426
+- addnode:
+  - tank-0014-orange
+  - tank-0042-blue
+  - tank-0058-violet
+  - tank-0000-red
+  - tank-0070-white
+  - tank-0063-black
+  - tank-0091-brown
+  - tank-0099-brown
+  config: 'uacomment=orange
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 96.0.0-no-mp-trim
+  name: tank-0013-orange
+  rpcpassword: 4874ba369029ac7f13d4b5bb6e4b2cb5
+- addnode:
+  - tank-0015-orange
+  - tank-0089-grey
+  - tank-0082-grey
+  - tank-0085-grey
+  - tank-0027-yellow
+  - tank-0052-violet
+  - tank-0022-yellow
+  - tank-0007-red
+  config: 'uacomment=orange
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 95.0.0-disabled-opcodes
+  name: tank-0014-orange
+  rpcpassword: ebcccffe394535dddbdd287e8d0d45fe
+- addnode:
+  - tank-0016-orange
+  - tank-0079-white
+  - tank-0074-white
+  - tank-0065-black
+  - tank-0039-green
+  - tank-0000-red
+  - tank-0008-red
+  - tank-0022-yellow
+  config: 'uacomment=orange
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 94.0.0-5k-inv
+  name: tank-0015-orange
+  rpcpassword: fa170681aaee2b72d15f9825180f1013
+- addnode:
+  - tank-0017-orange
+  - tank-0007-red
+  - tank-0001-red
+  - tank-0019-orange
+  - tank-0045-blue
+  - tank-0067-black
+  - tank-0062-black
+  - tank-0026-yellow
+  config: 'uacomment=orange
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.21.10.20.0
+  name: tank-0016-orange
+  rpcpassword: d1522b1e2b27ec3334e93c9f3b002ee7
+- addnode:
+  - tank-0018-orange
+  - tank-0029-yellow
+  - tank-0003-red
+  - tank-0064-black
+  - tank-0081-grey
+  - tank-0094-brown
+  - tank-0008-red
+  - tank-0093-brown
+  config: 'uacomment=orange
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
     tag: 0.19.2
-  name: tank-0020-orange
-  rpcpassword: b4c55c344ebfb8ce2187d52544acab58
+  name: tank-0017-orange
+  rpcpassword: 0265f101a565120d81b4826e47a0f4f3
 - addnode:
-  - tank-0022-yellow
-  - tank-0039-green
-  - tank-0079-white
-  - tank-0086-white
-  - miner
-  - tank-0057-violet
-  - tank-0098-grey
-  - tank-0008-red
+  - tank-0019-orange
+  - tank-0081-grey
+  - tank-0076-white
+  - tank-0021-yellow
+  - tank-0092-brown
+  - tank-0054-violet
+  - tank-0032-green
   config: 'uacomment=orange
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 0.21.1
-  name: tank-0021-orange
-  rpcpassword: fd1bd9bfd72b0744d1ce6939f5cba174
+    tag: 0.17.0
+  name: tank-0018-orange
+  rpcpassword: 820e7582a6aea80018b16f2ed1f02b8a
+- addnode:
+  - tank-0020-yellow
+  - tank-0012-orange
+  - tank-0003-red
+  - tank-0034-green
+  - tank-0072-white
+  - tank-0014-orange
+  - tank-0039-green
+  - tank-0079-white
+  config: 'uacomment=orange
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.16.1
+  name: tank-0019-orange
+  rpcpassword: 755d81c74c0acf9628521945c378ee0a
+- addnode:
+  - tank-0021-yellow
+  - tank-0014-orange
+  - tank-0090-brown
+  - tank-0089-grey
+  - tank-0025-yellow
+  - tank-0088-grey
+  - tank-0086-grey
+  config: 'uacomment=yellow
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 99.0.0-unknown-message
+  name: tank-0020-yellow
+  rpcpassword: 51c7d2c2eab0bffd2e64683108e8ffe8
+- addnode:
+  - tank-0022-yellow
+  - tank-0097-brown
+  - tank-0029-yellow
+  - tank-0052-violet
+  - tank-0081-grey
+  - tank-0027-yellow
+  - tank-0092-brown
+  - tank-0014-orange
+  config: 'uacomment=yellow
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 98.0.0-invalid-blocks
+  name: tank-0021-yellow
+  rpcpassword: c48ab80f99137994a90fdc750fb3f4c4
 - addnode:
   - tank-0023-yellow
-  - tank-0032-yellow
-  - tank-0041-green
-  - tank-0066-black
-  - tank-0028-yellow
-  - tank-0017-orange
+  - tank-0047-blue
+  - tank-0099-brown
+  - tank-0065-black
+  - tank-0045-blue
+  - tank-0053-violet
+  - tank-0092-brown
+  - tank-0031-green
   config: 'uacomment=yellow
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 99.1.0-invalid-blocks
+    tag: 97.0.0-50-orphans
   name: tank-0022-yellow
-  rpcpassword: 64ef080b286a8da77f340d709cdd44b7
+  rpcpassword: 6c12e279132f8cdb958bb2296ad22ba1
 - addnode:
   - tank-0024-yellow
-  - tank-0095-grey
-  - tank-0002-red
-  - tank-0032-yellow
-  - tank-0101-brown
-  - tank-0062-violet
-  - tank-0021-orange
-  - tank-0003-red
+  - tank-0007-red
+  - tank-0051-violet
+  - tank-0063-black
+  - tank-0017-orange
+  - tank-0073-white
+  - tank-0086-grey
+  - tank-0062-black
   config: 'uacomment=yellow
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 99.1.0-no-mp-trim
+    tag: 96.0.0-no-mp-trim
   name: tank-0023-yellow
-  rpcpassword: 06e11336d0ff62f0b64cd6aa3d9aba15
+  rpcpassword: 8f83e2b5382473ca7b2cb085bb59ad44
 - addnode:
   - tank-0025-yellow
-  - tank-0074-black
-  - tank-0073-black
-  - tank-0105-brown
-  - tank-0001-red
-  - tank-0038-green
-  - tank-0014-orange
-  - tank-0037-green
+  - tank-0078-white
+  - tank-0022-yellow
+  - tank-0042-blue
+  - tank-0075-white
+  - tank-0033-green
+  - tank-0088-grey
+  - tank-0063-black
   config: 'uacomment=yellow
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 99.1.0-unknown-message
+    tag: 95.0.0-disabled-opcodes
   name: tank-0024-yellow
-  rpcpassword: 6406b85566c0bf25fecdffa3a27097a1
+  rpcpassword: 9aca81c5f83fc21d98251312c235afff
 - addnode:
   - tank-0026-yellow
-  - tank-0032-yellow
-  - tank-0098-grey
-  - tank-0102-brown
-  - tank-0078-white
-  - tank-0043-green
-  - tank-0059-violet
-  - tank-0053-blue
+  - tank-0019-orange
+  - tank-0088-grey
+  - tank-0061-black
+  - tank-0049-blue
+  - tank-0045-blue
+  - tank-0071-white
   config: 'uacomment=yellow
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 99.1.0-5k-inv
+    tag: 94.0.0-5k-inv
   name: tank-0025-yellow
-  rpcpassword: dce5761c02f730f1293ca465fcebeca8
+  rpcpassword: 182bcd007f95ebe0d4a995ae635e7982
 - addnode:
   - tank-0027-yellow
-  - tank-0100-brown
-  - tank-0104-brown
-  - tank-0064-violet
-  - tank-0101-brown
-  - tank-0075-black
-  - tank-0093-grey
+  - tank-0066-black
+  - tank-0015-orange
+  - tank-0037-green
+  - tank-0007-red
   - tank-0055-violet
+  - tank-0042-blue
+  - tank-0030-green
   config: 'uacomment=yellow
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 99.1.0-disabled-opcodes
+    tag: 0.21.10.20.0
   name: tank-0026-yellow
-  rpcpassword: c6c183bf4d02ea33590d291d40ca1dcf
+  rpcpassword: ce7dc1e918ea68f12e1377aec872912d
 - addnode:
   - tank-0028-yellow
-  - tank-0062-violet
-  - tank-0005-red
-  - tank-0034-green
-  - tank-0022-yellow
-  - tank-0035-green
-  - tank-0003-red
+  - tank-0031-green
+  - tank-0045-blue
+  - tank-0047-blue
+  - tank-0057-violet
+  - tank-0085-grey
+  - tank-0040-blue
+  - tank-0095-brown
   config: 'uacomment=yellow
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 99.1.0-50-orphans
+    tag: 0.19.2
   name: tank-0027-yellow
-  rpcpassword: 4ffdfacab90869367920a04756185ab9
+  rpcpassword: 89793c71cc8082a36540744cdaa6cae3
 - addnode:
   - tank-0029-yellow
-  - tank-0012-orange
-  - tank-0108-brown
-  - tank-0056-violet
-  - tank-0009-red
-  - tank-0014-orange
-  - tank-0001-red
-  - tank-0105-brown
+  - tank-0050-violet
+  - tank-0026-yellow
+  - tank-0063-black
+  - tank-0002-red
+  - tank-0039-green
+  - tank-0008-red
+  - tank-0082-grey
   config: 'uacomment=yellow
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 0.20.0
+    tag: 0.17.0
   name: tank-0028-yellow
-  rpcpassword: ca47b0dbf622965427f47c9897ed51c0
+  rpcpassword: 39257090ca347a245146c1a5681b0e79
 - addnode:
-  - tank-0030-yellow
-  - tank-0059-violet
-  - tank-0010-red
-  - tank-0016-orange
-  - tank-0104-brown
-  - tank-0034-green
-  - tank-0035-green
-  - tank-0103-brown
+  - tank-0030-green
+  - tank-0089-grey
+  - tank-0087-grey
+  - tank-0023-yellow
+  - tank-0052-violet
+  - tank-0084-grey
+  - tank-0058-violet
   config: 'uacomment=yellow
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
     tag: 0.16.1
   name: tank-0029-yellow
-  rpcpassword: 905e7942aa252a268dba863f2f56ed8c
+  rpcpassword: 307373da4468ff9daedc5fa002c505e3
 - addnode:
-  - tank-0031-yellow
-  - miner
-  - tank-0027-yellow
-  - tank-0006-red
-  - tank-0038-green
-  - tank-0001-red
-  - tank-0068-black
-  - tank-0074-black
-  config: 'uacomment=yellow
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.17.0
-  name: tank-0030-yellow
-  rpcpassword: be0576ffdd38ca4d55c38580227585fa
-- addnode:
-  - tank-0032-yellow
-  - tank-0085-white
-  - tank-0014-orange
-  - tank-0072-black
-  - tank-0096-grey
-  - tank-0079-white
-  - tank-0081-white
-  config: 'uacomment=yellow
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.19.2
-  name: tank-0031-yellow
-  rpcpassword: 165275ddcb346964fde6c0bb16d4bbab
-- addnode:
-  - tank-0033-green
-  - tank-0104-brown
-  - tank-0083-white
-  - tank-0047-blue
-  - tank-0072-black
-  - tank-0074-black
-  - tank-0044-blue
-  - tank-0029-yellow
-  config: 'uacomment=yellow
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.21.1
-  name: tank-0032-yellow
-  rpcpassword: 2462ab20d012d31840086ebc7b1ec4bf
-- addnode:
-  - tank-0034-green
-  - tank-0075-black
-  - tank-0097-grey
-  - tank-0023-yellow
-  - tank-0076-black
-  - tank-0107-brown
-  - tank-0000-red
-  - tank-0031-yellow
-  config: 'uacomment=green
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-invalid-blocks
-  name: tank-0033-green
-  rpcpassword: 62b8c8626cc78d8e85030bce9efe5b19
-- addnode:
-  - tank-0035-green
-  - tank-0079-white
-  - tank-0056-violet
-  - tank-0020-orange
-  - tank-0087-white
-  - tank-0010-red
-  - tank-0011-orange
-  config: 'uacomment=green
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-no-mp-trim
-  name: tank-0034-green
-  rpcpassword: 60aced657560616d0a2679d23f081fe3
-- addnode:
-  - tank-0036-green
-  - tank-0081-white
-  - tank-0018-orange
+  - tank-0031-green
+  - tank-0072-white
+  - tank-0065-black
+  - tank-0058-violet
+  - tank-0085-grey
+  - tank-0076-white
+  - tank-0012-orange
   - tank-0013-orange
-  - tank-0104-brown
-  - tank-0054-blue
-  - tank-0107-brown
-  - tank-0019-orange
   config: 'uacomment=green
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 99.1.0-unknown-message
-  name: tank-0035-green
-  rpcpassword: 807095e129537d24246a83e219706788
+    tag: 99.0.0-unknown-message
+  name: tank-0030-green
+  rpcpassword: bd19c2443154a9d7217f1dad0fd5805c
 - addnode:
-  - tank-0037-green
-  - tank-0096-grey
-  - miner
-  - tank-0066-black
-  - tank-0011-orange
-  - tank-0040-green
-  - tank-0080-white
-  config: 'uacomment=green
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-5k-inv
-  name: tank-0036-green
-  rpcpassword: 18a313e6d4fe8ae089965b2494f8ea6d
-- addnode:
-  - tank-0038-green
-  - tank-0000-red
-  - tank-0082-white
-  - tank-0109-brown
-  - tank-0067-black
-  - tank-0042-green
-  - tank-0008-red
-  - tank-0003-red
-  config: 'uacomment=green
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-disabled-opcodes
-  name: tank-0037-green
-  rpcpassword: f7fce63ab594ea42593aa0d63e264b55
-- addnode:
-  - tank-0039-green
-  - tank-0078-white
-  - tank-0063-violet
-  - tank-0094-grey
-  - tank-0015-orange
-  - tank-0004-red
-  - tank-0073-black
-  config: 'uacomment=green
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-50-orphans
-  name: tank-0038-green
-  rpcpassword: 76143355f2c1721dbfd689412034a0b5
-- addnode:
-  - tank-0040-green
-  - tank-0086-white
-  - tank-0105-brown
-  - tank-0108-brown
-  - tank-0056-violet
-  - tank-0045-blue
-  - tank-0066-black
-  - tank-0083-white
-  config: 'uacomment=green
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.20.0
-  name: tank-0039-green
-  rpcpassword: 3f53e24cc3ee44cc39e96707a56628d3
-- addnode:
-  - tank-0041-green
-  - tank-0083-white
-  - tank-0022-yellow
-  - tank-0094-grey
-  - tank-0109-brown
-  - miner
+  - tank-0032-green
   - tank-0088-grey
+  - tank-0096-brown
   - tank-0048-blue
-  config: 'uacomment=green
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.16.1
-  name: tank-0040-green
-  rpcpassword: 701018641d1cf994c281fad48f3eb1fb
-- addnode:
-  - tank-0042-green
-  - tank-0097-grey
-  - tank-0006-red
-  - tank-0034-green
-  - tank-0027-yellow
-  - tank-0020-orange
-  - tank-0099-brown
-  - tank-0084-white
-  config: 'uacomment=green
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.17.0
-  name: tank-0041-green
-  rpcpassword: b51190c8e7fde203b7044f626c57107b
-- addnode:
-  - tank-0043-green
-  - tank-0107-brown
-  - tank-0029-yellow
-  - tank-0095-grey
-  - tank-0080-white
-  - tank-0009-red
-  - tank-0015-orange
-  config: 'uacomment=green
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.19.2
-  name: tank-0042-green
-  rpcpassword: 5a009ee7fb726add3d9f9ab94133dbd9
-- addnode:
+  - tank-0047-blue
+  - tank-0075-white
   - tank-0044-blue
-  - tank-0021-orange
-  - tank-0060-violet
-  - tank-0061-violet
-  - tank-0036-green
-  - tank-0062-violet
-  - tank-0080-white
-  - tank-0065-violet
   config: 'uacomment=green
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 0.21.1
-  name: tank-0043-green
-  rpcpassword: cb016d3b18545ced3ea40e7547b432c4
+    tag: 98.0.0-invalid-blocks
+  name: tank-0031-green
+  rpcpassword: 73c14da016e9863bb113b5a4cb592b59
 - addnode:
-  - tank-0045-blue
-  - tank-0055-violet
-  - tank-0047-blue
-  - tank-0092-grey
-  - tank-0095-grey
-  - tank-0094-grey
-  - tank-0062-violet
-  - tank-0072-black
-  config: 'uacomment=blue
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-invalid-blocks
-  name: tank-0044-blue
-  rpcpassword: d4f1d709078787a38cf045e3f9e2414c
-- addnode:
-  - tank-0046-blue
-  - tank-0038-green
-  - tank-0069-black
-  - tank-0014-orange
-  - tank-0006-red
-  - tank-0003-red
-  - tank-0095-grey
-  - tank-0031-yellow
-  config: 'uacomment=blue
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-no-mp-trim
-  name: tank-0045-blue
-  rpcpassword: e487383c1cf8b0e67a174d2e5a3fec0a
-- addnode:
-  - tank-0047-blue
-  - tank-0077-white
-  - tank-0072-black
-  - tank-0102-brown
-  - tank-0091-grey
-  - tank-0092-grey
-  - tank-0037-green
-  config: 'uacomment=blue
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-unknown-message
-  name: tank-0046-blue
-  rpcpassword: 39bc897f6c32b578b7979720425ca001
-- addnode:
-  - tank-0048-blue
-  - tank-0040-green
-  - tank-0070-black
-  - tank-0064-violet
-  - tank-0091-grey
   - tank-0033-green
-  - tank-0090-grey
-  config: 'uacomment=blue
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-5k-inv
-  name: tank-0047-blue
-  rpcpassword: 9458bb05bcba3b1b701902cdec59eff2
-- addnode:
-  - tank-0049-blue
-  - tank-0024-yellow
-  - tank-0001-red
-  - tank-0035-green
-  - tank-0073-black
-  - tank-0062-violet
-  - tank-0061-violet
-  - tank-0095-grey
-  config: 'uacomment=blue
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-disabled-opcodes
-  name: tank-0048-blue
-  rpcpassword: 0450bd1d17cd78cdcfbd59fa84135cec
-- addnode:
-  - tank-0050-blue
-  - tank-0100-brown
-  - tank-0009-red
-  - tank-0103-brown
-  - tank-0096-grey
-  - tank-0041-green
-  - tank-0080-white
-  - tank-0076-black
-  config: 'uacomment=blue
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-50-orphans
-  name: tank-0049-blue
-  rpcpassword: cdccb43466af0662d58f2b0478dee705
-- addnode:
-  - tank-0051-blue
-  - tank-0090-grey
-  - tank-0088-grey
-  - tank-0029-yellow
-  - tank-0108-brown
-  - tank-0097-grey
-  - tank-0077-white
-  - tank-0030-yellow
-  config: 'uacomment=blue
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.20.0
-  name: tank-0050-blue
-  rpcpassword: 7ac0b24d093520b8dea9528b2d90ec94
-- addnode:
-  - tank-0052-blue
-  - tank-0085-white
-  - tank-0008-red
-  - tank-0065-violet
-  - tank-0005-red
-  - tank-0086-white
-  - tank-0037-green
-  - tank-0056-violet
-  config: 'uacomment=blue
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.16.1
-  name: tank-0051-blue
-  rpcpassword: e924d1302649aa2418b805969e43f5a8
-- addnode:
-  - tank-0053-blue
-  - tank-0027-yellow
-  - tank-0022-yellow
-  - tank-0016-orange
-  - tank-0099-brown
-  - tank-0025-yellow
-  - tank-0032-yellow
-  - tank-0049-blue
-  config: 'uacomment=blue
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.17.0
-  name: tank-0052-blue
-  rpcpassword: ad27477808aa04c5ced6c907385aad44
-- addnode:
-  - tank-0054-blue
-  - tank-0104-brown
-  - tank-0073-black
-  - tank-0064-violet
-  - tank-0056-violet
-  - tank-0018-orange
-  - tank-0085-white
-  - tank-0068-black
-  config: 'uacomment=blue
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.19.2
-  name: tank-0053-blue
-  rpcpassword: 5f4ddbfffbfa9bbbb0e55f353bf5e7ec
-- addnode:
-  - tank-0055-violet
-  - tank-0038-green
-  - tank-0060-violet
-  - miner
-  - tank-0046-blue
-  - tank-0092-grey
-  - tank-0052-blue
-  config: 'uacomment=blue
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.21.1
-  name: tank-0054-blue
-  rpcpassword: 19ff24ae9656d17a9028d1943601d434
-- addnode:
-  - tank-0056-violet
-  - tank-0042-green
-  - tank-0045-blue
-  - tank-0053-blue
-  - tank-0011-orange
-  - tank-0082-white
-  - tank-0076-black
-  config: 'uacomment=violet
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-invalid-blocks
-  name: tank-0055-violet
-  rpcpassword: 3682664c7e42d0e8ca4ba9060c54557f
-- addnode:
-  - tank-0057-violet
-  - tank-0031-yellow
-  - tank-0073-black
-  - tank-0017-orange
-  - tank-0108-brown
-  - tank-0067-black
-  - tank-0092-grey
-  - tank-0071-black
-  config: 'uacomment=violet
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-no-mp-trim
-  name: tank-0056-violet
-  rpcpassword: 9ee23a973156cfd535a569dc2f12c622
-- addnode:
-  - tank-0058-violet
-  - tank-0084-white
-  - tank-0108-brown
-  - tank-0089-grey
-  - tank-0006-red
-  - tank-0051-blue
-  - tank-0059-violet
-  - tank-0041-green
-  config: 'uacomment=violet
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-unknown-message
-  name: tank-0057-violet
-  rpcpassword: 80557df4b11117e747ab9fd6a466d983
-- addnode:
-  - tank-0059-violet
-  - tank-0068-black
-  - tank-0016-orange
-  - tank-0011-orange
-  - tank-0096-grey
-  - tank-0089-grey
-  - tank-0099-brown
-  - tank-0046-blue
-  config: 'uacomment=violet
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-5k-inv
-  name: tank-0058-violet
-  rpcpassword: f8ed8eecac7fdc708d26caf8339f69dd
-- addnode:
-  - tank-0060-violet
-  - tank-0043-green
-  - tank-0022-yellow
-  - tank-0071-black
-  - tank-0078-white
-  - tank-0049-blue
-  - tank-0102-brown
-  - tank-0016-orange
-  config: 'uacomment=violet
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-disabled-opcodes
-  name: tank-0059-violet
-  rpcpassword: 71d1ba07542d5b7262efc8a4ab32ba41
-- addnode:
-  - tank-0061-violet
-  - tank-0105-brown
-  - tank-0019-orange
-  - tank-0046-blue
-  - tank-0079-white
-  - tank-0018-orange
-  - tank-0005-red
-  config: 'uacomment=violet
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-50-orphans
-  name: tank-0060-violet
-  rpcpassword: 6447ffd147465214bd42e2660eea99b0
-- addnode:
-  - tank-0062-violet
-  - tank-0055-violet
-  - tank-0067-black
-  - tank-0079-white
-  - tank-0106-brown
-  - tank-0072-black
-  - tank-0083-white
-  - tank-0031-yellow
-  config: 'uacomment=violet
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.20.0
-  name: tank-0061-violet
-  rpcpassword: 9cb70ea7aed7f326a334e9b297dd450b
-- addnode:
-  - tank-0063-violet
-  - tank-0097-grey
-  - tank-0102-brown
-  - tank-0088-grey
-  - miner
-  - tank-0092-grey
-  - tank-0106-brown
-  - tank-0096-grey
-  config: 'uacomment=violet
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.16.1
-  name: tank-0062-violet
-  rpcpassword: 89f25390aa1d495f4f23adf40c7c7ece
-- addnode:
-  - tank-0064-violet
-  - tank-0035-green
-  - tank-0065-violet
-  - tank-0043-green
-  - tank-0096-grey
-  - tank-0091-grey
-  - tank-0079-white
-  - tank-0009-red
-  config: 'uacomment=violet
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.17.0
-  name: tank-0063-violet
-  rpcpassword: 759a67a79023d583408f3a88920fc7f0
-- addnode:
-  - tank-0065-violet
-  - tank-0061-violet
-  - tank-0079-white
-  - tank-0060-violet
-  - tank-0096-grey
-  - tank-0100-brown
-  - tank-0022-yellow
-  - tank-0038-green
-  config: 'uacomment=violet
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.19.2
-  name: tank-0064-violet
-  rpcpassword: 57502e9859ad5a5a55a0ab774ed67b5a
-- addnode:
-  - tank-0066-black
-  - tank-0073-black
-  - tank-0083-white
-  - tank-0078-white
-  - tank-0095-grey
-  - tank-0050-blue
-  - tank-0014-orange
-  - tank-0039-green
-  config: 'uacomment=violet
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.21.1
-  name: tank-0065-violet
-  rpcpassword: ca8c11ef0e82689f559405caa258c159
-- addnode:
-  - tank-0067-black
-  - tank-0010-red
-  - tank-0020-orange
-  - tank-0096-grey
-  - tank-0107-brown
-  - tank-0094-grey
-  - tank-0090-grey
-  - tank-0077-white
-  config: 'uacomment=black
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-invalid-blocks
-  name: tank-0066-black
-  rpcpassword: dc1105b3afc240a6fd3cc3aea7e4b914
-- addnode:
-  - tank-0068-black
-  - tank-0086-white
-  - tank-0040-green
-  - tank-0002-red
-  - tank-0072-black
-  - tank-0053-blue
-  - tank-0088-grey
-  - tank-0099-brown
-  config: 'uacomment=black
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-no-mp-trim
-  name: tank-0067-black
-  rpcpassword: 843f8be9a65e2e22f1c3cae61f156727
-- addnode:
-  - tank-0069-black
-  - tank-0017-orange
-  - tank-0056-violet
-  - tank-0054-blue
-  - tank-0036-green
-  - tank-0100-brown
-  - tank-0097-grey
-  - tank-0046-blue
-  config: 'uacomment=black
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-unknown-message
-  name: tank-0068-black
-  rpcpassword: c603698afa5cf4cf696eab580aed7c07
-- addnode:
-  - tank-0070-black
-  - tank-0054-blue
-  - tank-0009-red
+  - tank-0064-black
   - tank-0026-yellow
-  - miner
-  - tank-0089-grey
-  - tank-0057-violet
-  - tank-0104-brown
-  config: 'uacomment=black
+  - tank-0079-white
+  - tank-0076-white
+  - tank-0081-grey
+  - tank-0039-green
+  config: 'uacomment=green
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 99.1.0-5k-inv
-  name: tank-0069-black
-  rpcpassword: e39ef9c0c5d0ce1d1ea0614a3cf89602
+    tag: 97.0.0-50-orphans
+  name: tank-0032-green
+  rpcpassword: 554436d9fb7042a5ef7570f7f30fa32b
 - addnode:
-  - tank-0071-black
-  - tank-0036-green
-  - tank-0030-yellow
-  - tank-0075-black
-  - tank-0095-grey
-  - tank-0076-black
+  - tank-0034-green
+  - tank-0016-orange
+  - tank-0026-yellow
   - tank-0004-red
-  - tank-0049-blue
-  config: 'uacomment=black
+  - tank-0085-grey
+  - tank-0080-grey
+  config: 'uacomment=green
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 99.1.0-disabled-opcodes
-  name: tank-0070-black
-  rpcpassword: d8a4cd62a4fd70201b24654c0c5cc8b0
+    tag: 96.0.0-no-mp-trim
+  name: tank-0033-green
+  rpcpassword: 3bcb36fce995f8a457934cabee78a9d0
 - addnode:
-  - tank-0072-black
-  - tank-0033-green
-  - tank-0106-brown
-  - tank-0090-grey
-  - tank-0068-black
-  - tank-0073-black
-  - tank-0048-blue
-  - tank-0057-violet
-  config: 'uacomment=black
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-50-orphans
-  name: tank-0071-black
-  rpcpassword: af4d567829957e52ebb79f872459ffb2
-- addnode:
-  - tank-0073-black
-  - tank-0093-grey
-  - tank-0076-black
-  - tank-0090-grey
-  - tank-0082-white
-  - tank-0020-orange
-  - tank-0102-brown
-  - tank-0022-yellow
-  config: 'uacomment=black
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.20.0
-  name: tank-0072-black
-  rpcpassword: 2168fd4e0b07a193d15ff340995bb4ef
-- addnode:
-  - tank-0074-black
-  - tank-0029-yellow
-  - tank-0068-black
-  - tank-0085-white
-  - tank-0042-green
-  - tank-0078-white
-  - tank-0025-yellow
-  config: 'uacomment=black
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.16.1
-  name: tank-0073-black
-  rpcpassword: 56914038cd784d681c30ab72e5a73192
-- addnode:
-  - tank-0075-black
-  - tank-0087-white
-  - tank-0065-violet
-  - tank-0071-black
-  - tank-0097-grey
-  - tank-0014-orange
-  - tank-0005-red
-  - tank-0047-blue
-  config: 'uacomment=black
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.17.0
-  name: tank-0074-black
-  rpcpassword: be3e44e4aac8e6c2fca3d225023628cd
-- addnode:
-  - tank-0076-black
+  - tank-0035-green
+  - tank-0054-violet
+  - tank-0076-white
+  - tank-0006-red
   - tank-0017-orange
-  - tank-0091-grey
-  - tank-0086-white
-  - tank-0046-blue
-  - tank-0018-orange
-  - tank-0103-brown
-  config: 'uacomment=black
+  - tank-0055-violet
+  - tank-0089-grey
+  - tank-0047-blue
+  config: 'uacomment=green
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 95.0.0-disabled-opcodes
+  name: tank-0034-green
+  rpcpassword: 66c051388678ec34fdddc94cca103637
+- addnode:
+  - tank-0036-green
+  - tank-0078-white
+  - tank-0092-brown
+  - tank-0028-yellow
+  - tank-0048-blue
+  - tank-0002-red
+  - tank-0039-green
+  - tank-0050-violet
+  config: 'uacomment=green
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 94.0.0-5k-inv
+  name: tank-0035-green
+  rpcpassword: 9524f670f15bbaeff5e1d9d381c521dd
+- addnode:
+  - tank-0037-green
+  - tank-0067-black
+  - tank-0076-white
+  - tank-0058-violet
+  - tank-0011-orange
+  - tank-0002-red
+  - tank-0088-grey
+  - tank-0054-violet
+  config: 'uacomment=green
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.21.10.20.0
+  name: tank-0036-green
+  rpcpassword: 2e41a4efc59e9b7c2953d920733410be
+- addnode:
+  - tank-0038-green
+  - tank-0004-red
+  - tank-0012-orange
+  - tank-0007-red
+  - tank-0079-white
+  - tank-0084-grey
+  - tank-0066-black
+  config: 'uacomment=green
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
     tag: 0.19.2
-  name: tank-0075-black
-  rpcpassword: 540ad398bb156e8a209b766a64c1ce0c
+  name: tank-0037-green
+  rpcpassword: 7c0931ef49b248441e4223470eff8772
+- addnode:
+  - tank-0039-green
+  - tank-0030-green
+  - tank-0017-orange
+  - tank-0098-brown
+  - tank-0054-violet
+  - tank-0016-orange
+  - tank-0046-blue
+  - tank-0045-blue
+  config: 'uacomment=green
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.17.0
+  name: tank-0038-green
+  rpcpassword: 58429a3be230d6515f61625c5f13cb3a
+- addnode:
+  - tank-0040-blue
+  - tank-0065-black
+  - tank-0088-grey
+  - tank-0060-black
+  - miner
+  - tank-0031-green
+  - tank-0092-brown
+  - tank-0012-orange
+  config: 'uacomment=green
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.16.1
+  name: tank-0039-green
+  rpcpassword: 1594278706eac79d301046b22792e7ec
+- addnode:
+  - tank-0041-blue
+  - tank-0025-yellow
+  - tank-0091-brown
+  - tank-0095-brown
+  - tank-0051-violet
+  - tank-0021-yellow
+  config: 'uacomment=blue
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 99.0.0-unknown-message
+  name: tank-0040-blue
+  rpcpassword: 609e9a40fa6ee889fff00c6c2f0ccbb1
+- addnode:
+  - tank-0042-blue
+  - tank-0045-blue
+  - tank-0084-grey
+  - tank-0068-black
+  - tank-0021-yellow
+  - tank-0024-yellow
+  - tank-0000-red
+  - tank-0082-grey
+  config: 'uacomment=blue
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 98.0.0-invalid-blocks
+  name: tank-0041-blue
+  rpcpassword: 1d059e4b3e814880df870725abc5a55d
+- addnode:
+  - tank-0043-blue
+  - tank-0060-black
+  - tank-0057-violet
+  - tank-0064-black
+  - tank-0027-yellow
+  - tank-0011-orange
+  - tank-0010-orange
+  - tank-0023-yellow
+  config: 'uacomment=blue
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 97.0.0-50-orphans
+  name: tank-0042-blue
+  rpcpassword: b3b6f6afe973194dbfc1f6012e2c07b5
+- addnode:
+  - tank-0044-blue
+  - tank-0018-orange
+  - tank-0092-brown
+  - tank-0038-green
+  - tank-0009-red
+  - tank-0006-red
+  - tank-0097-brown
+  config: 'uacomment=blue
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 96.0.0-no-mp-trim
+  name: tank-0043-blue
+  rpcpassword: f5dffb66fa9ac314a101d19880ff1593
+- addnode:
+  - tank-0045-blue
+  - tank-0016-orange
+  - tank-0047-blue
+  - tank-0087-grey
+  - tank-0026-yellow
+  - tank-0000-red
+  - tank-0035-green
+  - tank-0090-brown
+  config: 'uacomment=blue
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 95.0.0-disabled-opcodes
+  name: tank-0044-blue
+  rpcpassword: 39655ad7a440fdd9cce80abd16d0dcb3
+- addnode:
+  - tank-0046-blue
+  - tank-0003-red
+  - tank-0076-white
+  - tank-0034-green
+  - tank-0080-grey
+  - tank-0074-white
+  - tank-0050-violet
+  - tank-0058-violet
+  config: 'uacomment=blue
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 94.0.0-5k-inv
+  name: tank-0045-blue
+  rpcpassword: f51f5c632609c2d4c7702a95742a33dc
+- addnode:
+  - tank-0047-blue
+  - tank-0086-grey
+  - tank-0057-violet
+  - tank-0083-grey
+  - tank-0087-grey
+  - tank-0014-orange
+  - tank-0061-black
+  - tank-0011-orange
+  config: 'uacomment=blue
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.21.10.20.0
+  name: tank-0046-blue
+  rpcpassword: 434db353ef5219616612d888fe537dd1
+- addnode:
+  - tank-0048-blue
+  - tank-0076-white
+  - tank-0070-white
+  - tank-0025-yellow
+  - tank-0097-brown
+  - tank-0033-green
+  - tank-0000-red
+  - tank-0011-orange
+  config: 'uacomment=blue
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.19.2
+  name: tank-0047-blue
+  rpcpassword: 87499c48a12c4640deff684e3da8d0e0
+- addnode:
+  - tank-0049-blue
+  - tank-0060-black
+  - tank-0046-blue
+  - tank-0062-black
+  - tank-0083-grey
+  - tank-0052-violet
+  - tank-0080-grey
+  - tank-0005-red
+  config: 'uacomment=blue
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.17.0
+  name: tank-0048-blue
+  rpcpassword: 2706aa85031fc572832f300b7470648e
+- addnode:
+  - tank-0050-violet
+  - tank-0031-green
+  - tank-0044-blue
+  - tank-0088-grey
+  - tank-0055-violet
+  - tank-0065-black
+  - tank-0008-red
+  - tank-0038-green
+  config: 'uacomment=blue
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.16.1
+  name: tank-0049-blue
+  rpcpassword: 416b738d8157b15a64d9f86feb6222dd
+- addnode:
+  - tank-0051-violet
+  - tank-0033-green
+  - tank-0047-blue
+  - tank-0090-brown
+  - tank-0048-blue
+  - tank-0097-brown
+  - tank-0074-white
+  config: 'uacomment=violet
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 99.0.0-unknown-message
+  name: tank-0050-violet
+  rpcpassword: 00f6e7a2f6c47ebbbb1caeb9cc6cfe98
+- addnode:
+  - tank-0052-violet
+  - tank-0094-brown
+  - tank-0039-green
+  - tank-0048-blue
+  - tank-0071-white
+  - tank-0080-grey
+  - tank-0005-red
+  config: 'uacomment=violet
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 98.0.0-invalid-blocks
+  name: tank-0051-violet
+  rpcpassword: f170b339649518dfa7a9df6812bb4847
+- addnode:
+  - tank-0053-violet
+  - tank-0062-black
+  - tank-0060-black
+  - tank-0027-yellow
+  - tank-0091-brown
+  - tank-0088-grey
+  - tank-0087-grey
+  - tank-0072-white
+  config: 'uacomment=violet
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 97.0.0-50-orphans
+  name: tank-0052-violet
+  rpcpassword: d5603a3bb8343e8251b2ebd2ee99bda5
+- addnode:
+  - tank-0054-violet
+  - tank-0039-green
+  - tank-0037-green
+  - tank-0047-blue
+  - tank-0067-black
+  - tank-0021-yellow
+  - tank-0062-black
+  - tank-0091-brown
+  config: 'uacomment=violet
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 96.0.0-no-mp-trim
+  name: tank-0053-violet
+  rpcpassword: 5bab48548bef9b10e9d699839f2402cf
+- addnode:
+  - tank-0055-violet
+  - tank-0006-red
+  - tank-0037-green
+  - tank-0082-grey
+  - tank-0067-black
+  - tank-0066-black
+  config: 'uacomment=violet
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 95.0.0-disabled-opcodes
+  name: tank-0054-violet
+  rpcpassword: de761099d5292c5b772f8f385f0c8700
+- addnode:
+  - tank-0056-violet
+  - tank-0007-red
+  - tank-0038-green
+  - tank-0033-green
+  - tank-0031-green
+  - tank-0045-blue
+  - tank-0009-red
+  - tank-0018-orange
+  config: 'uacomment=violet
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 94.0.0-5k-inv
+  name: tank-0055-violet
+  rpcpassword: 398c89eee6d486ab2c728453fe7f29fd
+- addnode:
+  - tank-0057-violet
+  - tank-0010-orange
+  - tank-0000-red
+  - tank-0022-yellow
+  - tank-0058-violet
+  - tank-0020-yellow
+  - tank-0076-white
+  - tank-0075-white
+  config: 'uacomment=violet
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.21.10.20.0
+  name: tank-0056-violet
+  rpcpassword: ce7d6049f4dce1fe7eb872532e22fd44
+- addnode:
+  - tank-0058-violet
+  - tank-0026-yellow
+  - tank-0050-violet
+  - tank-0012-orange
+  - tank-0044-blue
+  - tank-0075-white
+  - tank-0065-black
+  config: 'uacomment=violet
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.19.2
+  name: tank-0057-violet
+  rpcpassword: 7a4282b856bca54a44762e4a9d7d518a
+- addnode:
+  - tank-0059-violet
+  - tank-0080-grey
+  - tank-0088-grey
+  - miner
+  - tank-0085-grey
+  - tank-0093-brown
+  config: 'uacomment=violet
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.17.0
+  name: tank-0058-violet
+  rpcpassword: f7fc036986c68a503004105a78b12a36
+- addnode:
+  - tank-0060-black
+  - tank-0026-yellow
+  - tank-0010-orange
+  - tank-0030-green
+  - tank-0038-green
+  - tank-0062-black
+  - tank-0065-black
+  - tank-0095-brown
+  config: 'uacomment=violet
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.16.1
+  name: tank-0059-violet
+  rpcpassword: 2d0150b3a59c743022d324ec0e77242f
+- addnode:
+  - tank-0061-black
+  - tank-0055-violet
+  - tank-0038-green
+  - tank-0078-white
+  - tank-0075-white
+  - tank-0084-grey
+  - tank-0000-red
+  - tank-0068-black
+  config: 'uacomment=black
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 99.0.0-unknown-message
+  name: tank-0060-black
+  rpcpassword: 63458236e65b27a4c3df966e1996bef7
+- addnode:
+  - tank-0062-black
+  - tank-0041-blue
+  - tank-0091-brown
+  - tank-0087-grey
+  - tank-0008-red
+  - tank-0094-brown
+  - tank-0000-red
+  - tank-0017-orange
+  config: 'uacomment=black
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 98.0.0-invalid-blocks
+  name: tank-0061-black
+  rpcpassword: 98357f53a070357afccd0eb201e52f07
+- addnode:
+  - tank-0063-black
+  - tank-0032-green
+  - tank-0070-white
+  - tank-0000-red
+  - tank-0021-yellow
+  - tank-0067-black
+  - tank-0068-black
+  config: 'uacomment=black
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 97.0.0-50-orphans
+  name: tank-0062-black
+  rpcpassword: edd30dd28800c84ebac4320adb67f4d8
+- addnode:
+  - tank-0064-black
+  - tank-0021-yellow
+  - tank-0092-brown
+  - tank-0011-orange
+  - tank-0002-red
+  - tank-0033-green
+  - tank-0051-violet
+  config: 'uacomment=black
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 96.0.0-no-mp-trim
+  name: tank-0063-black
+  rpcpassword: 15432a329eeaf0341b505a80f24bf114
+- addnode:
+  - tank-0065-black
+  - tank-0001-red
+  - tank-0069-black
+  - tank-0096-brown
+  - tank-0071-white
+  - tank-0014-orange
+  - tank-0016-orange
+  config: 'uacomment=black
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 95.0.0-disabled-opcodes
+  name: tank-0064-black
+  rpcpassword: 12ea1efb0bcd47dd2a56d94c0dd8f8a1
+- addnode:
+  - tank-0066-black
+  - tank-0033-green
+  - tank-0085-grey
+  - tank-0034-green
+  - tank-0098-brown
+  - tank-0069-black
+  - tank-0027-yellow
+  - tank-0090-brown
+  config: 'uacomment=black
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 94.0.0-5k-inv
+  name: tank-0065-black
+  rpcpassword: 437670b00a2936bc132a2b4ed0b01c97
+- addnode:
+  - tank-0067-black
+  - tank-0077-white
+  - tank-0080-grey
+  - tank-0039-green
+  - tank-0083-grey
+  - tank-0035-green
+  - tank-0081-grey
+  - tank-0085-grey
+  config: 'uacomment=black
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.21.10.20.0
+  name: tank-0066-black
+  rpcpassword: 7948ee5307bc24a3f0b59cf2b1a63bb5
+- addnode:
+  - tank-0068-black
+  - tank-0048-blue
+  - tank-0032-green
+  - tank-0010-orange
+  - tank-0047-blue
+  - tank-0079-white
+  - tank-0098-brown
+  - tank-0089-grey
+  config: 'uacomment=black
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.19.2
+  name: tank-0067-black
+  rpcpassword: 13f4455735e068815811c07272c0e4f2
+- addnode:
+  - tank-0069-black
+  - tank-0038-green
+  - tank-0032-green
+  - tank-0027-yellow
+  - tank-0021-yellow
+  - tank-0053-violet
+  - tank-0098-brown
+  - tank-0081-grey
+  config: 'uacomment=black
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.17.0
+  name: tank-0068-black
+  rpcpassword: 2d35b437e214c5cf1b3088ca27e8d412
+- addnode:
+  - tank-0070-white
+  - tank-0075-white
+  - tank-0044-blue
+  - tank-0011-orange
+  - tank-0004-red
+  - tank-0024-yellow
+  - tank-0098-brown
+  - tank-0058-violet
+  config: 'uacomment=black
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.16.1
+  name: tank-0069-black
+  rpcpassword: cdc358301b0212a39e4840beae1b4b3a
+- addnode:
+  - tank-0071-white
+  - miner
+  - tank-0053-violet
+  - tank-0084-grey
+  - tank-0040-blue
+  - tank-0057-violet
+  - tank-0031-green
+  config: 'uacomment=white
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 99.0.0-unknown-message
+  name: tank-0070-white
+  rpcpassword: e4d73a64dc852493f60b1ce656661c39
+- addnode:
+  - tank-0072-white
+  - tank-0050-violet
+  - tank-0086-grey
+  - tank-0092-brown
+  - tank-0088-grey
+  - tank-0098-brown
+  - tank-0022-yellow
+  - tank-0060-black
+  config: 'uacomment=white
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 98.0.0-invalid-blocks
+  name: tank-0071-white
+  rpcpassword: 2f74606d267d602a4503bb1cb427920d
+- addnode:
+  - tank-0073-white
+  - tank-0010-orange
+  - tank-0053-violet
+  - tank-0069-black
+  - tank-0070-white
+  - tank-0005-red
+  - tank-0036-green
+  config: 'uacomment=white
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 97.0.0-50-orphans
+  name: tank-0072-white
+  rpcpassword: 32e3b1911befa81721a798f8c3d8451b
+- addnode:
+  - tank-0074-white
+  - tank-0045-blue
+  - tank-0047-blue
+  - tank-0025-yellow
+  - tank-0046-blue
+  - tank-0070-white
+  - tank-0022-yellow
+  - tank-0064-black
+  config: 'uacomment=white
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 96.0.0-no-mp-trim
+  name: tank-0073-white
+  rpcpassword: f1f0b3b71066af129166b54b9d8b04d2
+- addnode:
+  - tank-0075-white
+  - tank-0082-grey
+  - tank-0087-grey
+  - tank-0065-black
+  - miner
+  - tank-0039-green
+  - tank-0046-blue
+  config: 'uacomment=white
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 95.0.0-disabled-opcodes
+  name: tank-0074-white
+  rpcpassword: 16fb18174bb4314252154a00611f2f06
+- addnode:
+  - tank-0076-white
+  - tank-0080-grey
+  - tank-0028-yellow
+  - tank-0072-white
+  - tank-0037-green
+  - tank-0053-violet
+  - tank-0071-white
+  - tank-0062-black
+  config: 'uacomment=white
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 94.0.0-5k-inv
+  name: tank-0075-white
+  rpcpassword: 734713b6264c16a00901d861175338db
 - addnode:
   - tank-0077-white
-  - tank-0080-white
-  - tank-0074-black
-  - tank-0012-orange
-  - tank-0085-white
-  - tank-0090-grey
-  - tank-0083-white
-  config: 'uacomment=black
+  - tank-0070-white
+  - tank-0051-violet
+  - tank-0084-grey
+  - tank-0025-yellow
+  - tank-0088-grey
+  - tank-0082-grey
+  - tank-0031-green
+  config: 'uacomment=white
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 0.21.1
-  name: tank-0076-black
-  rpcpassword: ca8318af9f10f84623659e04b946c53a
+    tag: 0.21.10.20.0
+  name: tank-0076-white
+  rpcpassword: 1b869690a8f6559e649022fc190ad0c9
 - addnode:
   - tank-0078-white
-  - tank-0064-violet
-  - tank-0107-brown
-  - tank-0094-grey
-  - tank-0042-green
-  - tank-0035-green
-  - tank-0069-black
-  - tank-0109-brown
-  config: 'uacomment=white
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-invalid-blocks
-  name: tank-0077-white
-  rpcpassword: 2d1a77f0413e07a9f0e4187abcf616aa
-- addnode:
-  - tank-0079-white
-  - tank-0005-red
-  - tank-0086-white
   - tank-0068-black
-  - tank-0049-blue
-  - tank-0055-violet
-  - tank-0088-grey
-  - tank-0072-black
-  config: 'uacomment=white
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-no-mp-trim
-  name: tank-0078-white
-  rpcpassword: 1cde9978471d8ef14e006921c85263a8
-- addnode:
-  - tank-0080-white
-  - tank-0054-blue
-  - tank-0103-brown
-  - tank-0025-yellow
-  - tank-0040-green
-  - tank-0088-grey
-  - tank-0016-orange
-  - tank-0085-white
-  config: 'uacomment=white
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-unknown-message
-  name: tank-0079-white
-  rpcpassword: a3c1f03616ff508cc0c14662d9bac345
-- addnode:
-  - tank-0081-white
-  - tank-0068-black
-  - tank-0054-blue
-  - tank-0048-blue
-  - tank-0091-grey
-  - tank-0100-brown
-  - tank-0065-violet
-  config: 'uacomment=white
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-5k-inv
-  name: tank-0080-white
-  rpcpassword: 0ecab095180994d4d427660fedd0e370
-- addnode:
-  - tank-0082-white
-  - tank-0091-grey
-  - tank-0101-brown
-  - tank-0029-yellow
-  - tank-0083-white
-  - tank-0038-green
-  - tank-0069-black
-  config: 'uacomment=white
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-disabled-opcodes
-  name: tank-0081-white
-  rpcpassword: fb0822a377f9a665f23c9b31e9ed0c28
-- addnode:
-  - tank-0083-white
-  - tank-0042-green
-  - tank-0063-violet
-  - tank-0051-blue
-  - tank-0099-brown
-  - tank-0094-grey
-  - tank-0016-orange
-  - tank-0024-yellow
-  config: 'uacomment=white
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-50-orphans
-  name: tank-0082-white
-  rpcpassword: e4e91b9bd05e76e095e414141fcf22d3
-- addnode:
-  - tank-0084-white
-  - tank-0057-violet
-  - tank-0034-green
-  - tank-0014-orange
-  - tank-0050-blue
-  - tank-0062-violet
-  - tank-0098-grey
-  - tank-0019-orange
-  config: 'uacomment=white
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.20.0
-  name: tank-0083-white
-  rpcpassword: bbc15e9724d902b4c47a54c48dd8bc9e
-- addnode:
-  - tank-0085-white
-  - tank-0036-green
-  - tank-0079-white
-  - tank-0073-black
-  - tank-0006-red
-  - tank-0024-yellow
-  - tank-0031-yellow
-  - tank-0052-blue
-  config: 'uacomment=white
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.16.1
-  name: tank-0084-white
-  rpcpassword: 5791bb394a90e2301e62093a47de8c7e
-- addnode:
-  - tank-0086-white
-  - tank-0093-grey
-  - tank-0103-brown
-  - tank-0009-red
-  - tank-0024-yellow
-  - tank-0014-orange
-  - tank-0064-violet
-  - tank-0075-black
-  config: 'uacomment=white
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.17.0
-  name: tank-0085-white
-  rpcpassword: 1e4f3bf6c6f729a3c0a1ed6f3363b183
-- addnode:
-  - tank-0087-white
-  - tank-0005-red
-  - tank-0094-grey
-  - tank-0003-red
-  - tank-0106-brown
   - tank-0047-blue
-  - tank-0035-green
+  - tank-0099-brown
+  - tank-0070-white
+  - tank-0046-blue
+  - tank-0052-violet
+  - tank-0095-brown
   config: 'uacomment=white
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
     tag: 0.19.2
-  name: tank-0086-white
-  rpcpassword: 35f4736c490c148ebdb6fa6acff09f74
+  name: tank-0077-white
+  rpcpassword: dc45860af5f1b7a666e9c9727dfe2c1e
 - addnode:
-  - tank-0088-grey
-  - tank-0108-brown
-  - tank-0062-violet
-  - tank-0085-white
-  - tank-0045-blue
-  - tank-0038-green
-  - tank-0036-green
-  - tank-0097-grey
+  - tank-0079-white
+  - tank-0093-brown
+  - tank-0076-white
+  - tank-0063-black
+  - tank-0069-black
+  - tank-0017-orange
+  - tank-0098-brown
+  - tank-0085-grey
   config: 'uacomment=white
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 0.21.1
-  name: tank-0087-white
-  rpcpassword: 3116202037c21c8ccd96bfc5bc787007
+    tag: 0.17.0
+  name: tank-0078-white
+  rpcpassword: 68d2c69122296c8f63e7d4b1df6944b7
 - addnode:
-  - tank-0089-grey
-  - tank-0019-orange
-  - tank-0011-orange
-  - tank-0008-red
-  - tank-0094-grey
-  - tank-0016-orange
-  - tank-0034-green
-  - tank-0029-yellow
-  config: 'uacomment=grey
+  - tank-0080-grey
+  - tank-0045-blue
+  - tank-0053-violet
+  - tank-0092-brown
+  - tank-0097-brown
+  - tank-0047-blue
+  - tank-0024-yellow
+  config: 'uacomment=white
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 99.1.0-invalid-blocks
-  name: tank-0088-grey
-  rpcpassword: dcb077fcdfda148f8cd92898149924d0
+    tag: 0.16.1
+  name: tank-0079-white
+  rpcpassword: b35667b5ce2d4bcca5a4cac9a39a1783
 - addnode:
-  - tank-0090-grey
-  - tank-0005-red
-  - tank-0033-green
-  - tank-0076-black
+  - tank-0081-grey
+  - tank-0046-blue
+  - tank-0095-brown
   - tank-0009-red
-  - tank-0094-grey
-  - tank-0025-yellow
-  - tank-0078-white
+  - tank-0089-grey
+  - tank-0060-black
+  - tank-0041-blue
+  - tank-0024-yellow
   config: 'uacomment=grey
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 99.1.0-no-mp-trim
-  name: tank-0089-grey
-  rpcpassword: 3c44a64d9aac79fde81caca0765afb0e
+    tag: 99.0.0-unknown-message
+  name: tank-0080-grey
+  rpcpassword: 9e6677ba404cd2a0283156637ff054ab
 - addnode:
-  - tank-0091-grey
-  - tank-0014-orange
-  - tank-0065-violet
-  - tank-0093-grey
-  - tank-0108-brown
+  - tank-0082-grey
+  - tank-0089-grey
+  - tank-0000-red
+  - tank-0099-brown
+  - tank-0087-grey
+  - tank-0049-blue
+  - tank-0009-red
+  config: 'uacomment=grey
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 98.0.0-invalid-blocks
+  name: tank-0081-grey
+  rpcpassword: 84e4cb9aaeb2d05aa89f3435f20d8aef
+- addnode:
+  - tank-0083-grey
+  - tank-0037-green
+  - tank-0002-red
+  - tank-0067-black
+  - tank-0058-violet
+  - tank-0015-orange
   - tank-0017-orange
   config: 'uacomment=grey
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 99.1.0-unknown-message
-  name: tank-0090-grey
-  rpcpassword: 452b1120a365ef1578e1ec7d1bac6b3c
+    tag: 97.0.0-50-orphans
+  name: tank-0082-grey
+  rpcpassword: 5c7e5ccfd71f9667cbcb39bf2ca0283d
 - addnode:
-  - tank-0092-grey
-  - tank-0066-black
-  - tank-0049-blue
-  - tank-0100-brown
-  - tank-0086-white
-  - tank-0024-yellow
-  - tank-0036-green
-  - tank-0048-blue
-  config: 'uacomment=grey
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-5k-inv
-  name: tank-0091-grey
-  rpcpassword: 000cecda3e49be4473263fe639f50720
-- addnode:
-  - tank-0093-grey
-  - tank-0035-green
-  - tank-0039-green
-  - tank-0082-white
-  - tank-0101-brown
-  - tank-0073-black
-  - tank-0058-violet
-  - tank-0033-green
-  config: 'uacomment=grey
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-disabled-opcodes
-  name: tank-0092-grey
-  rpcpassword: 1ac8a016d5b8b764a532f8aefaade5ff
-- addnode:
-  - tank-0094-grey
-  - tank-0000-red
-  - tank-0073-black
-  - tank-0016-orange
-  - tank-0062-violet
-  - tank-0066-black
-  - tank-0098-grey
-  config: 'uacomment=grey
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-50-orphans
-  name: tank-0093-grey
-  rpcpassword: 5b60a43410862955a4fce8cde2a0c2c2
-- addnode:
-  - tank-0095-grey
-  - tank-0039-green
-  - tank-0107-brown
-  - tank-0032-yellow
-  - tank-0034-green
-  - tank-0097-grey
-  - tank-0058-violet
-  config: 'uacomment=grey
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.20.0
-  name: tank-0094-grey
-  rpcpassword: 878fe6f26af2c9feea1e1bddd803b361
-- addnode:
-  - tank-0096-grey
-  - tank-0031-yellow
-  - tank-0098-grey
-  - tank-0029-yellow
-  - tank-0038-green
-  - tank-0057-violet
-  - tank-0109-brown
-  - tank-0097-grey
-  config: 'uacomment=grey
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.16.1
-  name: tank-0095-grey
-  rpcpassword: b39cb48038b09164c863b51ab7c5b638
-- addnode:
-  - tank-0097-grey
-  - tank-0000-red
-  - tank-0011-orange
-  - tank-0009-red
-  - tank-0104-brown
-  - tank-0089-grey
-  - tank-0091-grey
-  config: 'uacomment=grey
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.17.0
-  name: tank-0096-grey
-  rpcpassword: 54b2b32f9abfdebdbdf573eee626c67a
-- addnode:
-  - tank-0098-grey
+  - tank-0084-grey
+  - tank-0087-grey
+  - tank-0085-grey
   - tank-0056-violet
-  - tank-0043-green
-  - tank-0081-white
-  - tank-0011-orange
-  - tank-0099-brown
-  - tank-0060-violet
-  - tank-0101-brown
+  - tank-0052-violet
+  - tank-0039-green
+  - tank-0004-red
   config: 'uacomment=grey
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 96.0.0-no-mp-trim
+  name: tank-0083-grey
+  rpcpassword: bc9b5e3703ca01d56b8731a2c749edba
+- addnode:
+  - tank-0085-grey
+  - tank-0064-black
+  - tank-0039-green
+  - tank-0067-black
+  - tank-0004-red
+  - tank-0075-white
+  config: 'uacomment=grey
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 95.0.0-disabled-opcodes
+  name: tank-0084-grey
+  rpcpassword: 73700d6abd83e9a0ed1992910d6d357b
+- addnode:
+  - tank-0086-grey
+  - tank-0010-orange
+  - tank-0028-yellow
+  - miner
+  - tank-0024-yellow
+  config: 'uacomment=grey
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 94.0.0-5k-inv
+  name: tank-0085-grey
+  rpcpassword: 48189479b20825db9e4c36183e36f819
+- addnode:
+  - tank-0087-grey
+  - tank-0045-blue
+  - tank-0076-white
+  - tank-0030-green
+  - tank-0092-brown
+  - tank-0057-violet
+  - miner
+  config: 'uacomment=grey
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.21.10.20.0
+  name: tank-0086-grey
+  rpcpassword: 9885325cb93f1e7df8852eabf51f218f
+- addnode:
+  - tank-0088-grey
+  - tank-0045-blue
+  - tank-0084-grey
+  - tank-0062-black
+  - tank-0050-violet
+  - tank-0028-yellow
+  - tank-0067-black
+  config: 'uacomment=grey
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
     tag: 0.19.2
-  name: tank-0097-grey
-  rpcpassword: 1a19f9482b33b05830002b391cb6dce6
+  name: tank-0087-grey
+  rpcpassword: 2573b20e81f25b19c9c9002aa3832b5d
 - addnode:
-  - tank-0099-brown
-  - tank-0080-white
-  - tank-0103-brown
-  - tank-0107-brown
+  - tank-0089-grey
   - tank-0079-white
-  - tank-0027-yellow
-  - tank-0024-yellow
-  - tank-0075-black
+  - tank-0055-violet
+  - tank-0064-black
+  - tank-0091-brown
+  - tank-0003-red
+  - tank-0009-red
+  - tank-0019-orange
   config: 'uacomment=grey
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.21.1
-  name: tank-0098-grey
-  rpcpassword: 71f2dbc6db6a82b933b696a9fedf2f7f
-- addnode:
-  - tank-0100-brown
-  - tank-0027-yellow
-  - tank-0055-violet
-  - tank-0018-orange
-  - tank-0043-green
-  - tank-0094-grey
-  - tank-0084-white
-  config: 'uacomment=brown
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-invalid-blocks
-  name: tank-0099-brown
-  rpcpassword: 6c5731b3b72b6c7f03e1e86781bb3c87
-- addnode:
-  - tank-0101-brown
-  - tank-0103-brown
-  - tank-0071-black
-  - tank-0062-violet
-  - tank-0007-red
-  - tank-0075-black
-  - tank-0000-red
-  - tank-0081-white
-  config: 'uacomment=brown
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-no-mp-trim
-  name: tank-0100-brown
-  rpcpassword: b2c39139b8a2db4751331ecf7cca7c65
-- addnode:
-  - tank-0102-brown
-  - tank-0042-green
-  - tank-0099-brown
-  - tank-0000-red
-  - tank-0004-red
-  - tank-0096-grey
-  - tank-0085-white
-  config: 'uacomment=brown
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-unknown-message
-  name: tank-0101-brown
-  rpcpassword: 6da38c9ad1a2c1645c68890f9ee7b284
-- addnode:
-  - tank-0103-brown
-  - tank-0043-green
-  - tank-0009-red
-  - tank-0094-grey
-  - tank-0084-white
-  - tank-0002-red
-  config: 'uacomment=brown
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-5k-inv
-  name: tank-0102-brown
-  rpcpassword: 7df73af2fb72193c42dd7afa7ee8d99d
-- addnode:
-  - tank-0104-brown
-  - tank-0097-grey
-  - tank-0024-yellow
-  - tank-0046-blue
-  - tank-0004-red
-  - tank-0053-blue
-  - tank-0056-violet
-  config: 'uacomment=brown
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-disabled-opcodes
-  name: tank-0103-brown
-  rpcpassword: 47fe14007ffe8f38fe056835e5251d36
-- addnode:
-  - tank-0105-brown
-  - tank-0049-blue
-  - tank-0083-white
-  - tank-0025-yellow
-  - tank-0010-red
-  - tank-0089-grey
-  - tank-0012-orange
-  - tank-0055-violet
-  config: 'uacomment=brown
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 99.1.0-50-orphans
-  name: tank-0104-brown
-  rpcpassword: 2b1a0bc4e6706d3673baf44f207ea60d
-- addnode:
-  - tank-0106-brown
-  - tank-0090-grey
-  - tank-0092-grey
-  - tank-0072-black
-  - tank-0038-green
-  - tank-0091-grey
-  - tank-0101-brown
-  config: 'uacomment=brown
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.20.0
-  name: tank-0105-brown
-  rpcpassword: b3cf52eae89ae2afaa1759a2e66c8b93
-- addnode:
-  - tank-0107-brown
-  - tank-0045-blue
-  - tank-0063-violet
-  - tank-0070-black
-  - tank-0080-white
-  - tank-0055-violet
-  - tank-0008-red
-  - tank-0065-violet
-  config: 'uacomment=brown
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
-  image:
-    tag: 0.16.1
-  name: tank-0106-brown
-  rpcpassword: 0b7782e950b2679e092c09f1ad7d9de3
-- addnode:
-  - tank-0108-brown
-  - tank-0065-violet
-  - tank-0103-brown
-  - tank-0082-white
-  - tank-0080-white
-  - tank-0001-red
-  - tank-0043-green
-  - tank-0045-blue
-  config: 'uacomment=brown
-
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
     tag: 0.17.0
-  name: tank-0107-brown
-  rpcpassword: 4d4efad508368e62326e10238070d166
+  name: tank-0088-grey
+  rpcpassword: d05c6a050f037fb2ce28e502d226b3b8
+- addnode:
+  - tank-0090-brown
+  - tank-0012-orange
+  - tank-0057-violet
+  - tank-0013-orange
+  - tank-0051-violet
+  - tank-0087-grey
+  - tank-0084-grey
+  - tank-0054-violet
+  config: 'uacomment=grey
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.16.1
+  name: tank-0089-grey
+  rpcpassword: 93efe3d336551653c8fd47b5b3f57fd7
+- addnode:
+  - tank-0091-brown
+  - tank-0058-violet
+  - tank-0093-brown
+  - tank-0092-brown
+  - tank-0074-white
+  - tank-0085-grey
+  - tank-0070-white
+  config: 'uacomment=brown
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 99.0.0-unknown-message
+  name: tank-0090-brown
+  rpcpassword: 0b794aa94ca5d8f07ad70708fc084ca7
+- addnode:
+  - tank-0092-brown
+  - tank-0006-red
+  - tank-0086-grey
+  - tank-0079-white
+  - tank-0015-orange
+  config: 'uacomment=brown
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 98.0.0-invalid-blocks
+  name: tank-0091-brown
+  rpcpassword: b1984e7d9a477ff1163730170ad6a58a
+- addnode:
+  - tank-0093-brown
+  - tank-0038-green
+  - tank-0098-brown
+  - tank-0037-green
+  - tank-0055-violet
+  - tank-0017-orange
+  - tank-0053-violet
+  - tank-0006-red
+  config: 'uacomment=brown
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 97.0.0-50-orphans
+  name: tank-0092-brown
+  rpcpassword: 1d1de6e5c19a015b396d51aaa14765ee
+- addnode:
+  - tank-0094-brown
+  - tank-0062-black
+  - tank-0005-red
+  - tank-0041-blue
+  - tank-0084-grey
+  - tank-0080-grey
+  - tank-0091-brown
+  - tank-0044-blue
+  config: 'uacomment=brown
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 96.0.0-no-mp-trim
+  name: tank-0093-brown
+  rpcpassword: 0aee985d0e251ee0174bd3bcd857e6d5
+- addnode:
+  - tank-0095-brown
+  - tank-0068-black
+  - tank-0006-red
+  - tank-0018-orange
+  - tank-0064-black
+  - tank-0027-yellow
+  - tank-0008-red
+  - tank-0026-yellow
+  config: 'uacomment=brown
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 95.0.0-disabled-opcodes
+  name: tank-0094-brown
+  rpcpassword: 3927bd4d18b63576805b3a8d0de39671
+- addnode:
+  - tank-0096-brown
+  - tank-0074-white
+  - tank-0025-yellow
+  - tank-0071-white
+  - tank-0045-blue
+  - tank-0075-white
+  - tank-0087-grey
+  config: 'uacomment=brown
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 94.0.0-5k-inv
+  name: tank-0095-brown
+  rpcpassword: a2235fd859ce72d37906284661db5a60
+- addnode:
+  - tank-0097-brown
+  - tank-0065-black
+  - tank-0033-green
+  - tank-0027-yellow
+  - tank-0078-white
+  - tank-0018-orange
+  - tank-0038-green
+  - tank-0000-red
+  config: 'uacomment=brown
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.21.10.20.0
+  name: tank-0096-brown
+  rpcpassword: 342183877bdb1d4dfb3750f8ca41932d
+- addnode:
+  - tank-0098-brown
+  - tank-0015-orange
+  - tank-0041-blue
+  - tank-0040-blue
+  - tank-0091-brown
+  - tank-0076-white
+  - tank-0065-black
+  - tank-0020-yellow
+  config: 'uacomment=brown
+
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
+  image:
+    tag: 0.19.2
+  name: tank-0097-brown
+  rpcpassword: e141f94d45a48267f11cadab0230a7d6
 - addnode:
   - miner
+  - tank-0055-violet
+  - tank-0001-red
+  - tank-0006-red
+  - tank-0093-brown
   - tank-0046-blue
-  - tank-0049-blue
-  - tank-0029-yellow
-  - tank-0022-yellow
-  - tank-0100-brown
-  - tank-0033-green
-  - tank-0036-green
+  - tank-0089-grey
   config: 'uacomment=brown
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 0.19.2
-  name: tank-0108-brown
-  rpcpassword: 08ca46f191476c3b1c6802fdb01e8e04
+    tag: 0.17.0
+  name: tank-0098-brown
+  rpcpassword: 0c18587457a26e51d3273f33b0a11e9f
 - addnode:
   - tank-0000-red
-  - tank-0011-orange
-  - tank-0102-brown
-  - tank-0103-brown
-  - tank-0042-green
-  - tank-0044-blue
-  - tank-0097-grey
+  - tank-0042-blue
+  - tank-0071-white
+  - tank-0056-violet
+  - tank-0060-black
+  - tank-0036-green
+  - tank-0049-blue
+  - tank-0003-red
   config: 'uacomment=brown
 
-    signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
+    signetchallenge=00146b834db817d5ef48c3313d84f519e863d3401244'
   image:
-    tag: 0.21.1
-  name: tank-0109-brown
-  rpcpassword: 398014b58ff6b820689c35d9471243ca
+    tag: 0.16.1
+  name: tank-0099-brown
+  rpcpassword: b8396b3784e7f4056c0e344c08c654a4
