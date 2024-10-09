@@ -6,13 +6,13 @@ fork_observer:
 nodes:
 - addnode:
   - tank-0000-red
-  - tank-0008-red
-  - tank-0005-red
   - tank-0003-red
   - tank-0004-red
-  - tank-0001-red
-  - tank-0007-red
+  - tank-0008-red
+  - tank-0009-red
   - tank-0006-red
+  - tank-0001-red
+  - tank-0010-red
   config: 'maxconnections=1000
 
     uacomment=miner
@@ -21,126 +21,142 @@ nodes:
   image:
     tag: '27.0'
   name: miner
-  rpcpassword: bfe5ff101967917c946c8168c2a21a4e
+  rpcpassword: 2e251c04fb8b288620ffa6dff66d396c
 - addnode:
   - tank-0001-red
-  - tank-0006-red
   - tank-0005-red
-  - tank-0007-red
+  - tank-0010-red
   - tank-0004-red
-  - tank-0002-red
+  - tank-0009-red
+  - tank-0006-red
+  - tank-0007-red
   config: 'uacomment=red
 
     signetchallenge=51'
   image:
     tag: 99.0.0-unknown-message
   name: tank-0000-red
-  rpcpassword: 1ac90d396f9b108cefa61fee619869c6
+  rpcpassword: 5831d80b66efa641d0e4093b29833e3c
 - addnode:
   - tank-0002-red
-  - tank-0005-red
-  - tank-0007-red
-  - tank-0003-red
   - tank-0009-red
   - tank-0008-red
+  - tank-0007-red
+  - tank-0003-red
   config: 'uacomment=red
 
     signetchallenge=51'
   image:
     tag: 98.0.0-invalid-blocks
   name: tank-0001-red
-  rpcpassword: 038d390968cc3112c27100b866c75e05
+  rpcpassword: 0bf5531c66244bfa27612693211a4852
 - addnode:
   - tank-0003-red
   - tank-0008-red
-  - tank-0009-red
-  - tank-0007-red
   - tank-0006-red
+  - miner
+  - tank-0005-red
+  - tank-0000-red
+  - tank-0004-red
   config: 'uacomment=red
 
     signetchallenge=51'
   image:
     tag: 97.0.0-50-orphans
   name: tank-0002-red
-  rpcpassword: d9bf094bf0768fc02000cec9fb283a9d
+  rpcpassword: 5409ef5fd08a97231d05a247751f3007
 - addnode:
   - tank-0004-red
-  - tank-0005-red
-  - tank-0009-red
   - tank-0007-red
+  - tank-0009-red
+  - tank-0008-red
+  - tank-0005-red
+  - tank-0006-red
+  - tank-0010-red
   config: 'uacomment=red
 
     signetchallenge=51'
   image:
     tag: 96.0.0-no-mp-trim
   name: tank-0003-red
-  rpcpassword: f44d05bfd910cf5e013134d27feac5cd
+  rpcpassword: 563b63385f2b247c4bc808b651da9cbd
 - addnode:
   - tank-0005-red
-  - tank-0002-red
-  - tank-0008-red
   - tank-0006-red
+  - tank-0009-red
+  - tank-0010-red
   config: 'uacomment=red
 
     signetchallenge=51'
   image:
     tag: 95.0.0-disabled-opcodes
   name: tank-0004-red
-  rpcpassword: 393ac1686c7875a4a4e1bf8e4914f8cc
+  rpcpassword: ea2fef539c01fe22ee8d023a0fc7a064
 - addnode:
   - tank-0006-red
-  - tank-0007-red
-  - tank-0002-red
+  - tank-0010-red
   - tank-0008-red
-  - tank-0009-red
   config: 'uacomment=red
 
     signetchallenge=51'
   image:
     tag: 94.0.0-5k-inv
   name: tank-0005-red
-  rpcpassword: d2dde8255d4b9fe5a9d3d01d5a049f5c
+  rpcpassword: 31a09060a34d4a54da5fd50b701a2f23
 - addnode:
   - tank-0007-red
-  - tank-0008-red
+  - tank-0010-red
   - tank-0009-red
   - tank-0001-red
   config: 'uacomment=red
 
     signetchallenge=51'
   image:
-    tag: 0.21.10.20.0
+    tag: 0.21.1
   name: tank-0006-red
-  rpcpassword: 7dc8a41a6e111639167d5bfafc95c81e
+  rpcpassword: c1281de28b3a72844ff8d968de9b5a7a
 - addnode:
   - tank-0008-red
+  - tank-0002-red
+  - miner
   - tank-0009-red
+  - tank-0010-red
+  config: 'uacomment=red
+
+    signetchallenge=51'
+  image:
+    tag: 0.20.0
+  name: tank-0007-red
+  rpcpassword: b14b18341f1c3d78a5b244c02232744f
+- addnode:
+  - tank-0009-red
+  - tank-0000-red
   config: 'uacomment=red
 
     signetchallenge=51'
   image:
     tag: 0.19.2
-  name: tank-0007-red
-  rpcpassword: b2be92dd0c57f962724aa25e0851f038
+  name: tank-0008-red
+  rpcpassword: 0262c1d9c0f62db5cfc0c2151f33e102
 - addnode:
   - miner
-  - tank-0000-red
-  - tank-0009-red
-  - tank-0003-red
+  - tank-0005-red
   config: 'uacomment=red
 
     signetchallenge=51'
   image:
     tag: 0.17.0
-  name: tank-0008-red
-  rpcpassword: e44700d36c1dea8bd595ad66c875aadb
+  name: tank-0009-red
+  rpcpassword: 9b6e6bb9c087fcf0df4c5539455528a6
 - addnode:
   - tank-0000-red
-  - miner
+  - tank-0009-red
+  - tank-0002-red
+  - tank-0001-red
   config: 'uacomment=red
 
     signetchallenge=51'
   image:
     tag: 0.16.1
-  name: tank-0009-red
-  rpcpassword: ad567beead62884a1a0d3e00eb4b5ef1
+  name: tank-0010-red
+  rpcpassword: 7de74c0787310973234ccf61ec0f19aa
