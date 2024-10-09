@@ -30,7 +30,7 @@ nodes:
   - tank-0006-red
   - tank-0010-red
   image:
-    tag: 99.1.0-invalid-blocks
+    tag: 98.0.0-invalid-blocks
   name: tank-0000-red
   rpcpassword: 4034eca704111a391a1effe0cb5aa85e
 - config: uacomment=red
@@ -43,7 +43,7 @@ nodes:
   - tank-0006-red
   - tank-0007-red
   image:
-    tag: 99.1.0-no-mp-trim
+    tag: 96.0.0-no-mp-trim
   name: tank-0001-red
   rpcpassword: fe6d85093b7d4d0c0bea16316a966527
 - config: uacomment=red
@@ -56,7 +56,7 @@ nodes:
   - tank-0008-red
   - tank-0007-red
   image:
-    tag: 99.1.0-unknown-message
+    tag: 99.0.0-unknown-message
   name: tank-0002-red
   rpcpassword: 9a0e531f94f995c12c95735230b7f57d
 - config: uacomment=red
@@ -70,7 +70,7 @@ nodes:
   - tank-0001-red
   - tank-0009-red
   image:
-    tag: 99.1.0-5k-inv
+    tag: 94.0.0-5k-inv
   name: tank-0003-red
   rpcpassword: 95bd920c33d7684f7a69f691ae2b8e17
 - config: uacomment=red
@@ -80,7 +80,7 @@ nodes:
   - tank-0007-red
   - tank-0010-red
   image:
-    tag: 99.1.0-disabled-opcodes
+    tag: 95.0.0-disabled-opcodes
   name: tank-0004-red
   rpcpassword: 1b121d1137cd4d081749f55e332e8acc
 - config: uacomment=red
@@ -91,7 +91,7 @@ nodes:
   - tank-0009-red
   - tank-0010-red
   image:
-    tag: 99.1.0-50-orphans
+    tag: 97.0.0-50-orphans
   name: tank-0005-red
   rpcpassword: 00e62f322d697bd7be536528fee92a4f
 - config: uacomment=red

@@ -26,17 +26,17 @@ TEAMS = [
 ]
 
 VERSIONS = [
-    "99.1.0-invalid-blocks",
-    "99.1.0-no-mp-trim",
-    "99.1.0-unknown-message",
-    "99.1.0-5k-inv",
-    "99.1.0-disabled-opcodes",
-    "99.1.0-50-orphans",
-    "0.20.0",
-    "0.16.1",
-    "0.17.0",
-    "0.19.2",
+    "99.0.0-unknown-message",
+    "98.0.0-invalid-blocks",
+    "97.0.0-50-orphans",
+    "96.0.0-no-mp-trim",
+    "95.0.0-disabled-opcodes",
+    "94.0.0-5k-inv",
     "0.21.1"
+    "0.20.0",
+    "0.19.2",
+    "0.17.0",
+    "0.16.1",
 ]
 
 # generate and specify signet challenge (simple p2wpkh script)
