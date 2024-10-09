@@ -32,17 +32,19 @@ https://bitcorncore.org/en/blog/
 Warnet is a system written in Python to deploy, manage, and interact with
 Bitcoin p2p networks inside a Kubernetes cluster. The official battlefield
 will be a remote cluster with over 100 Bitcoin nodes (referred to as "Tanks")
-running on a custom Signet chain. Many of these nodes will be old versions of
+running on a custom signet chain (where only the network administrator can
+generate blocks). Many of these nodes will be old versions of
 Bitcoin Core with
 [publicly disclosed vulnerabilities](https://bitcoincore.org/en/blog/). There will
 also be additional nodes that have been compiled with intentional flaws and
 [FAKE disclosures](https://bitcorncore.org/en/blog/)
 
 To help facilitate Tank-attacking strategies on the battlefield, a smaller
-12-node network called scrimmage can be run on a regtest chain locally by attackers while
+12-node network called scrimmage can be run locally by attackers while
 developing scenarios. Scrimmage requires running kubernetes locally (either
 Docker Desktop or minikube) which is not required to run attacks on the remote
-battlefield.
+battlefield. Scrimmage also runs on a signet chain with a challenge of `OP_TRUE`
+so any node can generate blocks.
 
 ### Install Warnet
 
@@ -173,7 +175,7 @@ Network connected
 #### bitcoin-cli
 ```
 (.venv) --> warnet bitcoin rpc armada-0 -getinfo
-Chain: regtest
+Chain: signet
 Blocks: 0
 Headers: 0
 Verification progress: 100.0000%
@@ -277,7 +279,24 @@ the most-work chain. This could be the result of:
 - A CPU denial-of-service preventing the node from verifying new blocks
 
 Attackers will not be able to generate their own blocks on the battlefield
-Signet chain, but have unlimited permission on their local regtest networks.
+signet chain, but have unlimited permission on their local scrimmage signet network.
+
+## HINTS
+
+💡Scrimmage is a signet chain, meaning even though the difficulty target is the
+minimum, proof of work still matters. For that reason generating blocks may require
+more than one attempt.
+
+Try: `warnet deploy scenarios/miner_std.py --tank=miner --interval=1 --debug`
+
+💡You may be unfamiliar with the Bitcoin Core functional test framework. To get
+some clues about its usage in p2p scenarios, review some of the existing tests!
+
+Examples:
+- [send `addr` messages](https://github.com/bitcoin/bitcoin/blob/28.x/test/functional/p2p_addrfetch.py)
+- [create orphan trnasactions](https://github.com/bitcoin/bitcoin/blob/28.x/test/functional/p2p_orphan_handling.py)
+- [send invalid blocks](https://github.com/bitcoin/bitcoin/blob/28.x/test/functional/p2p_invalid_block.py)
+
 
 ## On The Battlefield
 

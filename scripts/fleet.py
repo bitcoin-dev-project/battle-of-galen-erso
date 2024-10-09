@@ -90,7 +90,7 @@ def custom_graph(
     # add central admin miner node
     nodes.append({
         "name": "miner",
-        "connect": [],
+        "addnode": [],
         "image": {"tag": "27.0"},
         "rpcpassword": secrets.token_hex(16),
         "config": f"maxconnections=1000\nuacomment=miner{extra}"
@@ -101,7 +101,7 @@ def custom_graph(
         name = f"tank-{i:04d}-{team}"
         nodes.append({
             "name": name,
-            "connect": [],
+            "addnode": [],
             "image": {"tag": next(version_generator)},
             "rpcpassword": secrets.token_hex(16),
             "config": f"uacomment={team}{extra}"
@@ -110,7 +110,7 @@ def custom_graph(
     for i, node in enumerate(nodes):
         # Add round-robin connection
         next_node_index = (i + 1) % num_nodes
-        node["connect"].append(nodes[next_node_index]["name"])
+        node["addnode"].append(nodes[next_node_index]["name"])
         connections.add((i, next_node_index))
 
         # Add random connections including miner
@@ -123,7 +123,7 @@ def custom_graph(
             random_node_index = random.choice(available_nodes)
             # Avoid circular loops of A -> B -> A
             if (random_node_index, i) not in connections:
-                node["connect"].append(nodes[random_node_index]["name"])
+                node["addnode"].append(nodes[random_node_index]["name"])
                 connections.add((i, random_node_index))
                 available_nodes.remove(random_node_index)
 
@@ -162,7 +162,7 @@ custom_graph(
     fork_obs_query_interval=20,
     caddy=True,
     logging=True,
-    signetchallenge=None)
+    signetchallenge="51")
 
 armies = {"namespaces": []}
 for team in TEAMS:

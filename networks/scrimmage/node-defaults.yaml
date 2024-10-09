@@ -1,7 +1,7 @@
-chain: regtest
-collectLogs: true
-metricsExport: true
-resources: {}
+chain: signet
+collectLogs: false
+metricsExport: false
+
 image:
   repository: bitcoindevproject/bitcoin
   pullPolicy: IfNotPresent
