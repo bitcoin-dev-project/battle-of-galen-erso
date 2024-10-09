@@ -109,7 +109,7 @@ nodes:
 
     signetchallenge=51'
   image:
-    tag: 0.21.10.20.0
+    tag: 0.20.0
   name: tank-0006-red
   rpcpassword: 7dc8a41a6e111639167d5bfafc95c81e
 - addnode:
