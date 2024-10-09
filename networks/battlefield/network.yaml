@@ -35,7 +35,7 @@ nodes:
 
     signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
   image:
-    tag: 99.1.0-invalid-blocks
+    tag: 98.0.0-invalid-blocks
   name: tank-0000-red
   rpcpassword: 8bd24747c1f8e35523dbc7d4b2d8c41d
 - addnode:
@@ -51,7 +51,7 @@ nodes:
 
     signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
   image:
-    tag: 99.1.0-no-mp-trim
+    tag: 96.0.0-no-mp-trim
   name: tank-0001-red
   rpcpassword: 710685cae5fa69ddce184968004dbcf3
 - addnode:
@@ -67,7 +67,7 @@ nodes:
 
     signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
   image:
-    tag: 99.1.0-unknown-message
+    tag: 99.0.0-unknown-message
   name: tank-0002-red
   rpcpassword: 449c9f8d9a2a2adb75f9424d0b744f8f
 - addnode:
@@ -83,7 +83,7 @@ nodes:
 
     signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
   image:
-    tag: 99.1.0-5k-inv
+    tag: 94.0.0-5k-inv
   name: tank-0003-red
   rpcpassword: 7d831cf954dad95e98c9d67f120f94c5
 - addnode:
@@ -99,7 +99,7 @@ nodes:
 
     signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
   image:
-    tag: 99.1.0-disabled-opcodes
+    tag: 95.0.0-disabled-opcodes
   name: tank-0004-red
   rpcpassword: d9bfbef26c6c67e5e8eb226bb1fa0a8f
 - addnode:
@@ -115,7 +115,7 @@ nodes:
 
     signetchallenge=00142f03667706a2b6077f01c66040f848a632b5abc0'
   image:
-    tag: 99.1.0-50-orphans
+    tag: 97.0.0-50-orphans
   name: tank-0005-red
   rpcpassword: 46941cd0786173d90a5a28044a0752d3
 - addnode:
