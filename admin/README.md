@@ -1,10 +1,10 @@
 # Rough notes how to set this all up:
 
-- `python scripts/fleet.py`:
+- `python admin/scripts/fleet.py`:
     - generate network yaml's for battlefield and scrimmage (local dev) with random rpc passwords
     - battlefield has all 10 teams @ all vuln versions (13 currently)
     - scrimmage has just 1 team x 13 vuln nodes
-- `warnet deploy namespaces/armies`:
+- `warnet deploy admin/namespaces/armies`:
     - deploys 13 team namespaces
     - can be used locally or remotely for either network, but locally only "red" is used
 - `warnet admin create-kubeconfigs`
@@ -13,26 +13,25 @@
 
 ## For remote battlefield admin:
 
-- `warnet deploy networks/battlefield`
+- `warnet deploy networks/admin/battlefield`
     - as the admin for your cluster with namespace `"default"`, deploy the network
 
 - `warnet deploy networks/armada --to-all-users`
     - deploys a 3-tank (v27) armada in each users' namespace, connected to `miner.default`
 
-- `bash scripts/miner_wallet.sh`
+- `bash admin/scripts/miner_wallet.sh`
     - creates wallet in "miner" tank and imports signet signer key as descriptor
 
-- `warnet run scenarios/signet_miner.py --tank=0 generate  --min-nbits --address=tb1qsre7e4ls9z3kh8hn0gqtvds33desz6768cuag8 --ongoing --debug`
-    - starts mining blocks. Get a new address first!
+- `warnet run scenarios/admin/signet_miner.py --source_dir=scenarios --tank=0 generate  --min-nbits --address=$(warnet bitcoin rpc miner getnewaddress) --ongoing`
+    - starts mining blocks.
 
-## For local scrimmage:
+## For remote scrimmage (if a player can not run k8s locally):
 
-- `warnet deploy networks/scrimmage`
-    - as the admin for your cluster with namespace `"default"`, deploy the network
+Player can deploy the scrimmage network to the remote cluster using the auth they already have:
 
-- `warnet auth kubeconfigs/warnet-user-wargames-red-kubeconfig`
+- `warnet deploy networks/admin/scrimmage`
 - `warnet deploy networks/armada`
-    - deploys a 3-tank (v27) armada in ONE users' namespace, connected to `miner.default`
+    - etc...
 
 # Admin
 

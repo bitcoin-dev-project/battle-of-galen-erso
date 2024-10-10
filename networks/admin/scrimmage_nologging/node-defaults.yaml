@@ -1,6 +1,6 @@
 chain: signet
-collectLogs: true
-metricsExport: true
+collectLogs: false
+metricsExport: false
 
 image:
   repository: bitcoindevproject/bitcoin

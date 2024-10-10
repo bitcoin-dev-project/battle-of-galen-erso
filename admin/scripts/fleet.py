@@ -145,7 +145,7 @@ custom_graph(
     teams=len(TEAMS),
     num_connections=8,
     version="27.0",
-    datadir=Path(os.path.dirname(__file__)).parent / "networks" / "battlefield",
+    datadir=Path(os.path.dirname(__file__)).parent.parent / "networks" / "admin" / "battlefield",
     fork_observer=True,
     fork_obs_query_interval=20,
     caddy=True,
@@ -157,11 +157,23 @@ custom_graph(
     teams=1,
     num_connections=8,
     version="27.0",
-    datadir=Path(os.path.dirname(__file__)).parent / "networks" / "scrimmage",
+    datadir=Path(os.path.dirname(__file__)).parent.parent / "networks" / "scrimmage",
     fork_observer=True,
     fork_obs_query_interval=20,
     caddy=True,
     logging=True,
+    signetchallenge="51")
+
+
+custom_graph(
+    teams=1,
+    num_connections=8,
+    version="27.0",
+    datadir=Path(os.path.dirname(__file__)).parent.parent / "networks" / "admin" / "scrimmage_nologging",
+    fork_observer=False,
+    fork_obs_query_interval=20,
+    caddy=False,
+    logging=False,
     signetchallenge="51")
 
 armies = {"namespaces": []}
@@ -177,7 +189,7 @@ armadanet = {
         {"name": "armada-2", "config": f"signetchallenge={signetchallenge}"}
     ]
 }
-with open(Path(os.path.dirname(__file__)).parent / "networks" / "armada" / "network.yaml", "w") as f:
+with open(Path(os.path.dirname(__file__)).parent.parent / "networks" / "armada" / "network.yaml", "w") as f:
     yaml.dump(armadanet, f, default_flow_style=False)
 
 with open(Path(os.path.dirname(__file__)) / "miner_wallet.sh", "w") as f:

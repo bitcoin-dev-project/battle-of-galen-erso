@@ -1,7 +1,7 @@
 chain: signet
 collectLogs: true
 metricsExport: true
-resources: {}
+
 image:
   repository: bitcoindevproject/bitcoin
   pullPolicy: IfNotPresent
