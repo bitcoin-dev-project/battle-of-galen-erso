@@ -228,11 +228,16 @@ tanks can be seen in the "description" field in the fork-observer web UI.
 
 Example:
 ```python
-attacker = P2PInterface().peer_connect(
-    dstaddr="tank-0000-red.default.svc",
+attacker = P2PInterface()
+attacker.peer_connect(
+    dstaddr=socket.gethostbyname("tank-0000-red.default.svc"),
     dstport=38333,
-    net="signet"
+    net="signet",
+    timeout_factor=1
 )()
+attacker.wait_until(lambda: attacker.is_connected, check_connected=False)
+
+# Create a malicious p2p packet and send...
 ```
 
 ### Attack Deployment

@@ -47,17 +47,14 @@ class Reconnaissance(Commander):
             self.log.info(f"{peer['addr']} {peer['subver']}")
 
         # We pick a node on the network to attack
-        victim = peerinfo[0]
+        victim = "tank-0000-red.default.svc"
 
         # regtest or signet
         chain = self.nodes[0].chain
 
         # The victim's address could be an explicit IP address
         # OR a kubernetes hostname (use default chain p2p port)
-        if ":" in victim["addr"]:
-            dstaddr = victim["addr"].split(":")[0]
-        else:
-            dstaddr = socket.gethostbyname(victim["addr"])
+        dstaddr = socket.gethostbyname(victim)
         if chain == "regtest":
             dstport = 18444
         if chain == "signet":
@@ -66,9 +63,14 @@ class Reconnaissance(Commander):
 
         # Now we will use a python-based Bitcoin p2p node to send very specific,
         # unusual or non-standard messages to a "victim" node.
-        self.log.info(f"Attacking {dstaddr}:{dstport}")
+        self.log.info(f"Attacking tank-0000-red.default.svc")
         attacker = P2PInterface()
-        attacker.peer_connect(dstaddr=dstaddr, dstport=dstport, net=chain, timeout_factor=1)()
+        attacker.peer_connect(
+            dstaddr=dstaddr,
+            dstport=dstport,
+            net="signet",
+            timeout_factor=1
+        )()
         attacker.wait_until(lambda: attacker.is_connected, check_connected=False)
 
         # Send a harmless network message we expect a response to and wait for it
