@@ -50,7 +50,7 @@ so any node can generate blocks.
 
 Documentation for Warnet is available in the repository.
 
-Install into a virtual environment from the Python repository:
+Install into a virtual python environment:
 
 https://github.com/bitcoin-dev-project/warnet/blob/main/docs/install.md#install-warnet
 
@@ -61,7 +61,8 @@ Warnet itself will guide you through the setup process.
 > [!TIP]
 > **There are several options to carefully choose when setting up Warnet!**
 > - You only need to install minikube or docker desktop's kubernetes if you plan to run the scrimmage network locally for experimentation and development.
-> - Accessing the remote 100-node signet battlefield does not require a local kubenetes distribution, but will still require installation of `kubectl`.
+> - Accessing the remote 100-node signet battlefield does not require a local kubenetes distribution, but will still require installation of `kubectl` and `helm`.
+> - The `warnet setup` wizard will install these dependencies for you.
 
 #### One Warnet is installed, execute `warnet setup`
 
@@ -104,7 +105,7 @@ may want to consider using [ktop](https://github.com/vladimirvivien/ktop)
 ### Start and Stop the Network
 
 > [!TIP]
-> This section is only relevant in scrimmage (you are running kubernetes locally)
+> **This section is only relevant in scrimmage (you are running kubernetes locally)**
 
 You can see the topology of the network which will be deployed, and make
 modifications to it by looking at: `networks/scrimmage/network.yaml`
@@ -127,7 +128,7 @@ warnet down
 ### Network Reconnaissance
 
 > [!TIP]
-> This section is only relevant in scrimmage (you are running kubernetes locally)
+> **This section is only relevant in scrimmage (you are running kubernetes locally)**
 
 You can open the web based visualizer with Grafana dashboards and Fork Observer
 at by executing the command:
@@ -139,17 +140,19 @@ warnet dashboard
 Warnet will get the `localhost` port of the dashboard web server and
 open it in your system's default browser.
 
+![fork observer screenshot](./images/fo.png)
+
 ### Network Communications
 
 > [!TIP]
-> On the battlefield, these commands will only be able to retrieve data from
-> tanks in your armada. In local scrimmage mode, you will have access to all tanks.
+> **On the battlefield, these commands will only be able to retrieve data from**
+> **tanks in your armada. In local scrimmage mode, you will have access to all tanks.**
 
 See the [Warnet documentation](https://github.com/bitcoin-dev-project/warnet/blob/main/docs/warnet.md)
 for all available CLI commands to retrieve logs, p2p messages, and other status
 information.
 
-Examples:
+#### Examples:
 #### Status
 
 ```
@@ -195,9 +198,9 @@ Warnings: (none)
 ### Attack Development
 
 The primary method of interacting with the network and mounting an attack is by
-deploying a Scenario.
+deploying a scenario.
 
-A Scenario is a Python script written with the same structure and library as
+A scenario is a Python script written with the same structure and library as
 a Bitcoin Core functional test, utilizing a copy of the `test_framework`, which is
 [included](/scenarios/test_framework) in this repo and may be modified if necessary.
 The primary difference is that the familiar `self.nodes[]` list contains
@@ -207,6 +210,11 @@ cluster rather than locally accessible bitcoind processes.
 An additional list `self.tanks[str]` is available to address Bitcoin nodes
 by their Kubernetes pod name (as opposed to their numerical index).
 
+Example:
+```python
+self.tanks["armada-0"].getpeerinfo()
+```
+
 **The only tanks you as an attacker have RPC access to are in your own armada**
 
 A handful of example scenarios are included in the [`scenarios/`](/scenarios/) directory.
@@ -214,6 +222,18 @@ In particular, [`scenarios/reconnaissance.py`](/scenarios/reconnaissance.py) is 
 to demonstrate how to execute RPC commands on available nodes, as well as how
 to utilize the framework's `P2PInterface` class to send arbitrary messages
 to targeted nodes.
+
+Tanks in the kubernetes network have URIs that include a namespace. URIs for all
+tanks can be seen in the "description" field in the fork-observer web UI.
+
+Example:
+```python
+attacker = P2PInterface().peer_connect(
+    dstaddr="tank-0000-red.default.svc",
+    dstport=38333,
+    net="signet"
+)()
+```
 
 ### Attack Deployment
 
@@ -294,7 +314,7 @@ some clues about its usage in p2p scenarios, review some of the existing tests!
 
 Examples:
 - [send `addr` messages](https://github.com/bitcoin/bitcoin/blob/28.x/test/functional/p2p_addrfetch.py)
-- [create orphan trnasactions](https://github.com/bitcoin/bitcoin/blob/28.x/test/functional/p2p_orphan_handling.py)
+- [create orphan transactions](https://github.com/bitcoin/bitcoin/blob/28.x/test/functional/p2p_orphan_handling.py)
 - [send invalid blocks](https://github.com/bitcoin/bitcoin/blob/28.x/test/functional/p2p_invalid_block.py)
 
 
