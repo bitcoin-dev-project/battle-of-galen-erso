@@ -31,7 +31,7 @@ class Inv5K(Commander):
         parser.description = (
             "Demonstrate network reconnaissance using a scenario and P2PInterface"
         )
-        parser.usage = "warnet run /path/to/reconnaissance.py"
+        parser.usage = "warnet run /path/to/my_first_attack_5kinv.py"
 
     # Scenario entrypoint
     def run_test(self):
@@ -51,7 +51,7 @@ class Inv5K(Commander):
         # We pick a node on the network to attack
         # We know this one is vulnderable to 5k inv messages based on it's subver
         # Change this to your teams colour if running in the battleground
-        victim = "tank-0005-red.default.svc"
+        victim = "TARGET-TANK-NAME.default.svc"
 
         # regtest or signet
         chain = self.nodes[0].chain

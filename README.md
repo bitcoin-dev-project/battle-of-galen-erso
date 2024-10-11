@@ -298,6 +298,24 @@ pod "commander-reconnaissance-1727792531" deleted
 
 ```
 
+You can also query the scenario with `-- --help` to learn about its arguments.
+
+Example:
+
+```
+(.venv) --> warnet run scenarios/miner_std.py -- --help
+usage: warnet run /path/to/miner_std.py [options]
+
+Generate blocks over time
+
+options:
+  -h, --help           show this help message and exit
+  --allnodes           When true, generate blocks from all nodes instead of just nodes[0]
+  --interval INTERVAL  Number of seconds between block generation (default 60 seconds)
+  --mature             When true, generate 101 blocks ONCE per miner
+  --tank TANK          Select one tank by name as the only miner
+```
+
 ## Rules of Engagement
 
 An attack is considered successful when a target node is no longer in sync with
