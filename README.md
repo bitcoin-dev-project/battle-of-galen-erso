@@ -14,11 +14,14 @@ https://bitcorncore.org/en/blog/
 
 ## Terminology
 
-- Tanks - Bitcoin Core nodes running in a Warnet network
-- Battlefield - A remote cluster with 100 vulnerable tanks
-- Scrimmage - A local cluster with only a few vulnerable tanks
-- Armada - a small set of tanks running the latest Bitcoin Core release under the attacker's control
-- Scenario - A program that deploys to the battlefield to attack the tanks
+- Tanks: Bitcoin Core nodes running in a Warnet network
+- Battlefield: A remote cluster with 100 vulnerable tanks
+    - custom signet chain with one miner run by admin
+    - 1 minute block intervals
+- Scrimmage: A local cluster with only a few vulnerable tanks
+    - custom signet chain with OP_TRUE challenge so anyone can generate blocks (like regtest)
+- Armada: A small set of tanks running the latest Bitcoin Core release under the attacker's control
+- Scenario: A program that deploys to the battlefield to attack the tanks
 
 ## Objectives
 
