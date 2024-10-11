@@ -213,10 +213,27 @@ cluster rather than locally accessible bitcoind processes.
 An additional list `self.tanks[str]` is available to address Bitcoin nodes
 by their Kubernetes pod name (as opposed to their numerical index).
 
+Objects in `self.nodes[]` and `self.tanks[]` are RPC proxy objects which interpret
+all calls as RPC commands to be forwarded to the bitcoin core node.
+
 Example:
 ```python
 self.tanks["armada-0"].getpeerinfo()
 ```
+
+If you are unfamiliar with the Bitcoin Core RPC interface you can get help directly
+from a Bitcoin Core node:
+
+```
+(.venv) $ warnet bitcoin rpc armada-0 help
+```
+
+There are also several resources online to learn about the available RPC commands:
+
+https://chainquery.com/bitcoin-cli
+
+https://developer.bitcoin.org/reference/rpc/
+
 
 **The only tanks you as an attacker have RPC access to are in your own armada**
 
