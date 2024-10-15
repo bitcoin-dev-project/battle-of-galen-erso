@@ -344,6 +344,16 @@ the most-work chain. This could be the result of:
 Attackers will not be able to generate their own blocks on the battlefield
 signet chain, but have unlimited permission on their local scrimmage signet network.
 
+## Funds
+
+On the battlefield, only the administrator can generate blocks. They will periodically
+run a script that funds everyone's armada nodes with whatever spendable balance
+the miner has. That script will ensure every armada node has a wallet called "miner".
+
+> [!TIP]
+> Your armada nodes will have a wallet called "miner" with lots of test BTC!
+
+
 ## HINTS
 
 💡Scrimmage is a signet chain, meaning even though the difficulty target is the

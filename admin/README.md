@@ -23,7 +23,12 @@
     - creates wallet in "miner" tank and imports signet signer key as descriptor
 
 - `warnet run scenarios/admin/signet_miner.py --source_dir=scenarios --tank=0 generate  --min-nbits --address=$(warnet bitcoin rpc miner getnewaddress) --ongoing`
-    - starts mining blocks.
+    - starts mining blocks at regular intervals (ten minutes).
+    - can be run WITHOUT the `--ongoing` argument at any time to generate a single block
+
+- ` warnet run scenarios/admin/faucet.py --source_dir=scenarios --debug`
+    - creates a wallet called "miner" on every armada tank if it doesn't exist already
+    - funds all aramda tanks evenly with whatever spendable balance the miner node has
 
 ## For remote scrimmage (if a player can not run k8s locally):
 
