@@ -29,29 +29,16 @@ class Inv5K(Commander):
 
     def add_options(self, parser):
         parser.description = (
-            "Demonstrate network reconnaissance using a scenario and P2PInterface"
+            "Demonstrate INV attack using a scenario and P2PInterface"
         )
         parser.usage = "warnet run /path/to/my_first_attack_5kinv.py"
 
     # Scenario entrypoint
     def run_test(self):
-        self.log.info("Getting peer info")
-
-        # Just like a typical Bitcoin Core functional test, this executes an
-        # RPC on a node in the network. The actual node at self.nodes[0] may
-        # be different depending on the user deploying the scenario. Users in
-        # Warnet may have different namepsace access but everyone should always
-        # have access to at least one node.
-        peerinfo = self.nodes[0].getpeerinfo()
-        for peer in peerinfo:
-            # You can print out the the scenario logs with `warnet logs`
-            # which have a list of all this node's peers' addresses and version
-            self.log.info(f"{peer['addr']} {peer['subver']}")
-
         # We pick a node on the network to attack
         # We know this one is vulnderable to 5k inv messages based on it's subver
         # Change this to your teams colour if running in the battleground
-        victim = "TARGET-TANK-NAME.default.svc"
+        victim = "TARGET_TANK_NAME.default.svc"
 
         # regtest or signet
         chain = self.nodes[0].chain

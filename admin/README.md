@@ -26,7 +26,7 @@
     - starts mining blocks at regular intervals (ten minutes).
     - can be run WITHOUT the `--ongoing` argument at any time to generate a single block
 
-- ` warnet run scenarios/admin/faucet.py --source_dir=scenarios --debug`
+- `warnet run scenarios/admin/faucet.py --source_dir=scenarios --debug`
     - creates a wallet called "miner" on every armada tank if it doesn't exist already
     - funds all aramda tanks evenly with whatever spendable balance the miner node has
 
