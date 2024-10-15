@@ -65,6 +65,7 @@ Warnet itself will guide you through the setup process.
 > - You only need to install minikube or docker desktop's kubernetes if you plan to run the scrimmage network locally for experimentation and development.
 > - Accessing the remote 100-node signet battlefield does not require a local kubenetes distribution, but will still require installation of `kubectl` and `helm`.
 > - The `warnet setup` wizard will install these dependencies for you.
+> - If running Docker Desktop, be generous with the amount of resources you assing to it.
 
 #### One Warnet is installed, execute `warnet setup`
 
