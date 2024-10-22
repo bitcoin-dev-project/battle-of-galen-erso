@@ -24,10 +24,11 @@ https://bitcorncore.org/en/blog/
 
 ## Objectives
 
-1. Install and set up Warnet
-2. Create attacks
-3. Test attacks locally in scrimmage
-4. Attack Bitcoin Core nodes on the battlefield
+1. Clone this repo!
+2. Install and set up Warnet
+3. Create attacks
+4. Test attacks locally in scrimmage
+5. Attack Bitcoin Core nodes on the battlefield
 
 ## Intelligence Brief -- What is Warnet?
 
@@ -369,6 +370,8 @@ more than one attempt.
 
 Try: `warnet deploy scenarios/miner_std.py --tank=miner --interval=1 --debug`
 
+Remember block subsidies will only be spendable after 100 blocks!
+
 💡You may be unfamiliar with the Bitcoin Core functional test framework. To get
 some clues about its usage in p2p scenarios, review some of the existing tests!
 
@@ -377,6 +380,24 @@ Examples:
 - [create orphan transactions](https://github.com/bitcoin/bitcoin/blob/28.x/test/functional/p2p_orphan_handling.py)
 - [send invalid blocks](https://github.com/bitcoin/bitcoin/blob/28.x/test/functional/p2p_invalid_block.py)
 
+
+## Run your first attack
+
+We will try to take down the 5k-inv node. To find out which node that is we can use 
+forkobserver by using `warnet dashboard` if running Scrimmage locally or using the 
+forkobserver URL provided by the administrators for your Battlefield.
+
+On fork-observer, the "description" field will show what version of bitcoin is running. 
+Find the 5k-inv node and update `scenarios/my_first_attack_5kinv.py` with the name of this node. 
+Look for a variable called `victim`. On  Battlefield you will have been a color to attack 
+and locally in Scrimmage there will only be red. The link "disclosing" this particular attack can be found:
+[5K Inv Disclosure](https://bitcorncore.org/en/2024/10/23/fake-disclosure-5kinv/).
+
+From the root of this repo, run this scenario with:
+
+`warnet run scencarios/my_first_attack_5kinv.py --debug`
+
+After the 5000 INVs have been sent, you should observe that this node becomes unresponsive on fork-observer.
 
 ## On The Battlefield
 
@@ -387,5 +408,23 @@ provided by the administrator:
 ```
 warnet auth /path/to/battlefield-100-large-kubeconfig.yaml
 ```
+
+### Switching context back to local / back to battlefield
+
+To see your available contexts run:
+
+```shell
+kubectl config get-contexts
+```
+
+For local the context you are most likely looking for would be `docker-desktop` or `minikube`. For the Battlefield it will be a longer name.
+
+Switch to that context using:
+
+```shell
+kubectl config use-context <context name>
+```
+
+Warnet commands will run against whatever is the context currently set in your kubeconfig (as shown using kubectl)
 
 Good luck!
