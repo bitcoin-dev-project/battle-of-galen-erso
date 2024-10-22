@@ -86,6 +86,13 @@ Example:
    No Backend (Interacting with remote cluster, see `warnet auth --help`)
 ```
 
+### Once Warnet is set up in a virtual environemnt, clone this repo!
+
+```
+(.venv) $ git clone https://github.com/bitcoin-dev-project/battle-of-galen-erso
+(.venv) $ cd battle-of-galen-erso/
+```
+
 ### Additional tools
 
 #### K9s
