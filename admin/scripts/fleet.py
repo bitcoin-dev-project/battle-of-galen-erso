@@ -93,7 +93,8 @@ def custom_graph(
         "addnode": [],
         "image": {"tag": "27.0"},
         "rpcpassword": secrets.token_hex(16),
-        "config": f"maxconnections=1000\nuacomment=miner{extra}"
+        "config": f"maxconnections=1000\nuacomment=miner{extra}\ncoinstatsindex=1",
+        "metrics": "txrate=getchaintxstats(10)[\"txrate\"] utxosetsize=gettxoutsetinfo()[\"txouts\"]"
     })
     num_nodes = teams * len(VERSIONS)
     for i in range(num_nodes):

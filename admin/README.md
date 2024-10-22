@@ -30,6 +30,11 @@
     - creates a wallet called "miner" on every armada tank if it doesn't exist already
     - funds all aramda tanks evenly with whatever spendable balance the miner node has
 
+- `warnet dashboard`
+    - opens the dashboard in local browser
+    - navigate to `http://<ingress IP>/grafana/dashboard/import`
+    - Upload the dashboard JSON file `admin/dashboards/battle-dashboard.json`
+
 ## For remote scrimmage (if a player can not run k8s locally):
 
 Player can deploy the scrimmage network to the remote cluster using the auth they already have:
