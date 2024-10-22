@@ -61,7 +61,18 @@ class Corn(Commander):
         attacker.wait_until(lambda: attacker.is_connected, check_connected=False)
 
         self.log.info("Creating first tx")
-        script = CScript([OP_CAT])
+
+
+
+
+
+        # FILL ME IN
+        script = CScript([])
+
+
+
+
+
         p2sh_address = script_to_p2sh(script)
         # psbt_str = node.walletcreatefundedpsbt(outputs=[{p2sh_address: 0.0001}], add_inputs=True)["psbt"]
         # self.log.info(f"psbt {psbt_str}  {node.finalizepsbt(psbt_str)}")
