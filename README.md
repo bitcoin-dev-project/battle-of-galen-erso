@@ -380,6 +380,7 @@ Examples:
 - [create orphan transactions](https://github.com/bitcoin/bitcoin/blob/28.x/test/functional/p2p_orphan_handling.py)
 - [send invalid blocks](https://github.com/bitcoin/bitcoin/blob/28.x/test/functional/p2p_invalid_block.py)
 
+Also look at the stubbed and example scenarios in the `scenarios` directory for inspiration.
 
 ## Run your first attack
 
