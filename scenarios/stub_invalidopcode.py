@@ -9,7 +9,6 @@ from test_framework.messages import (
     MSG_TX,
     CInv,
     hash256,
-    msg_unknown,
     tx_from_hex,
     msg_tx,
     COIN,
@@ -47,7 +46,7 @@ class Corn(Commander):
     # Scenario entrypoint
     def run_test(self):
         node = self.nodes[1]
-        victim = "tank-0103-brown.default.svc"
+        victim = "TARGET_TANK_NAME.default.svc"
 
         addr = socket.gethostbyname(victim)
         # node.addnode(f"{addr}:38333", "onetry")
@@ -62,16 +61,8 @@ class Corn(Commander):
 
         self.log.info("Creating first tx")
 
-
-
-
-
         # FILL ME IN
         script = CScript([])
-
-
-
-
 
         p2sh_address = script_to_p2sh(script)
         # psbt_str = node.walletcreatefundedpsbt(outputs=[{p2sh_address: 0.0001}], add_inputs=True)["psbt"]
