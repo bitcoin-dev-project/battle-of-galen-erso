@@ -5,3 +5,9 @@ image:
   tag: '27.0'
 addnode:
   - miner.default
+defaultConfig: |
+  debug=rpc
+  debug=mempool
+  debug=mempoolrej
+  debug=validation
+  debug=txpackages
