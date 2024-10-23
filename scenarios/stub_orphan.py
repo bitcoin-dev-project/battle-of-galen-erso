@@ -48,6 +48,10 @@ class Orphan50(Commander):
 
     # Scenario entrypoint
     def run_test(self):
+        # This scenario requires the nodes to not be in IBD
+        # On Scrimmage locally make sure you have mined some blocks with:
+        # warnet run scenarios/miner_std.py --debug -- --interval=1
+
         self.log.info("Starting orphan scenario")
         node = self.nodes[0]
         # create wallet miner, might already exist
