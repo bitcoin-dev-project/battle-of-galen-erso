@@ -370,9 +370,10 @@ more than one attempt.
 
 Try: `warnet deploy scenarios/miner_std.py --tank=miner --interval=1 --debug`
 
-Remember block subsidies will only be spendable after 100 blocks!
+💡 Remember block subsidies will only be spendable after 100 blocks and to mine some blocks 
+to get node out of IBD. Nodes on Scrimmage will not accept transactions until they are out of IBD.
 
-💡You may be unfamiliar with the Bitcoin Core functional test framework. To get
+💡 You may be unfamiliar with the Bitcoin Core functional test framework. To get
 some clues about its usage in p2p scenarios, review some of the existing tests!
 
 Examples:
