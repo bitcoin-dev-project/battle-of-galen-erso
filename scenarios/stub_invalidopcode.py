@@ -45,11 +45,14 @@ class Corn(Commander):
 
     # Scenario entrypoint
     def run_test(self):
-        node = self.nodes[1]
+        # This scenario requires some funds to spend. These should be available on Battlefield
+        # On Scrimmage locally make sure you have mined at least 101 blocks using:
+        # warnet run scenarios/miner_std.py --debug -- --interval=1
+
+        node = self.nodes[0]
         victim = "TARGET_TANK_NAME.default.svc"
 
         addr = socket.gethostbyname(victim)
-        # node.addnode(f"{addr}:38333", "onetry")
         MAGIC_BYTES["signet"] = get_signet_network_magic_from_node(self.nodes[0])
 
         self.log.info("Connecting to victim")
@@ -62,12 +65,10 @@ class Corn(Commander):
         self.log.info("Creating first tx")
 
         # FILL ME IN
+        # PERHAPS WITH A FELINE OP_CODE??
         script = CScript([])
 
         p2sh_address = script_to_p2sh(script)
-        # psbt_str = node.walletcreatefundedpsbt(outputs=[{p2sh_address: 0.0001}], add_inputs=True)["psbt"]
-        # self.log.info(f"psbt {psbt_str}  {node.finalizepsbt(psbt_str)}")
-        # tx_hex = node.finalizepsbt(psbt_str)["hex"]
         txid = node.sendtoaddress(p2sh_address, 0.0001)
         tx_hex = node.getrawtransaction(txid)
         first_tx = tx_from_hex(tx_hex)
