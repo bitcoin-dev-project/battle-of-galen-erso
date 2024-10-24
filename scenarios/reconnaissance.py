@@ -19,8 +19,8 @@ def get_signet_network_magic_from_node(node):
 
 
 # The actual scenario is a class like a Bitcoin Core functional test.
-# Commander is a subclass of BitcoinTestFramework instide Warnet
-# that allows to operate on containerized nodes instead of local nodes.
+# Commander is a subclass of BitcoinTestFramework inside Warnet
+# that allows you to operate on containerized nodes instead of local nodes.
 class Reconnaissance(Commander):
     def set_test_params(self):
         # This setting is ignored but still required as
