@@ -368,7 +368,7 @@ the miner has. That script will ensure every armada node has a wallet called "mi
 minimum, proof of work still matters. For that reason generating blocks may require
 more than one attempt.
 
-Try: `warnet deploy scenarios/miner_std.py --tank=miner --interval=1 --debug`
+Try: `warnet run scenarios/miner_std.py --tank=miner --interval=1 --debug`
 
 💡 Remember block subsidies will only be spendable after 100 blocks and to mine some blocks 
 to get node out of IBD. Nodes on Scrimmage will not accept transactions until they are out of IBD.

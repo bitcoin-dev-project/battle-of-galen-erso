@@ -92,7 +92,7 @@ def custom_graph(
         "name": "miner",
         "addnode": [],
         "image": {"tag": "27.0"},
-        "rpcpassword": secrets.token_hex(16),
+        "global": {"rpcpassword": secrets.token_hex(16)},
         "config": f"maxconnections=1000\nuacomment=miner{extra}\ncoinstatsindex=1",
         "metrics": "txrate=getchaintxstats(10)[\"txrate\"] utxosetsize=gettxoutsetinfo()[\"txouts\"]"
     })
@@ -104,7 +104,7 @@ def custom_graph(
             "name": name,
             "addnode": [],
             "image": {"tag": next(version_generator)},
-            "rpcpassword": secrets.token_hex(16),
+            "global": {"rpcpassword": secrets.token_hex(16)},
             "config": f"uacomment={team}{extra}"
         })
 

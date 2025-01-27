@@ -1,4 +1,5 @@
-chain: signet
+global:
+  chain: signet
 collectLogs: true
 metricsExport: true
 metrics: blocks=getblockcount() mempool_size=getmempoolinfo()["size"] memused=getmemoryinfo()["locked"]["used"] memfree=getmemoryinfo()["locked"]["free"]

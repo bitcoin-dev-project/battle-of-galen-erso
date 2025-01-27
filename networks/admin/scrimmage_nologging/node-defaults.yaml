@@ -1,4 +1,5 @@
-chain: signet
+global:
+  chain: signet
 collectLogs: false
 metricsExport: false
 
