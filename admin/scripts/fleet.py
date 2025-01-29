@@ -13,16 +13,19 @@ from test_framework.wallet_util import bytes_to_wif  # noqa: E402
 from test_framework.descriptors import descsum_create  # noqa: E402
 
 TEAMS = [
-    "red",
-    "orange",
-    "yellow",
-    "green",
+    "rust",
     "blue",
-    "violet",
-    "black",
-    "white",
-    "grey",
-    "brown"
+    "yellow",
+    "coffee",
+    "purple",
+    "orange",
+    "navy",
+    "olive",
+    "emerald",
+    "mint",
+    "sapphire",
+    "silver",
+    "aqua"
 ]
 
 VERSIONS = [

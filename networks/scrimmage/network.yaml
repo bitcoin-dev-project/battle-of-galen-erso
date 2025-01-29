@@ -5,14 +5,14 @@ fork_observer:
   enabled: true
 nodes:
 - addnode:
-  - tank-0000-red
-  - tank-0006-red
-  - tank-0003-red
-  - tank-0007-red
-  - tank-0001-red
-  - tank-0009-red
-  - tank-0010-red
-  - tank-0004-red
+  - tank-0000-rust
+  - tank-0007-rust
+  - tank-0008-rust
+  - tank-0002-rust
+  - tank-0001-rust
+  - tank-0005-rust
+  - tank-0010-rust
+  - tank-0009-rust
   config: 'maxconnections=1000
 
     uacomment=miner
@@ -21,156 +21,159 @@ nodes:
 
     coinstatsindex=1'
   global:
-    rpcpassword: 41fce945e0f02eb3cb91536c4fa0a60f
+    rpcpassword: 7f784060b83a1f9cb3a0921dec93c7c7
   image:
     tag: '27.0'
   metrics: txrate=getchaintxstats(10)["txrate"] utxosetsize=gettxoutsetinfo()["txouts"]
   name: miner
 - addnode:
-  - tank-0001-red
-  - tank-0009-red
-  - tank-0010-red
-  - tank-0003-red
-  - tank-0007-red
-  - tank-0006-red
-  - tank-0005-red
-  - tank-0004-red
-  config: 'uacomment=red
+  - tank-0001-rust
+  - tank-0009-rust
+  - tank-0003-rust
+  - tank-0008-rust
+  - tank-0004-rust
+  - tank-0006-rust
+  - tank-0007-rust
+  config: 'uacomment=rust
 
     signetchallenge=51'
   global:
-    rpcpassword: 22b5276c55116f9b951681be29d73019
+    rpcpassword: 6bb5f23efa94a78b2117ba8d4a9e8e7b
   image:
     tag: 99.0.0-unknown-message
-  name: tank-0000-red
+  name: tank-0000-rust
 - addnode:
-  - tank-0002-red
-  - tank-0004-red
-  - tank-0005-red
-  - tank-0010-red
-  - tank-0008-red
-  - tank-0006-red
-  - tank-0007-red
-  - tank-0003-red
-  config: 'uacomment=red
+  - tank-0002-rust
+  - tank-0007-rust
+  - tank-0005-rust
+  - tank-0004-rust
+  - tank-0010-rust
+  - tank-0006-rust
+  - tank-0003-rust
+  config: 'uacomment=rust
 
     signetchallenge=51'
   global:
-    rpcpassword: 7c31555003fe75ca71fd56bf695e61d3
+    rpcpassword: bbd86c1b45f6b85bff4f13a8938b11da
   image:
     tag: 98.0.0-invalid-blocks
-  name: tank-0001-red
+  name: tank-0001-rust
 - addnode:
-  - tank-0003-red
-  - tank-0009-red
-  - tank-0006-red
-  - tank-0000-red
-  - tank-0004-red
-  - tank-0008-red
-  - tank-0007-red
-  config: 'uacomment=red
+  - tank-0003-rust
+  - tank-0006-rust
+  - tank-0004-rust
+  - tank-0000-rust
+  - tank-0010-rust
+  - tank-0005-rust
+  - tank-0007-rust
+  config: 'uacomment=rust
 
     signetchallenge=51'
   global:
-    rpcpassword: 57c5a4f889d6e2febf450f3879d33b93
+    rpcpassword: 9cddc1e21ec3d538c7bec538373bbb39
   image:
     tag: 97.0.0-50-orphans
-  name: tank-0002-red
+  name: tank-0002-rust
 - addnode:
-  - tank-0004-red
-  - tank-0009-red
-  - tank-0007-red
-  - tank-0008-red
-  - tank-0010-red
-  config: 'uacomment=red
+  - tank-0004-rust
+  - tank-0005-rust
+  - tank-0006-rust
+  config: 'uacomment=rust
 
     signetchallenge=51'
   global:
-    rpcpassword: aea943456e05522313b33e94fc07a36f
+    rpcpassword: de0a1d393bcb1fce1b08de70f05422e0
   image:
     tag: 96.0.0-no-mp-trim
-  name: tank-0003-red
+  name: tank-0003-rust
 - addnode:
-  - tank-0005-red
-  - tank-0008-red
-  - tank-0007-red
-  - tank-0006-red
-  - tank-0010-red
-  config: 'uacomment=red
+  - tank-0005-rust
+  - tank-0007-rust
+  - tank-0009-rust
+  - miner
+  - tank-0008-rust
+  config: 'uacomment=rust
 
     signetchallenge=51'
   global:
-    rpcpassword: 4732bc359abd2db12a5b6eeee38ba448
+    rpcpassword: 16ab530c042587d7b1831f12d3ad9946
   image:
     tag: 95.0.0-disabled-opcodes
-  name: tank-0004-red
+  name: tank-0004-rust
 - addnode:
-  - tank-0006-red
-  - tank-0008-red
-  - tank-0003-red
-  - tank-0007-red
-  - miner
-  config: 'uacomment=red
+  - tank-0006-rust
+  - tank-0000-rust
+  - tank-0007-rust
+  - tank-0010-rust
+  config: 'uacomment=rust
 
     signetchallenge=51'
   global:
-    rpcpassword: f80eda8d4bbd041368aeecf5aef0c577
+    rpcpassword: 77781f49eb1917d8bab8c54f65e7b2e8
   image:
     tag: 94.0.0-5k-inv
-  name: tank-0005-red
+  name: tank-0005-rust
 - addnode:
-  - tank-0007-red
-  - tank-0009-red
-  - tank-0010-red
-  config: 'uacomment=red
+  - tank-0007-rust
+  - tank-0010-rust
+  - tank-0009-rust
+  config: 'uacomment=rust
 
     signetchallenge=51'
   global:
-    rpcpassword: b28b99d8b80e3168b091de11ea077a4d
+    rpcpassword: fb41ea390ee2d7ed9158132330bbdc10
   image:
     tag: 0.21.1
-  name: tank-0006-red
+  name: tank-0006-rust
 - addnode:
-  - tank-0008-red
-  - tank-0010-red
-  config: 'uacomment=red
+  - tank-0008-rust
+  - tank-0009-rust
+  config: 'uacomment=rust
 
     signetchallenge=51'
   global:
-    rpcpassword: efe6212f03b8acdd1c84c3eae17775a1
+    rpcpassword: 2c250fe740b0fea978b0dfa5ddff0aec
   image:
     tag: 0.20.0
-  name: tank-0007-red
+  name: tank-0007-rust
 - addnode:
-  - tank-0009-red
-  - miner
-  config: 'uacomment=red
+  - tank-0009-rust
+  - tank-0002-rust
+  - tank-0003-rust
+  - tank-0010-rust
+  - tank-0005-rust
+  - tank-0006-rust
+  config: 'uacomment=rust
 
     signetchallenge=51'
   global:
-    rpcpassword: 7b4d20f8e6f9c10789ff4da91bc032fd
+    rpcpassword: 2e968592971a96c4a01e6386f68a8dd8
   image:
     tag: 0.19.2
-  name: tank-0008-red
+  name: tank-0008-rust
 - addnode:
   - miner
-  - tank-0004-red
-  - tank-0010-red
-  config: 'uacomment=red
+  - tank-0010-rust
+  - tank-0003-rust
+  - tank-0005-rust
+  - tank-0002-rust
+  - tank-0001-rust
+  config: 'uacomment=rust
 
     signetchallenge=51'
   global:
-    rpcpassword: 49d89bc09f56dcdcabb6e1b2a1317ede
+    rpcpassword: d2945c9265dfc8e1b5f3ea3e620ba4a4
   image:
     tag: 0.17.0
-  name: tank-0009-red
+  name: tank-0009-rust
 - addnode:
-  - tank-0000-red
-  config: 'uacomment=red
+  - tank-0000-rust
+  - tank-0003-rust
+  config: 'uacomment=rust
 
     signetchallenge=51'
   global:
-    rpcpassword: 8fe31fc0762ef7dcf95c017ad24e27e7
+    rpcpassword: a96715619a465446e74d7a6b58a465f0
   image:
     tag: 0.16.1
-  name: tank-0010-red
+  name: tank-0010-rust

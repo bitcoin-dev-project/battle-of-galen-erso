@@ -1,11 +1,14 @@
 namespaces:
-- name: wargames-red
-- name: wargames-orange
-- name: wargames-yellow
-- name: wargames-green
+- name: wargames-rust
 - name: wargames-blue
-- name: wargames-violet
-- name: wargames-black
-- name: wargames-white
-- name: wargames-grey
-- name: wargames-brown
+- name: wargames-yellow
+- name: wargames-coffee
+- name: wargames-purple
+- name: wargames-orange
+- name: wargames-navy
+- name: wargames-olive
+- name: wargames-emerald
+- name: wargames-mint
+- name: wargames-sapphire
+- name: wargames-silver
+- name: wargames-aqua

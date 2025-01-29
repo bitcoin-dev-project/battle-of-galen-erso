@@ -22,7 +22,7 @@
 - `bash admin/scripts/miner_wallet.sh`
     - creates wallet in "miner" tank and imports signet signer key as descriptor
 
-- `warnet run scenarios/admin/signet_miner.py --source_dir=scenarios --tank=0 generate  --min-nbits --address=$(warnet bitcoin rpc miner getnewaddress) --ongoing`
+- `warnet run scenarios/admin/signet_miner.py --source_dir=scenarios --tank=miner generate  --min-nbits --address=$(warnet bitcoin rpc miner getnewaddress) --ongoing`
     - starts mining blocks at regular intervals (ten minutes).
     - can be run WITHOUT the `--ongoing` argument at any time to generate a single block
 

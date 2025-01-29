@@ -71,14 +71,14 @@ class SignetMinerScenario(Commander):
         parser.add_argument(
             "--tank",
             dest="tank",
-            type=int,
-            help="Index of tank with wallet loaded for block signing",
+            type=str,
+            help="Name of tank with wallet loaded for block signing",
         )
         get_args(parser)
 
     def run_test(self):
         args = self.options
-        args.bcli = lambda method, *args, **kwargs: self.nodes[
+        args.bcli = lambda method, *args, **kwargs: self.tanks[
             self.options.tank
         ].__getattr__(method)(*args, **kwargs)
         return do_generate(args)
