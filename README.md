@@ -397,7 +397,9 @@ and locally in Scrimmage there will only be red. The link "disclosing" this part
 
 From the root of this repo, run this scenario with:
 
-`warnet run scencarios/my_first_attack_5kinv.py --debug`
+```
+warnet run scenarios/my_first_attack_5kinv.py --debug
+```
 
 After the 5000 INVs have been sent, you should observe that this node becomes unresponsive on fork-observer.
 
