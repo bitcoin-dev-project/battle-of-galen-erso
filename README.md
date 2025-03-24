@@ -66,9 +66,9 @@ Warnet itself will guide you through the setup process.
 > - You only need to install minikube or docker desktop's kubernetes if you plan to run the scrimmage network locally for experimentation and development.
 > - Accessing the remote 100-node signet battlefield does not require a local kubenetes distribution, but will still require installation of `kubectl` and `helm`.
 > - The `warnet setup` wizard will install these dependencies for you.
-> - If running Docker Desktop, be generous with the amount of resources you assing to it.
+> - If running Docker Desktop, be generous with the amount of resources you assign to it.
 
-#### One Warnet is installed, execute `warnet setup`
+#### Once Warnet is installed, execute `warnet setup`
 
 Example:
 
@@ -87,7 +87,7 @@ Example:
    No Backend (Interacting with remote cluster, see `warnet auth --help`)
 ```
 
-### Once Warnet is set up in a virtual environemnt, clone this repo!
+### Once Warnet is set up in a virtual environment, clone this repo!
 
 ```
 (.venv) $ git clone https://github.com/bitcoin-dev-project/battle-of-galen-erso
@@ -204,7 +204,7 @@ Min tx relay fee rate (BTC/kvB): 0.00001000
 Warnings: (none)
 ```
 
-## Ordnance
+## Ordinance
 
 ### Attack Development
 
