@@ -3,11 +3,11 @@ global:
 image:
   repository: bitcoindevproject/bitcoin
   pullPolicy: IfNotPresent
-  tag: '27.0'
+  tag: '28.1'
 addnode:
   - miner.default
 defaultConfig: |
   debug=rpc
   debug=mempool
   debug=mempoolrej
-  
+restartPolicy: Always

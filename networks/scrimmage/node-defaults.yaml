@@ -6,7 +6,7 @@ metricsExport: true
 image:
   repository: bitcoindevproject/bitcoin
   pullPolicy: IfNotPresent
-  tag: '27.0'
+  tag: '28.1'
 defaultConfig: |
   dns=1
   debug=rpc
